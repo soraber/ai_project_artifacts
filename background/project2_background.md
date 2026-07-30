@@ -97,10 +97,10 @@ normalization.
 A common BM25 form is:
 
 $$
-\operatorname{BM25}(q,d)=
+\mathrm{BM25}(q,d)=
 \sum_{t\in q}IDF(t)
 \frac{f(t,d)(k_1+1)}
-{f(t,d)+k_1(1-b+b|d|/\operatorname{avgdl})}
+{f(t,d)+k_1(1-b+b|d|/\mathrm{avgdl})}
 $$
 
 where:
@@ -134,8 +134,8 @@ Dense and BM25 raw scores have different scales. Reciprocal-Rank Fusion (RRF)
 combines rank positions instead of raw scores:
 
 $$
-\operatorname{RRF}(d)=
-\sum_{j=1}^{m}\frac{1}{k+\operatorname{rank}_j(d)}
+\mathrm{RRF}(d)=
+\sum_{j=1}^{m}\frac{1}{k+\mathrm{rank}_j(d)}
 $$
 
 where \(m\) is the number of ranked lists and \(k\) dampens the influence of the
@@ -187,7 +187,7 @@ Because the dataset has no gold passage IDs, a retrieved set counts as a hit whe
 at least one chunk contains the normalized reference answer:
 
 $$
-\operatorname{Hit@k}=
+\mathrm{Hit}_k=
 \mathbb{1}[\exists d\in R_k(q): answer\subseteq d]
 $$
 

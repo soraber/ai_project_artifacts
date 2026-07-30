@@ -121,7 +121,7 @@ operation is allowed. For the writer tool, the policy checks:
 The key rule is:
 
 $$
-\operatorname{allow}(action)
+\mathrm{allow}(action)
 =schema\_valid\land authorized\land path\_confined
 $$
 

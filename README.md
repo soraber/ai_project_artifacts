@@ -5,8 +5,8 @@ generation, and tool-using multi-agent systems. The notebooks are designed for a
 Google Colab A100 runtime and emphasize controlled comparisons, measurable results,
 safety boundaries, and documented engineering tradeoffs.
 
-> **Version:** ver 1.2: security check & background info<br>
-> **Updated:** 2026-07-30 02:20 EDT
+> **Version:** ver 1.2.1: larger figures and math fixes<br>
+> **Updated:** 2026-07-30 02:43 EDT
 
 ## Portfolio Summary
 
@@ -125,13 +125,15 @@ claim should always retain its metric and sample-size qualification.
 
 ### Training and Evaluation Figures
 
-<p>
-  <img src="output/project1/project1_report_assets/training_dynamics.png" alt="Project 1 training loss dynamics" width="49%">
-  <img src="output/project1/project1_report_assets/evaluation_comparison.png" alt="Project 1 base versus tuned evaluation" width="49%">
+<p align="center">
+  <img src="output/project1/project1_report_assets/training_dynamics.png" alt="Project 1 training loss dynamics" width="100%">
+</p>
+<p align="center">
+  <img src="output/project1/project1_report_assets/evaluation_comparison.png" alt="Project 1 base versus tuned evaluation" width="100%">
 </p>
 
-The left figure shows optimization behavior across the recorded training run.
-The right figure compares held-out answer NLL and perplexity with the adapter
+The first figure shows optimization behavior across the recorded training run.
+The second figure compares held-out answer NLL and perplexity with the adapter
 disabled and enabled.
 
 ### Future Optimization
@@ -197,13 +199,15 @@ IDs, answer-hit is a transparent proxy rather than a complete relevance metric.
 
 ### Training and Evaluation Figures
 
-<p>
-  <img src="output/project2/project2_report_assets/quality_metrics.png" alt="Project 2 baseline and advanced RAG quality metrics" width="49%">
-  <img src="output/project2/project2_report_assets/score_latency_tradeoff.png" alt="Project 2 quality and latency tradeoff" width="49%">
+<p align="center">
+  <img src="output/project2/project2_report_assets/quality_metrics.png" alt="Project 2 baseline and advanced RAG quality metrics" width="100%">
+</p>
+<p align="center">
+  <img src="output/project2/project2_report_assets/score_latency_tradeoff.png" alt="Project 2 quality and latency tradeoff" width="100%">
 </p>
 
-The left figure compares answer-hit, reciprocal rank, token F1, and citation
-validity. The right figure makes the composite-score gain and added latency
+The first figure compares answer-hit, reciprocal rank, token F1, and citation
+validity. The second figure makes the composite-score gain and added latency
 visible together.
 
 ### Future Optimization
@@ -278,13 +282,15 @@ lexical strategy rubric are portfolio evidence, not production certification.
 
 ### Training and Evaluation Figures
 
-<p>
-  <img src="output/project3/project3_report_assets/agent_quality_metrics.png" alt="Project 3 local-agent evaluation metrics" width="49%">
-  <img src="output/project3/project3_report_assets/strategy_quality.png" alt="Project 3 single-agent and CrewAI strategy comparison" width="49%">
+<p align="center">
+  <img src="output/project3/project3_report_assets/agent_quality_metrics.png" alt="Project 3 local-agent evaluation metrics" width="100%">
+</p>
+<p align="center">
+  <img src="output/project3/project3_report_assets/strategy_quality.png" alt="Project 3 single-agent and CrewAI strategy comparison" width="100%">
 </p>
 
-The left figure shows routing, native JSON, task, citation, and safety results.
-The right figure compares strategy-rubric dimensions and total quality for the
+The first figure shows routing, native JSON, task, citation, and safety results.
+The second figure compares strategy-rubric dimensions and total quality for the
 single-agent and CrewAI paths.
 
 ### Future Optimization

@@ -186,7 +186,7 @@ labels keep examples logically separated.
 Perplexity is the exponential of average token NLL:
 
 $$
-\operatorname{PPL}=\exp(\mathcal{L}_{NLL})
+\mathrm{PPL}=\exp(\mathcal{L}_{NLL})
 $$
 
 Lower perplexity means the model assigns more probability to the reference
