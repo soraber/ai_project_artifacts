@@ -5,8 +5,8 @@ generation, and tool-using multi-agent systems. The notebooks are designed for a
 Google Colab A100 runtime and emphasize controlled comparisons, measurable results,
 safety boundaries, and documented engineering tradeoffs.
 
-> **Version:** ver 1.0, mostly Codex Automated<br>
-> **Updated:** 2026-07-30 01:24 EDT
+> **Version:** ver 1.1: reorganize files and update readme.md<br>
+> **Updated:** 2026-07-30 01:39 EDT
 
 ## Portfolio Summary
 
@@ -23,8 +23,9 @@ safety boundaries, and documented engineering tradeoffs.
 | File | Purpose |
 | --- | --- |
 | [`ai_projects_guideline.pdf`](ai_projects_guideline.pdf) | Step-by-step implementation guide, commands, code, and source links for all three projects |
-| [`ai_metrics_and_bq_answers.pdf`](ai_metrics_and_bq_answers.pdf) | Explanation of the resume improvement claims and concise behavioral interview answers |
+| [`ai_metrics_and_explanations.pdf`](ai_metrics_and_explanations.pdf) | Explanation of the resume improvement claims and concise behavioral interview answers |
 | [`project_debug_log.md`](project_debug_log.md) | Symptoms, root causes, fixes, affected cells, and verification notes from development |
+| [`tools/`](tools/) | Report generators and reproducible notebook-update utilities |
 | [`.gitignore`](.gitignore) | Excludes local dependencies, caches, temporary renders, secrets, and local helper files |
 | [`.gitattributes`](.gitattributes) | Marks PDF and PNG artifacts as binary Git content |
 
@@ -33,7 +34,7 @@ safety boundaries, and documented engineering tradeoffs.
 | File | Purpose |
 | --- | --- |
 | [`01_llm_fine_tuning_pipeline.ipynb`](01_llm_fine_tuning_pipeline.ipynb) | Executed data preparation, LLaMA-Factory QLoRA training, evaluation, and serving notebook |
-| [`generate_project1_report.py`](generate_project1_report.py) | Rebuilds the Project 1 PDF and charts from saved notebook outputs |
+| [`tools/generate_project1_report.py`](tools/generate_project1_report.py) | Rebuilds the Project 1 PDF and charts from saved notebook outputs |
 | [`output/project1/project1_report.pdf`](output/project1/project1_report.pdf) | Portfolio report with architecture, data quality, training, evaluation, and limitations |
 | [`output/project1/project1_report_assets/data_quality.png`](output/project1/project1_report_assets/data_quality.png) | Dataset cleaning and split visualization |
 | [`output/project1/project1_report_assets/training_dynamics.png`](output/project1/project1_report_assets/training_dynamics.png) | Training-loss visualization |
@@ -44,8 +45,8 @@ safety boundaries, and documented engineering tradeoffs.
 | File | Purpose |
 | --- | --- |
 | [`02_rag_document_qa_system.ipynb`](02_rag_document_qa_system.ipynb) | Executed baseline and advanced RAG experiment |
-| [`update_project2_notebook.py`](update_project2_notebook.py) | Reproducible notebook construction and update script |
-| [`generate_project2_report.py`](generate_project2_report.py) | Rebuilds the Project 2 report from notebook result markers |
+| [`tools/update_project2_notebook.py`](tools/update_project2_notebook.py) | Reproducible notebook construction and update script |
+| [`tools/generate_project2_report.py`](tools/generate_project2_report.py) | Rebuilds the Project 2 report from notebook result markers |
 | [`output/project2/project2_report.pdf`](output/project2/project2_report.pdf) | Portfolio report with architecture, evaluation design, results, and caveats |
 | [`output/project2/project2_final_summary.json`](output/project2/project2_final_summary.json) | Final seed-2026 metrics and experiment configuration |
 | [`output/project2/project2_representative_samples.json`](output/project2/project2_representative_samples.json) | Representative baseline and advanced answers |
@@ -58,8 +59,8 @@ safety boundaries, and documented engineering tradeoffs.
 | File | Purpose |
 | --- | --- |
 | [`03_llm_agent_system.ipynb`](03_llm_agent_system.ipynb) | Executed LangChain, MCP-style tool, and CrewAI workflow notebook |
-| [`update_project3_notebook.py`](update_project3_notebook.py) | Reproducible notebook construction and update script |
-| [`generate_project3_report.py`](generate_project3_report.py) | Rebuilds the Project 3 report and evidence artifacts |
+| [`tools/update_project3_notebook.py`](tools/update_project3_notebook.py) | Reproducible notebook construction and update script |
+| [`tools/generate_project3_report.py`](tools/generate_project3_report.py) | Rebuilds the Project 3 report and evidence artifacts |
 | [`output/project3/project3_report.pdf`](output/project3/project3_report.pdf) | Portfolio report with agent architecture, CrewAI workflow, metrics, and limitations |
 | [`output/project3/project3_final_summary.json`](output/project3/project3_final_summary.json) | Final agent and strategy metrics |
 | [`output/project3/project3_representative_samples.json`](output/project3/project3_representative_samples.json) | Example routed tools and grounded answers |
@@ -91,6 +92,17 @@ evaluating the adapter against the unchanged base model.
 - Compared adapter-enabled and adapter-disabled inference on the same model,
   tokenizer, prompts, quantization, hardware, and held-out examples.
 - Scored only assistant-answer tokens and used 2,000 paired bootstrap resamples.
+
+### Compute Resources, Time, and Key Settings
+
+| Item | Configuration |
+| --- | --- |
+| Compute | One Google Colab `NVIDIA A100-SXM4-40GB` GPU |
+| Training time | 9,873 seconds (`2:44:33`), 1.135 samples/second, and 701 optimizer steps |
+| Model precision | Llama 3 8B in 4-bit NF4 with BF16 compute and layer-norm upcasting |
+| Training parameters | 2,048-token cutoff; batch size 2; gradient accumulation 8; effective batch size 16; one epoch; cosine schedule; learning rate `2e-4` |
+| Efficiency controls | 20,971,520 trainable parameters (0.26%); sequence packing; gradient checkpointing; two retained checkpoints |
+| Evaluation parameters | Seed 42; 100 held-out examples; 18,798 answer tokens; 2,000 paired bootstrap samples |
 
 ### Results and Judgment
 
@@ -140,6 +152,17 @@ retrieval baseline.
   experiment isolates retrieval and prompting changes.
 - Evaluated both systems on the same deterministic 60-example seed-2026 holdout
   with answer-hit, reciprocal rank, token F1, citation validity, and latency.
+
+### Compute Resources, Time, and Key Settings
+
+| Item | Configuration |
+| --- | --- |
+| Compute | One Google Colab `NVIDIA A100-SXM4-40GB` GPU; local 4-bit Llama generator, E5 encoder, and cross-encoder reranker |
+| Timed evaluation | Baseline: 0.805 seconds/question, about 48.3 seconds for 60 questions; advanced: 1.749 seconds/question, about 104.9 seconds for 60 questions |
+| Timing boundary | Evaluation timings exclude one-time dataset download, model loading, chunking, embedding, and index construction |
+| Chunking | 900-character chunks with 120-character overlap, producing 3,492 chunks |
+| Retrieval parameters | Baseline top-3; advanced top-5 after dense/BM25 fusion and cross-encoder reranking; 20 candidates per retriever |
+| Experiment controls | Seed 2026; 60 evaluation questions; identical Llama 3 8B NF4 generator and decoding path for both systems |
 
 ### Results and Judgment
 
@@ -192,6 +215,17 @@ workflow that applies multiple roles to a real business-planning task.
   editor roles.
 - Evaluated search, calculation, approved writes, denied writes, path traversal,
   unsupported questions, citations, routing, JSON validity, and latency.
+
+### Compute Resources, Time, and Key Settings
+
+| Item | Configuration |
+| --- | --- |
+| Compute | One Google Colab `NVIDIA A100-SXM4-40GB` GPU with the cached Llama 3 8B model in 4-bit NF4/BF16 mode |
+| Local-agent time | 4.86-second median and 7.24-second p95 latency across 12 deterministic cases |
+| Strategy time | Single agent: 29.23 seconds; four-role CrewAI workflow: 133.88 seconds |
+| Agent parameters | Seed 2026; planner budget 100 tokens; grounded search-answer budget 120 tokens; one JSON retry plus deterministic fallback |
+| CrewAI parameters | Sequential process; maximum 3 iterations per role; researcher/strategist/critic/editor budgets of 300/500/400/750 tokens |
+| Evaluation scale | 12 agent cases, four local knowledge files, three typed tools, three MCP-style contracts, and 35 local generation calls |
 
 ### Results and Judgment
 

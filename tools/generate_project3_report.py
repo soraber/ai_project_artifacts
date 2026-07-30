@@ -18,9 +18,9 @@ from reportlab.pdfbase.pdfmetrics import stringWidth
 from reportlab.pdfgen import canvas
 
 
-ROOT = Path(__file__).resolve().parents[1]
-NOTEBOOK = ROOT / "ai_project_artifacts" / "03_llm_agent_system.ipynb"
-OUTPUT_DIR = ROOT / "ai_project_artifacts" / "output" / "project3"
+REPO_ROOT = Path(__file__).resolve().parents[1]
+NOTEBOOK = REPO_ROOT / "03_llm_agent_system.ipynb"
+OUTPUT_DIR = REPO_ROOT / "output" / "project3"
 ASSET_DIR = OUTPUT_DIR / "project3_report_assets"
 OUTPUT_PDF = OUTPUT_DIR / "project3_report.pdf"
 

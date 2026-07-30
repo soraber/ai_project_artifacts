@@ -3,7 +3,8 @@ from pathlib import Path
 from textwrap import dedent
 
 
-NOTEBOOK = Path(__file__).with_name("02_rag_document_qa_system.ipynb")
+REPO_ROOT = Path(__file__).resolve().parents[1]
+NOTEBOOK = REPO_ROOT / "02_rag_document_qa_system.ipynb"
 
 
 def lines(text):
