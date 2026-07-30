@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+.report_deps/
+.mplconfig/
+tmp/
+
+.env
+.env.*
+colab_tool.py

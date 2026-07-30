@@ -1,0 +1,20 @@
+[
+  {
+    "question": "What happened in 1867?",
+    "reference": "Canada was formed as a federal, semi-autonomous polity",
+    "baseline_answer": "Insufficient evidence.",
+    "advanced_answer": "Canada was formed. [wiki::2273::0]"
+  },
+  {
+    "question": "What happened in 1811?",
+    "reference": "Monroe returned to the Virginia House of Delegates and was elected to another term as governor of Virginia",
+    "baseline_answer": "Avogadro published an article titled \"Essai d'une mani\u00e8re de d\u00e9terminer les masses relatives des mol\u00e9cules \u00e9l\u00e9mentaires des corps, et les proportions selon lesquelles elles entrent dans ces combinaisons\" in 1811. [wiki::729::0]",
+    "advanced_answer": "Insufficient evidence."
+  },
+  {
+    "question": "Who spend half of their life on land and half in the oceans?",
+    "reference": "Penguins",
+    "baseline_answer": "Penguins. [wiki::954::0]",
+    "advanced_answer": "Penguins. [wiki::954::0]"
+  }
+]

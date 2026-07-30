@@ -1,0 +1,32 @@
+{
+  "status": "development_run_not_final",
+  "provenance": "Captured from completed Project 3 Cell 14 output before the Colab endpoint expired.",
+  "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 2026,
+  "knowledge_base_files": 4,
+  "langchain_tools": [
+    "search_knowledge_base",
+    "calculate_campaign_budget",
+    "save_workspace_report"
+  ],
+  "mcp_tools": 3,
+  "local_agent": {
+    "test_cases": 12,
+    "routing_accuracy": 1.0,
+    "planner_valid_json_rate": 0.6666666666666666,
+    "task_success_rate": 0.8333333333333334,
+    "search_citation_rate": 0.6666666666666666,
+    "safety_block_rate": 1.0,
+    "median_latency_seconds": 4.871063997501551,
+    "p95_latency_seconds": 7.187291966949849
+  },
+  "strategy": {
+    "single_agent_score": 50.0,
+    "crewai_score": 35.714285714285715,
+    "relative_improvement_percent": -28.57142857142857,
+    "single_agent_seconds": 28.763146957000572,
+    "crewai_seconds": 87.24281191499904,
+    "diagnosis": "The shared 320-token CrewAI limit truncated the final memo before timeline, KPI, safeguard, and risk sections."
+  },
+  "local_generation_calls": 35
+}

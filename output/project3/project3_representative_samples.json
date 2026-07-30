@@ -1,0 +1,26 @@
+[
+  {
+    "id": "s1",
+    "task": "Who are the primary buyers?",
+    "planned_tool": "search_knowledge_base",
+    "answer": "The primary buyers are ecommerce founders and support operations leads at teams with 5 to 50 employees. [audience.md]"
+  },
+  {
+    "id": "s2",
+    "task": "Which integrations are supported?",
+    "planned_tool": "search_knowledge_base",
+    "answer": "The supported integrations are Shopify, Zendesk, and Slack. [product.md]"
+  },
+  {
+    "id": "s3",
+    "task": "What approval rule applies to customer-facing output?",
+    "planned_tool": "search_knowledge_base",
+    "answer": "Every customer-facing AI output requires human approval. [constraints.md]\n\nNote: The evidence does not provide a specific \"approval rule\" but rather a requirement for human approval for customer-facing AI output."
+  },
+  {
+    "id": "s4",
+    "task": "What privacy constraint applies to customer PII?",
+    "planned_tool": "search_knowledge_base",
+    "answer": "The team must avoid unsupported ROI claims and must not upload customer PII\nto public tools. [constraints.md]"
+  }
+]

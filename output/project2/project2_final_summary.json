@@ -1,0 +1,37 @@
+{
+  "dataset": "rag-datasets/rag-mini-wikipedia",
+  "dataset_revision": "ec8e240df1b1eb7171cb3e5dcf9462f6569f4544",
+  "corpus_rows": 3200,
+  "qa_rows": 918,
+  "chunks": 3492,
+  "evaluation_examples": 60,
+  "evaluation_seed": 2026,
+  "generator_model": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "embedding_model": "intfloat/e5-small-v2",
+  "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "baseline_composite": 0.5673845578738358,
+  "advanced_composite": 0.6669381402463475,
+  "relative_improvement_percent": 17.54605073242908,
+  "metrics": [
+    {
+      "system": "advanced",
+      "answer_hit": 0.9333333333333333,
+      "reciprocal_rank": 0.8805555555555556,
+      "token_f1": 0.4089366079548462,
+      "citation_validity": 0.7833333333333333,
+      "composite_score": 0.6669381402463475,
+      "retrieval_seconds_per_question": 1.2674623434000145,
+      "generation_seconds_per_question": 0.4815191571833566
+    },
+    {
+      "system": "baseline",
+      "answer_hit": 0.8333333333333334,
+      "reciprocal_rank": 0.7916666666666666,
+      "token_f1": 0.3173360545344498,
+      "citation_validity": 0.65,
+      "composite_score": 0.5673845578738358,
+      "retrieval_seconds_per_question": 0.012146322000019912,
+      "generation_seconds_per_question": 0.7926341302666818
+    }
+  ]
+}

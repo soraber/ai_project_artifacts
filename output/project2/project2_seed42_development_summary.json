@@ -1,0 +1,39 @@
+{
+  "status": "development_run_not_final_holdout",
+  "provenance": "Captured from completed Project 2 Cell 17 output before the Colab endpoint expired.",
+  "dataset": "rag-datasets/rag-mini-wikipedia",
+  "dataset_revision": "ec8e240df1b1eb7171cb3e5dcf9462f6569f4544",
+  "corpus_rows": 3200,
+  "qa_rows": 918,
+  "chunks": 3492,
+  "evaluation_examples": 60,
+  "evaluation_seed": 42,
+  "generator_model": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "embedding_model": "intfloat/e5-small-v2",
+  "reranker_model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "baseline_composite": 0.5140930388026453,
+  "advanced_composite": 0.5246211339289222,
+  "relative_improvement_percent": 2.047896845831141,
+  "metrics": [
+    {
+      "system": "advanced",
+      "answer_hit": 0.9,
+      "reciprocal_rank": 0.8450000000000001,
+      "token_f1": 0.11193585317538263,
+      "citation_validity": 0.8166666666666667,
+      "composite_score": 0.5246211339289222,
+      "retrieval_seconds_per_question": 1.2913981615166752,
+      "generation_seconds_per_question": 1.3170049923333258
+    },
+    {
+      "system": "baseline",
+      "answer_hit": 0.7833333333333333,
+      "reciprocal_rank": 0.711111111111111,
+      "token_f1": 0.2590956417836564,
+      "citation_validity": 0.6333333333333333,
+      "composite_score": 0.5140930388026453,
+      "retrieval_seconds_per_question": 0.013057344249985666,
+      "generation_seconds_per_question": 0.6173238654166198
+    }
+  ]
+}
