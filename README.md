@@ -5,8 +5,8 @@ generation, and tool-using multi-agent systems. The notebooks are designed for a
 Google Colab A100 runtime and emphasize controlled comparisons, measurable results,
 safety boundaries, and documented engineering tradeoffs.
 
-> **Version:** ver 1.2.1: larger figures and math fixes<br>
-> **Updated:** 2026-07-30 02:43 EDT
+> **Version:** ver 1.2.2: Project 1 math fix<br>
+> **Updated:** 2026-07-30 02:50 EDT
 
 ## Portfolio Summary
 

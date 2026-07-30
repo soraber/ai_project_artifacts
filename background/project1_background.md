@@ -37,7 +37,7 @@ An autoregressive LLM estimates the probability of a token sequence by
 factorizing it from left to right:
 
 $$
-p(x_1,\ldots,x_T)=\prod_{t=1}^{T}p(x_t\mid x_{<t})
+p(x_1,\ldots,x_T)=\prod_{t=1}^{T}p(x_t\mid x_{1:t-1})
 $$
 
 The model converts tokens into vectors, applies transformer layers, and produces
@@ -48,11 +48,11 @@ Training normally minimizes token-level negative log-likelihood:
 
 $$
 \mathcal{L}_{NLL}
-=-\frac{1}{N}\sum_{i=1}^{N}\log p_\theta(y_i\mid x,y_{<i})
+=-\frac{1}{N}\sum_{i=1}^{N}\log p_\theta(y_i\mid x,y_{1:i-1})
 $$
 
-Here, \(x\) is the instruction and question, while \(y_i\) is an answer token.
-The parameters \(\theta\) include the frozen base model plus the trainable
+Here, $x$ is the instruction and question, while $y_i$ is an answer token.
+The parameters $\theta$ include the frozen base model plus the trainable
 adapter parameters.
 
 ## 2. Supervised Fine-Tuning
@@ -98,7 +98,7 @@ biased.
 
 Full fine-tuning updates every model weight and requires optimizer state and
 gradients for billions of parameters. Low-Rank Adaptation (LoRA) freezes a weight
-matrix \(W_0\) and learns a low-rank update:
+matrix $W_0$ and learns a low-rank update:
 
 $$
 W = W_0 + \frac{\alpha}{r}BA
@@ -106,14 +106,14 @@ $$
 
 where:
 
-- \(W_0 \in \mathbb{R}^{d_{out}\times d_{in}}\) is frozen.
-- \(A \in \mathbb{R}^{r\times d_{in}}\) and
-  \(B \in \mathbb{R}^{d_{out}\times r}\) are trainable.
-- \(r\) is much smaller than the original dimensions.
-- \(\alpha/r\) controls the update scale.
+- $W_0 \in \mathbb{R}^{d_{out}\times d_{in}}$ is frozen.
+- $A \in \mathbb{R}^{r\times d_{in}}$ and
+  $B \in \mathbb{R}^{d_{out}\times r}$ are trainable.
+- $r$ is much smaller than the original dimensions.
+- $\alpha/r$ controls the update scale.
 
-Instead of learning \(d_{out}d_{in}\) parameters, LoRA learns approximately
-\(r(d_{in}+d_{out})\). This project trained 20,971,520 parameters, about 0.26%
+Instead of learning $d_{out}d_{in}$ parameters, LoRA learns approximately
+$r(d_{in}+d_{out})$. This project trained 20,971,520 parameters, about 0.26%
 of the full 8.05B-parameter model.
 
 ## 5. QLoRA and NF4 Quantization
@@ -144,14 +144,14 @@ by A100 tensor cores and is generally more stable than FP16 for LLM training.
 
 ### Gradient accumulation
 
-With micro-batch size \(b\) and accumulation count \(k\), the effective batch
+With micro-batch size $b$ and accumulation count $k$, the effective batch
 size on one GPU is:
 
 $$
 B_{effective}=b\times k
 $$
 
-This project uses \(b=2\) and \(k=8\), giving an effective batch size of 16.
+This project uses $b=2$ and $k=8$, giving an effective batch size of 16.
 
 ### Gradient checkpointing
 
@@ -203,14 +203,14 @@ hardware.
 
 ## 9. Paired Win Rate and Bootstrap Interval
 
-For example \(i\), define the improvement:
+For example $i$, define the improvement:
 
 $$
 \Delta_i=NLL_{base,i}-NLL_{tuned,i}
 $$
 
 A positive value favors the tuned model. The paired win rate is the fraction of
-examples with \(\Delta_i>0\).
+examples with $\Delta_i>0$.
 
 Bootstrap evaluation repeatedly samples the paired improvements with
 replacement, computes a mean for each sample, and takes percentile bounds. A
