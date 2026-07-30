@@ -5,8 +5,8 @@ generation, and tool-using multi-agent systems. The notebooks are designed for a
 Google Colab A100 runtime and emphasize controlled comparisons, measurable results,
 safety boundaries, and documented engineering tradeoffs.
 
-> **Version:** ver 1.1: reorganize files and update readme.md<br>
-> **Updated:** 2026-07-30 01:39 EDT
+> **Version:** ver 1.2: security check & background info<br>
+> **Updated:** 2026-07-30 02:20 EDT
 
 ## Portfolio Summary
 
@@ -25,6 +25,7 @@ safety boundaries, and documented engineering tradeoffs.
 | [`ai_projects_guideline.pdf`](ai_projects_guideline.pdf) | Step-by-step implementation guide, commands, code, and source links for all three projects |
 | [`ai_metrics_and_explanations.pdf`](ai_metrics_and_explanations.pdf) | Explanation of the resume improvement claims and concise behavioral interview answers |
 | [`project_debug_log.md`](project_debug_log.md) | Symptoms, root causes, fixes, affected cells, and verification notes from development |
+| [`background/`](background/) | Graduate-level explanations of the concepts, mathematics, evaluation methods, and tradeoffs behind each project |
 | [`tools/`](tools/) | Report generators and reproducible notebook-update utilities |
 | [`.gitignore`](.gitignore) | Excludes local dependencies, caches, temporary renders, secrets, and local helper files |
 | [`.gitattributes`](.gitattributes) | Marks PDF and PNG artifacts as binary Git content |
@@ -34,6 +35,7 @@ safety boundaries, and documented engineering tradeoffs.
 | File | Purpose |
 | --- | --- |
 | [`01_llm_fine_tuning_pipeline.ipynb`](01_llm_fine_tuning_pipeline.ipynb) | Executed data preparation, LLaMA-Factory QLoRA training, evaluation, and serving notebook |
+| [`background/project1_background.md`](background/project1_background.md) | Concepts behind SFT, LoRA/QLoRA, GPU-efficient training, perplexity, and paired evaluation |
 | [`tools/generate_project1_report.py`](tools/generate_project1_report.py) | Rebuilds the Project 1 PDF and charts from saved notebook outputs |
 | [`output/project1/project1_report.pdf`](output/project1/project1_report.pdf) | Portfolio report with architecture, data quality, training, evaluation, and limitations |
 | [`output/project1/project1_report_assets/data_quality.png`](output/project1/project1_report_assets/data_quality.png) | Dataset cleaning and split visualization |
@@ -45,6 +47,7 @@ safety boundaries, and documented engineering tradeoffs.
 | File | Purpose |
 | --- | --- |
 | [`02_rag_document_qa_system.ipynb`](02_rag_document_qa_system.ipynb) | Executed baseline and advanced RAG experiment |
+| [`background/project2_background.md`](background/project2_background.md) | Concepts behind chunking, dense/BM25 retrieval, HyDE, RRF, reranking, citations, and QA metrics |
 | [`tools/update_project2_notebook.py`](tools/update_project2_notebook.py) | Reproducible notebook construction and update script |
 | [`tools/generate_project2_report.py`](tools/generate_project2_report.py) | Rebuilds the Project 2 report from notebook result markers |
 | [`output/project2/project2_report.pdf`](output/project2/project2_report.pdf) | Portfolio report with architecture, evaluation design, results, and caveats |
@@ -59,6 +62,7 @@ safety boundaries, and documented engineering tradeoffs.
 | File | Purpose |
 | --- | --- |
 | [`03_llm_agent_system.ipynb`](03_llm_agent_system.ipynb) | Executed LangChain, MCP-style tool, and CrewAI workflow notebook |
+| [`background/project3_background.md`](background/project3_background.md) | Concepts behind agent loops, typed tools, policy gates, MCP contracts, fallbacks, and multi-agent evaluation |
 | [`tools/update_project3_notebook.py`](tools/update_project3_notebook.py) | Reproducible notebook construction and update script |
 | [`tools/generate_project3_report.py`](tools/generate_project3_report.py) | Rebuilds the Project 3 report and evidence artifacts |
 | [`output/project3/project3_report.pdf`](output/project3/project3_report.pdf) | Portfolio report with agent architecture, CrewAI workflow, metrics, and limitations |
@@ -118,6 +122,17 @@ target answer distribution. However, perplexity measures reference-answer fit,
 not factual correctness, instruction safety, or user preference. The final
 portfolio result uses 100 examples from the fixed 500-example holdout, so the
 claim should always retain its metric and sample-size qualification.
+
+### Training and Evaluation Figures
+
+<p>
+  <img src="output/project1/project1_report_assets/training_dynamics.png" alt="Project 1 training loss dynamics" width="49%">
+  <img src="output/project1/project1_report_assets/evaluation_comparison.png" alt="Project 1 base versus tuned evaluation" width="49%">
+</p>
+
+The left figure shows optimization behavior across the recorded training run.
+The right figure compares held-out answer NLL and perplexity with the adapter
+disabled and enabled.
 
 ### Future Optimization
 
@@ -179,6 +194,17 @@ The advanced system produced a defensible quality improvement across retrieval,
 answer overlap, and citation behavior. Its main cost is retrieval latency,
 especially from HyDE and reranking. Because the benchmark lacks gold passage
 IDs, answer-hit is a transparent proxy rather than a complete relevance metric.
+
+### Training and Evaluation Figures
+
+<p>
+  <img src="output/project2/project2_report_assets/quality_metrics.png" alt="Project 2 baseline and advanced RAG quality metrics" width="49%">
+  <img src="output/project2/project2_report_assets/score_latency_tradeoff.png" alt="Project 2 quality and latency tradeoff" width="49%">
+</p>
+
+The left figure compares answer-hit, reciprocal rank, token F1, and citation
+validity. The right figure makes the composite-score gain and added latency
+visible together.
 
 ### Future Optimization
 
@@ -249,6 +275,17 @@ saved memo still received no measurable-KPI credit under the strict lexical
 rubric. The four-role workflow is therefore more appropriate for high-value,
 asynchronous planning than for low-latency requests. The 12-case agent suite and
 lexical strategy rubric are portfolio evidence, not production certification.
+
+### Training and Evaluation Figures
+
+<p>
+  <img src="output/project3/project3_report_assets/agent_quality_metrics.png" alt="Project 3 local-agent evaluation metrics" width="49%">
+  <img src="output/project3/project3_report_assets/strategy_quality.png" alt="Project 3 single-agent and CrewAI strategy comparison" width="49%">
+</p>
+
+The left figure shows routing, native JSON, task, citation, and safety results.
+The right figure compares strategy-rubric dimensions and total quality for the
+single-agent and CrewAI paths.
 
 ### Future Optimization
 

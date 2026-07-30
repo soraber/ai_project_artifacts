@@ -700,7 +700,7 @@ def build_pdf(results: dict, charts: dict[str, Path]) -> None:
     pdf.setFillColor(INK)
     pdf.drawString(MARGIN, 350, "Evidence and source links")
     references = [
-        ("Project notebook", str(NOTEBOOK)),
+        ("Project notebook", NOTEBOOK.relative_to(REPO_ROOT).as_posix()),
         ("Stack Exchange preference dataset", "https://huggingface.co/datasets/HuggingFaceH4/stack-exchange-preferences"),
         ("Meta Llama 3 8B Instruct model card", "https://huggingface.co/meta-llama/Meta-Llama-3-8B-Instruct"),
         ("LLaMA-Factory", "https://github.com/hiyouga/LlamaFactory"),
