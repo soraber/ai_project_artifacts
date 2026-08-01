@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="540" viewBox="0 0 1600 540" role="img">
+<title>Project 2: RAG Document QA Procedure</title>
+<desc>Dense baseline versus HyDE, hybrid retrieval, fusion, and reranking. Methods, functions, and evaluation metrics are shown.</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#475569"/>
+  </marker>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; fill: #172033; }
+    .title { font-size: 32px; font-weight: 700; }
+    .subtitle { font-size: 18px; fill: #475569; }
+    .section { font-size: 14px; font-weight: 700; fill: #64748b; letter-spacing: 1px; }
+    .stage-title { font-size: 20px; font-weight: 700; }
+    .stage-detail { font-size: 15px; fill: #334155; }
+    .metric-title { font-size: 15px; font-weight: 600; fill: #cbd5e1; }
+    .metric-value { font-size: 18px; font-weight: 700; fill: #ffffff; }
+  </style>
+</defs>
+<rect width="1600" height="540" fill="#ffffff"/>
+<text x="35" y="48" class="title" text-anchor="start">Project 2: RAG Document QA Procedure</text>
+<text x="35" y="78" class="subtitle" text-anchor="start">Dense baseline versus HyDE, hybrid retrieval, fusion, and reranking</text>
+<text x="35" y="109" class="section" text-anchor="start">METHODS AND FUNCTIONS</text>
+<rect x="35" y="128" width="233" height="220" rx="8" fill="#eef6ff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="35" y="128" width="8" height="220" rx="4" fill="#2563eb"/>
+<text x="57" y="166" class="stage-title" text-anchor="start">1. Corpus and chunks</text>
+<text x="57" y="212" class="stage-detail" text-anchor="start">3,200 Wikipedia rows</text>
+<text x="57" y="250" class="stage-detail" text-anchor="start">900 chars / 120 overlap</text>
+<text x="57" y="288" class="stage-detail" text-anchor="start">3,492 stable chunk IDs</text>
+<line x1="272" y1="238" x2="287" y2="238" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="294" y="128" width="233" height="220" rx="8" fill="#f2fbf5" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="294" y="128" width="8" height="220" rx="4" fill="#15803d"/>
+<text x="316" y="166" class="stage-title" text-anchor="start">2. Build indexes</text>
+<text x="316" y="212" class="stage-detail" text-anchor="start">E5Encoder.encode()</text>
+<text x="316" y="250" class="stage-detail" text-anchor="start">FAISS IndexFlatIP</text>
+<text x="316" y="288" class="stage-detail" text-anchor="start">lexical_tokens() + BM25</text>
+<line x1="531" y1="238" x2="546" y2="238" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="553" y="128" width="233" height="220" rx="8" fill="#fff8e8" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="553" y="128" width="8" height="220" rx="4" fill="#b45309"/>
+<text x="575" y="166" class="stage-title" text-anchor="start">3. Expand query</text>
+<text x="575" y="212" class="stage-detail" text-anchor="start">hyde_prompt()</text>
+<text x="575" y="250" class="stage-detail" text-anchor="start">generate_batch()</text>
+<text x="575" y="288" class="stage-detail" text-anchor="start">raw + hypothetical text</text>
+<line x1="790" y1="238" x2="805" y2="238" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="812" y="128" width="233" height="220" rx="8" fill="#f7f2ff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="812" y="128" width="8" height="220" rx="4" fill="#7e22ce"/>
+<text x="834" y="166" class="stage-title" text-anchor="start">4. Hybrid retrieval</text>
+<text x="834" y="212" class="stage-detail" text-anchor="start">dense_rank() + sparse_rank()</text>
+<text x="834" y="250" class="stage-detail" text-anchor="start">reciprocal_rank_fusion()</text>
+<text x="834" y="288" class="stage-detail" text-anchor="start">20 candidates per path</text>
+<line x1="1049" y1="238" x2="1064" y2="238" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1071" y="128" width="233" height="220" rx="8" fill="#eef9f8" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="1071" y="128" width="8" height="220" rx="4" fill="#0f766e"/>
+<text x="1093" y="166" class="stage-title" text-anchor="start">5. Rerank and answer</text>
+<text x="1093" y="212" class="stage-detail" text-anchor="start">rerank(): cross-encoder</text>
+<text x="1093" y="250" class="stage-detail" text-anchor="start">advanced_answer_prompt()</text>
+<text x="1093" y="288" class="stage-detail" text-anchor="start">Llama top-5 + citations</text>
+<line x1="1308" y1="238" x2="1323" y2="238" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1330" y="128" width="233" height="220" rx="8" fill="#fff3f3" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="1330" y="128" width="8" height="220" rx="4" fill="#be123c"/>
+<text x="1352" y="166" class="stage-title" text-anchor="start">6. Controlled evaluation</text>
+<text x="1352" y="212" class="stage-detail" text-anchor="start">retrieval_metrics()</text>
+<text x="1352" y="250" class="stage-detail" text-anchor="start">token_f1()</text>
+<text x="1352" y="288" class="stage-detail" text-anchor="start">citation_validity()</text>
+<text x="35" y="385" class="section" text-anchor="start">RECORDED EVALUATION METRICS</text>
+<rect x="35" y="404" width="1530" height="104" rx="8" fill="#1e293b"/>
+<text x="162.5" y="443" class="metric-title" text-anchor="middle">Answer-hit</text>
+<text x="162.5" y="479" class="metric-value" text-anchor="middle">0.833 -&gt; 0.933</text>
+<line x1="290.0" y1="422" x2="290.0" y2="490" stroke="#475569" stroke-width="1"/>
+<text x="417.5" y="443" class="metric-title" text-anchor="middle">Reciprocal rank</text>
+<text x="417.5" y="479" class="metric-value" text-anchor="middle">0.792 -&gt; 0.881</text>
+<line x1="545.0" y1="422" x2="545.0" y2="490" stroke="#475569" stroke-width="1"/>
+<text x="672.5" y="443" class="metric-title" text-anchor="middle">Token F1</text>
+<text x="672.5" y="479" class="metric-value" text-anchor="middle">0.317 -&gt; 0.409</text>
+<line x1="800.0" y1="422" x2="800.0" y2="490" stroke="#475569" stroke-width="1"/>
+<text x="927.5" y="443" class="metric-title" text-anchor="middle">Citation validity</text>
+<text x="927.5" y="479" class="metric-value" text-anchor="middle">0.650 -&gt; 0.783</text>
+<line x1="1055.0" y1="422" x2="1055.0" y2="490" stroke="#475569" stroke-width="1"/>
+<text x="1182.5" y="443" class="metric-title" text-anchor="middle">Composite</text>
+<text x="1182.5" y="479" class="metric-value" text-anchor="middle">+17.55% relative</text>
+<line x1="1310.0" y1="422" x2="1310.0" y2="490" stroke="#475569" stroke-width="1"/>
+<text x="1437.5" y="443" class="metric-title" text-anchor="middle">Latency / question</text>
+<text x="1437.5" y="479" class="metric-value" text-anchor="middle">0.805 s -&gt; 1.749 s</text>
+</svg>

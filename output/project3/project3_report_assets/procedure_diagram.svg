@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="540" viewBox="0 0 1600 540" role="img">
+<title>Project 3: Local LLM Agent Procedure</title>
+<desc>Validated tools, deterministic policy controls, traces, and role decomposition. Methods, functions, and evaluation metrics are shown.</desc>
+<defs>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L0,6 L9,3 z" fill="#475569"/>
+  </marker>
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif; fill: #172033; }
+    .title { font-size: 32px; font-weight: 700; }
+    .subtitle { font-size: 18px; fill: #475569; }
+    .section { font-size: 14px; font-weight: 700; fill: #64748b; letter-spacing: 1px; }
+    .stage-title { font-size: 20px; font-weight: 700; }
+    .stage-detail { font-size: 15px; fill: #334155; }
+    .metric-title { font-size: 15px; font-weight: 600; fill: #cbd5e1; }
+    .metric-value { font-size: 18px; font-weight: 700; fill: #ffffff; }
+  </style>
+</defs>
+<rect width="1600" height="540" fill="#ffffff"/>
+<text x="35" y="48" class="title" text-anchor="start">Project 3: Local LLM Agent Procedure</text>
+<text x="35" y="78" class="subtitle" text-anchor="start">Validated tools, deterministic policy controls, traces, and role decomposition</text>
+<text x="35" y="109" class="section" text-anchor="start">METHODS AND FUNCTIONS</text>
+<rect x="35" y="128" width="233" height="220" rx="8" fill="#eef6ff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="35" y="128" width="8" height="220" rx="4" fill="#2563eb"/>
+<text x="57" y="166" class="stage-title" text-anchor="start">1. Plan action</text>
+<text x="57" y="212" class="stage-detail" text-anchor="start">plan_action()</text>
+<text x="57" y="250" class="stage-detail" text-anchor="start">local Llama JSON decision</text>
+<text x="57" y="288" class="stage-detail" text-anchor="start">100-token planner budget</text>
+<line x1="272" y1="238" x2="287" y2="238" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="294" y="128" width="233" height="220" rx="8" fill="#f2fbf5" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="294" y="128" width="8" height="220" rx="4" fill="#15803d"/>
+<text x="316" y="166" class="stage-title" text-anchor="start">2. Validate and recover</text>
+<text x="316" y="212" class="stage-detail" text-anchor="start">AgentDecision / Pydantic</text>
+<text x="316" y="250" class="stage-detail" text-anchor="start">extract_json_object()</text>
+<text x="316" y="288" class="stage-detail" text-anchor="start">retry + fallback_decision()</text>
+<line x1="531" y1="238" x2="546" y2="238" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="553" y="128" width="233" height="220" rx="8" fill="#fff8e8" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="553" y="128" width="8" height="220" rx="4" fill="#b45309"/>
+<text x="575" y="166" class="stage-title" text-anchor="start">3. Execute typed tool</text>
+<text x="575" y="212" class="stage-detail" text-anchor="start">search_knowledge_base()</text>
+<text x="575" y="250" class="stage-detail" text-anchor="start">calculate_campaign_budget()</text>
+<text x="575" y="288" class="stage-detail" text-anchor="start">save_workspace_report()</text>
+<line x1="790" y1="238" x2="805" y2="238" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="812" y="128" width="233" height="220" rx="8" fill="#f7f2ff" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="812" y="128" width="8" height="220" rx="4" fill="#7e22ce"/>
+<text x="834" y="166" class="stage-title" text-anchor="start">4. Enforce and trace</text>
+<text x="834" y="212" class="stage-detail" text-anchor="start">traced() wrapper</text>
+<text x="834" y="250" class="stage-detail" text-anchor="start">approval + path confinement</text>
+<text x="834" y="288" class="stage-detail" text-anchor="start">latency / status record</text>
+<line x1="1049" y1="238" x2="1064" y2="238" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1071" y="128" width="233" height="220" rx="8" fill="#eef9f8" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="1071" y="128" width="8" height="220" rx="4" fill="#0f766e"/>
+<text x="1093" y="166" class="stage-title" text-anchor="start">5. Return response</text>
+<text x="1093" y="212" class="stage-detail" text-anchor="start">run_local_agent()</text>
+<text x="1093" y="250" class="stage-detail" text-anchor="start">grounded_answer()</text>
+<text x="1093" y="288" class="stage-detail" text-anchor="start">MCP-style dispatcher</text>
+<line x1="1308" y1="238" x2="1323" y2="238" stroke="#475569" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1330" y="128" width="233" height="220" rx="8" fill="#fff3f3" stroke="#cbd5e1" stroke-width="2"/>
+<rect x="1330" y="128" width="8" height="220" rx="4" fill="#be123c"/>
+<text x="1352" y="166" class="stage-title" text-anchor="start">6. Role workflow</text>
+<text x="1352" y="212" class="stage-detail" text-anchor="start">CrewAI sequential process</text>
+<text x="1352" y="250" class="stage-detail" text-anchor="start">research &gt; strategy &gt; critique</text>
+<text x="1352" y="288" class="stage-detail" text-anchor="start">edit + strategy_rubric()</text>
+<text x="35" y="385" class="section" text-anchor="start">RECORDED EVALUATION METRICS</text>
+<rect x="35" y="404" width="1530" height="104" rx="8" fill="#1e293b"/>
+<text x="162.5" y="443" class="metric-title" text-anchor="middle">Routing accuracy</text>
+<text x="162.5" y="479" class="metric-value" text-anchor="middle">100%</text>
+<line x1="290.0" y1="422" x2="290.0" y2="490" stroke="#475569" stroke-width="1"/>
+<text x="417.5" y="443" class="metric-title" text-anchor="middle">Native valid JSON</text>
+<text x="417.5" y="479" class="metric-value" text-anchor="middle">66.7%</text>
+<line x1="545.0" y1="422" x2="545.0" y2="490" stroke="#475569" stroke-width="1"/>
+<text x="672.5" y="443" class="metric-title" text-anchor="middle">Task success</text>
+<text x="672.5" y="479" class="metric-value" text-anchor="middle">100%</text>
+<line x1="800.0" y1="422" x2="800.0" y2="490" stroke="#475569" stroke-width="1"/>
+<text x="927.5" y="443" class="metric-title" text-anchor="middle">Citation / safety</text>
+<text x="927.5" y="479" class="metric-value" text-anchor="middle">100% / 100%</text>
+<line x1="1055.0" y1="422" x2="1055.0" y2="490" stroke="#475569" stroke-width="1"/>
+<text x="1182.5" y="443" class="metric-title" text-anchor="middle">Median / p95</text>
+<text x="1182.5" y="479" class="metric-value" text-anchor="middle">4.86 s / 7.24 s</text>
+<line x1="1310.0" y1="422" x2="1310.0" y2="490" stroke="#475569" stroke-width="1"/>
+<text x="1437.5" y="443" class="metric-title" text-anchor="middle">Crew strategy</text>
+<text x="1437.5" y="479" class="metric-value" text-anchor="middle">+35.71%; 4.58x slower</text>
+</svg>

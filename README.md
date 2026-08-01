@@ -5,8 +5,8 @@ generation, and tool-using multi-agent systems. The notebooks are designed for a
 Google Colab A100 runtime and emphasize controlled comparisons, measurable results,
 safety boundaries, and documented engineering tradeoffs.
 
-> **Version:** ver 1.2.2: Project 1 math fix<br>
-> **Updated:** 2026-07-30 02:50 EDT
+> **Version:** ver 1.3: procedure diagrams and method alternatives<br>
+> **Updated:** 2026-07-31 21:29 EDT
 
 ## Portfolio Summary
 
@@ -15,6 +15,29 @@ safety boundaries, and documented engineering tradeoffs.
 | 1. LLM Fine-Tuning | Adapt Llama 3 8B to software-engineering answers with parameter-efficient training | Base model vs. QLoRA adapter | Held-out answer perplexity decreased **30.42%**, from 7.9560 to 5.5359 | Strong evidence of better fit to the target answer distribution; not yet proof of factual or production quality |
 | 2. RAG Document QA | Improve grounded QA over a real Wikipedia corpus | Dense baseline vs. HyDE + hybrid retrieval + reranking | Composite score increased **17.55%**, from 0.5674 to 0.6669 | Better retrieval, answer overlap, and citation validity, with higher retrieval latency |
 | 3. LLM Agent System | Build auditable local tools and a role-based business workflow | Single agent vs. CrewAI workflow | Agent task success was **100%** on 12 cases; CrewAI strategy score improved **35.71%** | Typed tools and fallbacks were reliable; multi-agent quality improved at a substantial latency cost |
+
+### Procedure Diagrams
+
+Each full-width diagram identifies the implemented methods and callable functions,
+then closes with the metrics used to judge that project's result.
+
+#### Project 1: Efficient LLM Fine-Tuning
+
+<p align="center">
+  <img src="output/project1/project1_report_assets/procedure_diagram.svg" alt="Project 1 procedure showing data preparation, QLoRA training, paired evaluation functions, and recorded metrics" width="100%">
+</p>
+
+#### Project 2: RAG Document QA
+
+<p align="center">
+  <img src="output/project2/project2_report_assets/procedure_diagram.svg" alt="Project 2 procedure showing chunking, indexing, HyDE, hybrid retrieval, reranking functions, and recorded metrics" width="100%">
+</p>
+
+#### Project 3: Local LLM Agent System
+
+<p align="center">
+  <img src="output/project3/project3_report_assets/procedure_diagram.svg" alt="Project 3 procedure showing planning, validation, typed tools, policy controls, CrewAI functions, and recorded metrics" width="100%">
+</p>
 
 ## Repository Map
 
@@ -26,7 +49,9 @@ safety boundaries, and documented engineering tradeoffs.
 | [`ai_metrics_and_explanations.pdf`](ai_metrics_and_explanations.pdf) | Explanation of the resume improvement claims and concise behavioral interview answers |
 | [`project_debug_log.md`](project_debug_log.md) | Symptoms, root causes, fixes, affected cells, and verification notes from development |
 | [`background/`](background/) | Graduate-level explanations of the concepts, mathematics, evaluation methods, and tradeoffs behind each project |
+| [`background/method_comparision.md`](background/method_comparision.md) | Within-project comparisons of implemented methods, functions, metrics, alternatives, and replacement tradeoffs |
 | [`tools/`](tools/) | Report generators and reproducible notebook-update utilities |
+| [`tools/generate_procedure_diagrams.py`](tools/generate_procedure_diagrams.py) | Rebuilds the three full-width SVG procedure diagrams using only the Python standard library |
 | [`.gitignore`](.gitignore) | Excludes local dependencies, caches, temporary renders, secrets, and local helper files |
 | [`.gitattributes`](.gitattributes) | Marks PDF and PNG artifacts as binary Git content |
 
@@ -41,6 +66,7 @@ safety boundaries, and documented engineering tradeoffs.
 | [`output/project1/project1_report_assets/data_quality.png`](output/project1/project1_report_assets/data_quality.png) | Dataset cleaning and split visualization |
 | [`output/project1/project1_report_assets/training_dynamics.png`](output/project1/project1_report_assets/training_dynamics.png) | Training-loss visualization |
 | [`output/project1/project1_report_assets/evaluation_comparison.png`](output/project1/project1_report_assets/evaluation_comparison.png) | Base-versus-tuned evaluation chart |
+| [`output/project1/project1_report_assets/procedure_diagram.svg`](output/project1/project1_report_assets/procedure_diagram.svg) | Full procedure with implemented methods, functions, and evaluation metrics |
 
 ### Project 2 Files
 
@@ -56,6 +82,7 @@ safety boundaries, and documented engineering tradeoffs.
 | [`output/project2/project2_seed42_development_summary.json`](output/project2/project2_seed42_development_summary.json) | Preserved development-run evidence used to diagnose prompt verbosity |
 | [`output/project2/project2_report_assets/quality_metrics.png`](output/project2/project2_report_assets/quality_metrics.png) | Per-metric baseline and advanced comparison |
 | [`output/project2/project2_report_assets/score_latency_tradeoff.png`](output/project2/project2_report_assets/score_latency_tradeoff.png) | Composite-quality and latency comparison |
+| [`output/project2/project2_report_assets/procedure_diagram.svg`](output/project2/project2_report_assets/procedure_diagram.svg) | Full procedure with implemented methods, functions, and evaluation metrics |
 
 ### Project 3 Files
 
@@ -72,6 +99,7 @@ safety boundaries, and documented engineering tradeoffs.
 | [`output/project3/project3_first_run_summary.json`](output/project3/project3_first_run_summary.json) | Preserved development result before the output-budget correction |
 | [`output/project3/project3_report_assets/agent_quality_metrics.png`](output/project3/project3_report_assets/agent_quality_metrics.png) | Agent routing, JSON, task, citation, and safety metrics |
 | [`output/project3/project3_report_assets/strategy_quality.png`](output/project3/project3_report_assets/strategy_quality.png) | Single-agent and CrewAI strategy comparison |
+| [`output/project3/project3_report_assets/procedure_diagram.svg`](output/project3/project3_report_assets/procedure_diagram.svg) | Full procedure with implemented methods, functions, and evaluation metrics |
 
 ## Project 1: LLM Fine-Tuning Pipeline
 
