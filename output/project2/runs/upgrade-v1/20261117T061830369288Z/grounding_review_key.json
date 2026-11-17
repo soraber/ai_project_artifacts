@@ -1,0 +1,1010 @@
+{
+  "review-0000": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 52
+  },
+  "review-0001": {
+    "system": "dense",
+    "example_id": 11
+  },
+  "review-0002": {
+    "system": "hybrid_rerank",
+    "example_id": 40
+  },
+  "review-0003": {
+    "system": "dense",
+    "example_id": 24
+  },
+  "review-0004": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 16
+  },
+  "review-0005": {
+    "system": "dense",
+    "example_id": 50
+  },
+  "review-0006": {
+    "system": "dense",
+    "example_id": 38
+  },
+  "review-0007": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 41
+  },
+  "review-0008": {
+    "system": "hybrid_rerank",
+    "example_id": 60
+  },
+  "review-0009": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 22
+  },
+  "review-0010": {
+    "system": "dense",
+    "example_id": 19
+  },
+  "review-0011": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 29
+  },
+  "review-0012": {
+    "system": "hybrid",
+    "example_id": 1
+  },
+  "review-0013": {
+    "system": "dense",
+    "example_id": 61
+  },
+  "review-0014": {
+    "system": "hybrid_rerank",
+    "example_id": 42
+  },
+  "review-0015": {
+    "system": "hybrid_rerank",
+    "example_id": 3
+  },
+  "review-0016": {
+    "system": "hybrid_rerank",
+    "example_id": 9
+  },
+  "review-0017": {
+    "system": "dense",
+    "example_id": 47
+  },
+  "review-0018": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 18
+  },
+  "review-0019": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 12
+  },
+  "review-0020": {
+    "system": "dense",
+    "example_id": 41
+  },
+  "review-0021": {
+    "system": "dense",
+    "example_id": 12
+  },
+  "review-0022": {
+    "system": "hybrid_rerank",
+    "example_id": 62
+  },
+  "review-0023": {
+    "system": "hybrid_rerank",
+    "example_id": 6
+  },
+  "review-0024": {
+    "system": "hybrid_rerank",
+    "example_id": 41
+  },
+  "review-0025": {
+    "system": "hybrid",
+    "example_id": 37
+  },
+  "review-0026": {
+    "system": "hybrid_rerank",
+    "example_id": 19
+  },
+  "review-0027": {
+    "system": "dense",
+    "example_id": 3
+  },
+  "review-0028": {
+    "system": "dense",
+    "example_id": 30
+  },
+  "review-0029": {
+    "system": "hybrid",
+    "example_id": 5
+  },
+  "review-0030": {
+    "system": "dense",
+    "example_id": 53
+  },
+  "review-0031": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 62
+  },
+  "review-0032": {
+    "system": "hybrid_rerank",
+    "example_id": 10
+  },
+  "review-0033": {
+    "system": "hybrid",
+    "example_id": 28
+  },
+  "review-0034": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 8
+  },
+  "review-0035": {
+    "system": "hybrid",
+    "example_id": 60
+  },
+  "review-0036": {
+    "system": "dense",
+    "example_id": 0
+  },
+  "review-0037": {
+    "system": "dense",
+    "example_id": 56
+  },
+  "review-0038": {
+    "system": "dense",
+    "example_id": 10
+  },
+  "review-0039": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 40
+  },
+  "review-0040": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 56
+  },
+  "review-0041": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 28
+  },
+  "review-0042": {
+    "system": "hybrid",
+    "example_id": 51
+  },
+  "review-0043": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 48
+  },
+  "review-0044": {
+    "system": "hybrid",
+    "example_id": 2
+  },
+  "review-0045": {
+    "system": "hybrid_rerank",
+    "example_id": 26
+  },
+  "review-0046": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 58
+  },
+  "review-0047": {
+    "system": "hybrid",
+    "example_id": 43
+  },
+  "review-0048": {
+    "system": "hybrid_rerank",
+    "example_id": 17
+  },
+  "review-0049": {
+    "system": "hybrid_rerank",
+    "example_id": 34
+  },
+  "review-0050": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 33
+  },
+  "review-0051": {
+    "system": "hybrid",
+    "example_id": 12
+  },
+  "review-0052": {
+    "system": "dense",
+    "example_id": 45
+  },
+  "review-0053": {
+    "system": "hybrid_rerank",
+    "example_id": 53
+  },
+  "review-0054": {
+    "system": "hybrid",
+    "example_id": 10
+  },
+  "review-0055": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 38
+  },
+  "review-0056": {
+    "system": "dense",
+    "example_id": 54
+  },
+  "review-0057": {
+    "system": "hybrid_rerank",
+    "example_id": 21
+  },
+  "review-0058": {
+    "system": "hybrid",
+    "example_id": 8
+  },
+  "review-0059": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 11
+  },
+  "review-0060": {
+    "system": "hybrid_rerank",
+    "example_id": 47
+  },
+  "review-0061": {
+    "system": "hybrid",
+    "example_id": 32
+  },
+  "review-0062": {
+    "system": "hybrid_rerank",
+    "example_id": 23
+  },
+  "review-0063": {
+    "system": "hybrid_rerank",
+    "example_id": 4
+  },
+  "review-0064": {
+    "system": "dense",
+    "example_id": 15
+  },
+  "review-0065": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 54
+  },
+  "review-0066": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 4
+  },
+  "review-0067": {
+    "system": "dense",
+    "example_id": 34
+  },
+  "review-0068": {
+    "system": "dense",
+    "example_id": 42
+  },
+  "review-0069": {
+    "system": "dense",
+    "example_id": 20
+  },
+  "review-0070": {
+    "system": "dense",
+    "example_id": 49
+  },
+  "review-0071": {
+    "system": "hybrid",
+    "example_id": 11
+  },
+  "review-0072": {
+    "system": "hybrid_rerank",
+    "example_id": 43
+  },
+  "review-0073": {
+    "system": "hybrid_rerank",
+    "example_id": 57
+  },
+  "review-0074": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 1
+  },
+  "review-0075": {
+    "system": "hybrid",
+    "example_id": 3
+  },
+  "review-0076": {
+    "system": "hybrid_rerank",
+    "example_id": 37
+  },
+  "review-0077": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 36
+  },
+  "review-0078": {
+    "system": "hybrid_rerank",
+    "example_id": 2
+  },
+  "review-0079": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 17
+  },
+  "review-0080": {
+    "system": "dense",
+    "example_id": 48
+  },
+  "review-0081": {
+    "system": "hybrid",
+    "example_id": 21
+  },
+  "review-0082": {
+    "system": "hybrid_rerank",
+    "example_id": 55
+  },
+  "review-0083": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 2
+  },
+  "review-0084": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 0
+  },
+  "review-0085": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 24
+  },
+  "review-0086": {
+    "system": "hybrid",
+    "example_id": 4
+  },
+  "review-0087": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 13
+  },
+  "review-0088": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 6
+  },
+  "review-0089": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 27
+  },
+  "review-0090": {
+    "system": "hybrid_rerank",
+    "example_id": 11
+  },
+  "review-0091": {
+    "system": "hybrid",
+    "example_id": 31
+  },
+  "review-0092": {
+    "system": "hybrid_rerank",
+    "example_id": 8
+  },
+  "review-0093": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 20
+  },
+  "review-0094": {
+    "system": "dense",
+    "example_id": 40
+  },
+  "review-0095": {
+    "system": "hybrid",
+    "example_id": 55
+  },
+  "review-0096": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 57
+  },
+  "review-0097": {
+    "system": "hybrid",
+    "example_id": 13
+  },
+  "review-0098": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 44
+  },
+  "review-0099": {
+    "system": "hybrid_rerank",
+    "example_id": 39
+  },
+  "review-0100": {
+    "system": "dense",
+    "example_id": 31
+  },
+  "review-0101": {
+    "system": "hybrid_rerank",
+    "example_id": 58
+  },
+  "review-0102": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 25
+  },
+  "review-0103": {
+    "system": "hybrid_rerank",
+    "example_id": 51
+  },
+  "review-0104": {
+    "system": "hybrid",
+    "example_id": 56
+  },
+  "review-0105": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 14
+  },
+  "review-0106": {
+    "system": "hybrid",
+    "example_id": 39
+  },
+  "review-0107": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 59
+  },
+  "review-0108": {
+    "system": "hybrid_rerank",
+    "example_id": 44
+  },
+  "review-0109": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 10
+  },
+  "review-0110": {
+    "system": "hybrid",
+    "example_id": 9
+  },
+  "review-0111": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 26
+  },
+  "review-0112": {
+    "system": "dense",
+    "example_id": 1
+  },
+  "review-0113": {
+    "system": "dense",
+    "example_id": 21
+  },
+  "review-0114": {
+    "system": "dense",
+    "example_id": 17
+  },
+  "review-0115": {
+    "system": "dense",
+    "example_id": 13
+  },
+  "review-0116": {
+    "system": "hybrid_rerank",
+    "example_id": 25
+  },
+  "review-0117": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 15
+  },
+  "review-0118": {
+    "system": "hybrid",
+    "example_id": 26
+  },
+  "review-0119": {
+    "system": "hybrid",
+    "example_id": 24
+  },
+  "review-0120": {
+    "system": "hybrid",
+    "example_id": 16
+  },
+  "review-0121": {
+    "system": "dense",
+    "example_id": 14
+  },
+  "review-0122": {
+    "system": "hybrid_rerank",
+    "example_id": 15
+  },
+  "review-0123": {
+    "system": "dense",
+    "example_id": 22
+  },
+  "review-0124": {
+    "system": "dense",
+    "example_id": 55
+  },
+  "review-0125": {
+    "system": "hybrid_rerank",
+    "example_id": 54
+  },
+  "review-0126": {
+    "system": "hybrid",
+    "example_id": 42
+  },
+  "review-0127": {
+    "system": "dense",
+    "example_id": 23
+  },
+  "review-0128": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 42
+  },
+  "review-0129": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 47
+  },
+  "review-0130": {
+    "system": "dense",
+    "example_id": 9
+  },
+  "review-0131": {
+    "system": "dense",
+    "example_id": 2
+  },
+  "review-0132": {
+    "system": "hybrid",
+    "example_id": 53
+  },
+  "review-0133": {
+    "system": "hybrid",
+    "example_id": 17
+  },
+  "review-0134": {
+    "system": "hybrid",
+    "example_id": 18
+  },
+  "review-0135": {
+    "system": "hybrid_rerank",
+    "example_id": 12
+  },
+  "review-0136": {
+    "system": "hybrid",
+    "example_id": 27
+  },
+  "review-0137": {
+    "system": "hybrid",
+    "example_id": 48
+  },
+  "review-0138": {
+    "system": "dense",
+    "example_id": 58
+  },
+  "review-0139": {
+    "system": "dense",
+    "example_id": 62
+  },
+  "review-0140": {
+    "system": "hybrid",
+    "example_id": 58
+  },
+  "review-0141": {
+    "system": "hybrid",
+    "example_id": 19
+  },
+  "review-0142": {
+    "system": "dense",
+    "example_id": 44
+  },
+  "review-0143": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 35
+  },
+  "review-0144": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 51
+  },
+  "review-0145": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 34
+  },
+  "review-0146": {
+    "system": "hybrid_rerank",
+    "example_id": 38
+  },
+  "review-0147": {
+    "system": "dense",
+    "example_id": 29
+  },
+  "review-0148": {
+    "system": "hybrid_rerank",
+    "example_id": 7
+  },
+  "review-0149": {
+    "system": "hybrid",
+    "example_id": 14
+  },
+  "review-0150": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 30
+  },
+  "review-0151": {
+    "system": "hybrid",
+    "example_id": 50
+  },
+  "review-0152": {
+    "system": "hybrid",
+    "example_id": 30
+  },
+  "review-0153": {
+    "system": "dense",
+    "example_id": 27
+  },
+  "review-0154": {
+    "system": "hybrid",
+    "example_id": 61
+  },
+  "review-0155": {
+    "system": "hybrid",
+    "example_id": 33
+  },
+  "review-0156": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 3
+  },
+  "review-0157": {
+    "system": "dense",
+    "example_id": 8
+  },
+  "review-0158": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 60
+  },
+  "review-0159": {
+    "system": "dense",
+    "example_id": 46
+  },
+  "review-0160": {
+    "system": "hybrid_rerank",
+    "example_id": 46
+  },
+  "review-0161": {
+    "system": "hybrid_rerank",
+    "example_id": 33
+  },
+  "review-0162": {
+    "system": "hybrid_rerank",
+    "example_id": 50
+  },
+  "review-0163": {
+    "system": "hybrid_rerank",
+    "example_id": 30
+  },
+  "review-0164": {
+    "system": "dense",
+    "example_id": 36
+  },
+  "review-0165": {
+    "system": "hybrid",
+    "example_id": 59
+  },
+  "review-0166": {
+    "system": "hybrid_rerank",
+    "example_id": 16
+  },
+  "review-0167": {
+    "system": "dense",
+    "example_id": 33
+  },
+  "review-0168": {
+    "system": "dense",
+    "example_id": 51
+  },
+  "review-0169": {
+    "system": "hybrid_rerank",
+    "example_id": 52
+  },
+  "review-0170": {
+    "system": "dense",
+    "example_id": 59
+  },
+  "review-0171": {
+    "system": "hybrid_rerank",
+    "example_id": 32
+  },
+  "review-0172": {
+    "system": "hybrid",
+    "example_id": 44
+  },
+  "review-0173": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 7
+  },
+  "review-0174": {
+    "system": "hybrid_rerank",
+    "example_id": 31
+  },
+  "review-0175": {
+    "system": "dense",
+    "example_id": 35
+  },
+  "review-0176": {
+    "system": "dense",
+    "example_id": 37
+  },
+  "review-0177": {
+    "system": "hybrid",
+    "example_id": 25
+  },
+  "review-0178": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 5
+  },
+  "review-0179": {
+    "system": "hybrid_rerank",
+    "example_id": 27
+  },
+  "review-0180": {
+    "system": "hybrid_rerank",
+    "example_id": 29
+  },
+  "review-0181": {
+    "system": "hybrid",
+    "example_id": 23
+  },
+  "review-0182": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 23
+  },
+  "review-0183": {
+    "system": "hybrid",
+    "example_id": 45
+  },
+  "review-0184": {
+    "system": "hybrid_rerank",
+    "example_id": 1
+  },
+  "review-0185": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 19
+  },
+  "review-0186": {
+    "system": "hybrid",
+    "example_id": 36
+  },
+  "review-0187": {
+    "system": "hybrid_rerank",
+    "example_id": 45
+  },
+  "review-0188": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 45
+  },
+  "review-0189": {
+    "system": "hybrid_rerank",
+    "example_id": 61
+  },
+  "review-0190": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 9
+  },
+  "review-0191": {
+    "system": "hybrid",
+    "example_id": 29
+  },
+  "review-0192": {
+    "system": "hybrid",
+    "example_id": 54
+  },
+  "review-0193": {
+    "system": "dense",
+    "example_id": 18
+  },
+  "review-0194": {
+    "system": "hybrid",
+    "example_id": 34
+  },
+  "review-0195": {
+    "system": "hybrid_rerank",
+    "example_id": 59
+  },
+  "review-0196": {
+    "system": "dense",
+    "example_id": 5
+  },
+  "review-0197": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 21
+  },
+  "review-0198": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 46
+  },
+  "review-0199": {
+    "system": "dense",
+    "example_id": 4
+  },
+  "review-0200": {
+    "system": "hybrid",
+    "example_id": 40
+  },
+  "review-0201": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 61
+  },
+  "review-0202": {
+    "system": "hybrid",
+    "example_id": 47
+  },
+  "review-0203": {
+    "system": "hybrid_rerank",
+    "example_id": 24
+  },
+  "review-0204": {
+    "system": "hybrid_rerank",
+    "example_id": 22
+  },
+  "review-0205": {
+    "system": "hybrid",
+    "example_id": 22
+  },
+  "review-0206": {
+    "system": "dense",
+    "example_id": 16
+  },
+  "review-0207": {
+    "system": "dense",
+    "example_id": 25
+  },
+  "review-0208": {
+    "system": "hybrid_rerank",
+    "example_id": 13
+  },
+  "review-0209": {
+    "system": "hybrid",
+    "example_id": 20
+  },
+  "review-0210": {
+    "system": "dense",
+    "example_id": 43
+  },
+  "review-0211": {
+    "system": "hybrid",
+    "example_id": 57
+  },
+  "review-0212": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 43
+  },
+  "review-0213": {
+    "system": "dense",
+    "example_id": 52
+  },
+  "review-0214": {
+    "system": "hybrid",
+    "example_id": 0
+  },
+  "review-0215": {
+    "system": "hybrid_rerank",
+    "example_id": 28
+  },
+  "review-0216": {
+    "system": "hybrid",
+    "example_id": 6
+  },
+  "review-0217": {
+    "system": "hybrid",
+    "example_id": 52
+  },
+  "review-0218": {
+    "system": "hybrid_rerank",
+    "example_id": 18
+  },
+  "review-0219": {
+    "system": "dense",
+    "example_id": 7
+  },
+  "review-0220": {
+    "system": "hybrid_rerank",
+    "example_id": 5
+  },
+  "review-0221": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 39
+  },
+  "review-0222": {
+    "system": "hybrid_rerank",
+    "example_id": 0
+  },
+  "review-0223": {
+    "system": "hybrid",
+    "example_id": 15
+  },
+  "review-0224": {
+    "system": "dense",
+    "example_id": 28
+  },
+  "review-0225": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 37
+  },
+  "review-0226": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 49
+  },
+  "review-0227": {
+    "system": "hybrid_rerank",
+    "example_id": 48
+  },
+  "review-0228": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 31
+  },
+  "review-0229": {
+    "system": "hybrid_rerank",
+    "example_id": 49
+  },
+  "review-0230": {
+    "system": "hybrid",
+    "example_id": 49
+  },
+  "review-0231": {
+    "system": "hybrid",
+    "example_id": 46
+  },
+  "review-0232": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 53
+  },
+  "review-0233": {
+    "system": "hybrid_rerank",
+    "example_id": 35
+  },
+  "review-0234": {
+    "system": "hybrid_rerank",
+    "example_id": 36
+  },
+  "review-0235": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 50
+  },
+  "review-0236": {
+    "system": "dense",
+    "example_id": 26
+  },
+  "review-0237": {
+    "system": "hybrid",
+    "example_id": 35
+  },
+  "review-0238": {
+    "system": "dense",
+    "example_id": 39
+  },
+  "review-0239": {
+    "system": "hybrid",
+    "example_id": 38
+  },
+  "review-0240": {
+    "system": "dense",
+    "example_id": 57
+  },
+  "review-0241": {
+    "system": "hybrid_rerank",
+    "example_id": 14
+  },
+  "review-0242": {
+    "system": "hybrid_rerank",
+    "example_id": 56
+  },
+  "review-0243": {
+    "system": "dense",
+    "example_id": 6
+  },
+  "review-0244": {
+    "system": "hybrid",
+    "example_id": 62
+  },
+  "review-0245": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 55
+  },
+  "review-0246": {
+    "system": "hybrid",
+    "example_id": 41
+  },
+  "review-0247": {
+    "system": "dense",
+    "example_id": 32
+  },
+  "review-0248": {
+    "system": "dense",
+    "example_id": 60
+  },
+  "review-0249": {
+    "system": "hyde_hybrid_rerank",
+    "example_id": 32
+  },
+  "review-0250": {
+    "system": "hybrid_rerank",
+    "example_id": 20
+  },
+  "review-0251": {
+    "system": "hybrid",
+    "example_id": 7
+  }
+}

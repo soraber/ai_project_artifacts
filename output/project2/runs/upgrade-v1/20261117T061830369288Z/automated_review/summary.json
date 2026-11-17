@@ -1,0 +1,98 @@
+[
+  {
+    "system": "dense",
+    "stratum": "authored_absence_probe",
+    "attempted": 3,
+    "rated": 3,
+    "review_failures": 0,
+    "claims": 0,
+    "supported_claim_fraction": null,
+    "uncertain_claims": 0,
+    "abstentions": 3,
+    "mean_relevance": 1.3333333333333333
+  },
+  {
+    "system": "dense",
+    "stratum": "natural_qa",
+    "attempted": 7,
+    "rated": 7,
+    "review_failures": 0,
+    "claims": 6,
+    "supported_claim_fraction": 1.0,
+    "uncertain_claims": 0,
+    "abstentions": 3,
+    "mean_relevance": 1.8571428571428572
+  },
+  {
+    "system": "hybrid",
+    "stratum": "authored_absence_probe",
+    "attempted": 3,
+    "rated": 3,
+    "review_failures": 0,
+    "claims": 0,
+    "supported_claim_fraction": null,
+    "uncertain_claims": 0,
+    "abstentions": 3,
+    "mean_relevance": 2
+  },
+  {
+    "system": "hybrid",
+    "stratum": "natural_qa",
+    "attempted": 8,
+    "rated": 7,
+    "review_failures": 1,
+    "claims": 5,
+    "supported_claim_fraction": 1.0,
+    "uncertain_claims": 0,
+    "abstentions": 3,
+    "mean_relevance": 1.5714285714285714
+  },
+  {
+    "system": "hybrid_rerank",
+    "stratum": "authored_absence_probe",
+    "attempted": 3,
+    "rated": 3,
+    "review_failures": 0,
+    "claims": 0,
+    "supported_claim_fraction": null,
+    "uncertain_claims": 0,
+    "abstentions": 3,
+    "mean_relevance": 1.6666666666666667
+  },
+  {
+    "system": "hybrid_rerank",
+    "stratum": "natural_qa",
+    "attempted": 8,
+    "rated": 7,
+    "review_failures": 1,
+    "claims": 8,
+    "supported_claim_fraction": 1.0,
+    "uncertain_claims": 0,
+    "abstentions": 2,
+    "mean_relevance": 2
+  },
+  {
+    "system": "hyde_hybrid_rerank",
+    "stratum": "authored_absence_probe",
+    "attempted": 3,
+    "rated": 3,
+    "review_failures": 0,
+    "claims": 0,
+    "supported_claim_fraction": null,
+    "uncertain_claims": 0,
+    "abstentions": 3,
+    "mean_relevance": 2
+  },
+  {
+    "system": "hyde_hybrid_rerank",
+    "stratum": "natural_qa",
+    "attempted": 8,
+    "rated": 7,
+    "review_failures": 1,
+    "claims": 8,
+    "supported_claim_fraction": 1.0,
+    "uncertain_claims": 0,
+    "abstentions": 2,
+    "mean_relevance": 2
+  }
+]

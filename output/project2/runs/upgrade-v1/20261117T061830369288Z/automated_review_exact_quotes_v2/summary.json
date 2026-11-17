@@ -1,0 +1,98 @@
+[
+  {
+    "system": "dense",
+    "stratum": "authored_absence_probe",
+    "attempted": 3,
+    "rated": 3,
+    "review_failures": 0,
+    "claims": 0,
+    "supported_claim_fraction": null,
+    "uncertain_claims": 0,
+    "abstentions": 3,
+    "mean_relevance": 1.3333333333333333
+  },
+  {
+    "system": "dense",
+    "stratum": "natural_qa",
+    "attempted": 12,
+    "rated": 12,
+    "review_failures": 0,
+    "claims": 10,
+    "supported_claim_fraction": 1.0,
+    "uncertain_claims": 0,
+    "abstentions": 5,
+    "mean_relevance": 1.75
+  },
+  {
+    "system": "hybrid",
+    "stratum": "authored_absence_probe",
+    "attempted": 3,
+    "rated": 3,
+    "review_failures": 0,
+    "claims": 0,
+    "supported_claim_fraction": null,
+    "uncertain_claims": 0,
+    "abstentions": 3,
+    "mean_relevance": 2
+  },
+  {
+    "system": "hybrid",
+    "stratum": "natural_qa",
+    "attempted": 12,
+    "rated": 12,
+    "review_failures": 0,
+    "claims": 8,
+    "supported_claim_fraction": 1.0,
+    "uncertain_claims": 0,
+    "abstentions": 6,
+    "mean_relevance": 1.5833333333333333
+  },
+  {
+    "system": "hybrid_rerank",
+    "stratum": "authored_absence_probe",
+    "attempted": 3,
+    "rated": 3,
+    "review_failures": 0,
+    "claims": 0,
+    "supported_claim_fraction": null,
+    "uncertain_claims": 0,
+    "abstentions": 3,
+    "mean_relevance": 1.6666666666666667
+  },
+  {
+    "system": "hybrid_rerank",
+    "stratum": "natural_qa",
+    "attempted": 12,
+    "rated": 12,
+    "review_failures": 0,
+    "claims": 21,
+    "supported_claim_fraction": 0.7619047619047619,
+    "uncertain_claims": 1,
+    "abstentions": 4,
+    "mean_relevance": 1.8333333333333333
+  },
+  {
+    "system": "hyde_hybrid_rerank",
+    "stratum": "authored_absence_probe",
+    "attempted": 3,
+    "rated": 3,
+    "review_failures": 0,
+    "claims": 0,
+    "supported_claim_fraction": null,
+    "uncertain_claims": 0,
+    "abstentions": 3,
+    "mean_relevance": 2
+  },
+  {
+    "system": "hyde_hybrid_rerank",
+    "stratum": "natural_qa",
+    "attempted": 12,
+    "rated": 12,
+    "review_failures": 0,
+    "claims": 20,
+    "supported_claim_fraction": 0.75,
+    "uncertain_claims": 1,
+    "abstentions": 4,
+    "mean_relevance": 1.8333333333333333
+  }
+]

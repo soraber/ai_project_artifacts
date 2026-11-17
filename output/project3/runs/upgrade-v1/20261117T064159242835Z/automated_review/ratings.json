@@ -1,0 +1,407 @@
+[
+  {
+    "review_id": "candidate-000",
+    "case_id": "missing_operating_inputs",
+    "system": "self_review",
+    "error": null,
+    "request_sha256": "88137f72ed934f2098e356e26af9c3af09fb0c71c379078d15c8f4aafa19dbfc",
+    "status": "rated",
+    "rating": {
+      "source_support": {
+        "score": 1,
+        "reason": "It accurately reflects several undecided inputs from constraints.md, but provides no required filename citations and makes unsupported claims about deficiencies in an unspecified memo."
+      },
+      "constraint_adherence": {
+        "score": 0,
+        "reason": "It does not create the required 30-day memo and omits positioning, audience, three channels, weekly plan, owners, budget structure, privacy safeguards, human approval controls, and source citations."
+      },
+      "actionability": {
+        "score": 0,
+        "reason": "The recommendations are generic and lack channel tactics, week-by-week actions, assigned owners, budget, proposed KPI targets, and concrete risks or mitigations."
+      },
+      "uncertainty_handling": {
+        "score": 2,
+        "reason": "It explicitly requests decisions on budget, region, staffing, and launch approval, keeps finalization conditional, and does not invent pilot results."
+      }
+    },
+    "usage": {
+      "input_tokens": 991,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 346,
+      "output_tokens_details": {
+        "reasoning_tokens": 167
+      },
+      "total_tokens": 1337
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"source_support\":{\"score\":1,\"reason\":\"It accurately reflects several undecided inputs from constraints.md, but provides no required filename citations and makes unsupported claims about deficiencies in an unspecified memo.\"},\"constraint_adherence\":{\"score\":0,\"reason\":\"It does not create the required 30-day memo and omits positioning, audience, three channels, weekly plan, owners, budget structure, privacy safeguards, human approval controls, and source citations.\"},\"actionability\":{\"score\":0,\"reason\":\"The recommendations are generic and lack channel tactics, week-by-week actions, assigned owners, budget, proposed KPI targets, and concrete risks or mitigations.\"},\"uncertainty_handling\":{\"score\":2,\"reason\":\"It explicitly requests decisions on budget, region, staffing, and launch approval, keeps finalization conditional, and does not invent pilot results.\"}}",
+    "seconds": 5.245850624982268
+  },
+  {
+    "review_id": "candidate-001",
+    "case_id": "small_team_no_paid_media",
+    "system": "self_review",
+    "error": null,
+    "request_sha256": "ff4d3d88b74091a9dca9f0f1afe5b1c515368e6ebd438c17d681c9be0d194d41",
+    "status": "rated",
+    "rating": {
+      "source_support": {
+        "score": 0,
+        "reason": "Material unsupported claims include early-adopter testimonials, a 30-day product trial, and $0 CAC; the listed filenames are not tied to specific claims, and the budget line items sum to $3,200 rather than the stated $3,500."
+      },
+      "constraint_adherence": {
+        "score": 0,
+        "reason": "Although spend is below $4,000 and paid media is avoided, the memo omits the required two-region scope, customer-PII safeguards, per-output human approval controls, and clear opt-in handling for outreach."
+      },
+      "actionability": {
+        "score": 1,
+        "reason": "It provides weekly activities, channels, proposed measures, and a budget, but owners are placeholders without task assignments, regional execution is unspecified, and several KPI targets lack measurement plans."
+      },
+      "uncertainty_handling": {
+        "score": 0,
+        "reason": "It does not request essential missing inputs such as owner names, pilot regions, baselines, or availability/permission for testimonials, and instead makes dependent actions unconditional."
+      }
+    },
+    "usage": {
+      "input_tokens": 1511,
+      "input_tokens_details": {
+        "cache_write_tokens": 1508,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1508
+        }
+      },
+      "output_tokens": 522,
+      "output_tokens_details": {
+        "reasoning_tokens": 305
+      },
+      "total_tokens": 2033
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"source_support\":{\"score\":0,\"reason\":\"Material unsupported claims include early-adopter testimonials, a 30-day product trial, and $0 CAC; the listed filenames are not tied to specific claims, and the budget line items sum to $3,200 rather than the stated $3,500.\"},\"constraint_adherence\":{\"score\":0,\"reason\":\"Although spend is below $4,000 and paid media is avoided, the memo omits the required two-region scope, customer-PII safeguards, per-output human approval controls, and clear opt-in handling for outreach.\"},\"actionability\":{\"score\":1,\"reason\":\"It provides weekly activities, channels, proposed measures, and a budget, but owners are placeholders without task assignments, regional execution is unspecified, and several KPI targets lack measurement plans.\"},\"uncertainty_handling\":{\"score\":0,\"reason\":\"It does not request essential missing inputs such as owner names, pilot regions, baselines, or availability/permission for testimonials, and instead makes dependent actions unconditional.\"}}",
+    "seconds": 7.965694957994856
+  },
+  {
+    "review_id": "candidate-002",
+    "case_id": "standard_launch",
+    "system": "one_shot",
+    "error": null,
+    "request_sha256": "7dafab8c61c5a7a82fc977f2330a8af8a0e61077fbd67faf09b13a7ae987898a",
+    "status": "rated",
+    "rating": {
+      "source_support": {
+        "score": 1,
+        "reason": "Core product, audience, constraints, and metric categories are source-backed, and KPI values are framed as proposed; however, efficiency/outcome language, case studies/testimonials, and generic filename citations are not clearly tied to supporting evidence."
+      },
+      "constraint_adherence": {
+        "score": 0,
+        "reason": "The plan sets a $12,000 budget despite the required spend being strictly below $12,000, omits the two-region scope, and does not require human approval for every customer-facing AI output; paid media timing and PII restrictions are respected."
+      },
+      "actionability": {
+        "score": 1,
+        "reason": "It provides three channels, weekly activities, risks, and proposed KPIs, but owner names, dates, regional scope, channel-level responsibilities, and budget allocation remain unspecified."
+      },
+      "uncertainty_handling": {
+        "score": 1,
+        "reason": "Placeholders acknowledge missing owners and dates, and no measured results are invented, but the memo does not explicitly request these essential inputs or make dependent launch actions conditional on receiving them."
+      }
+    },
+    "usage": {
+      "input_tokens": 1377,
+      "input_tokens_details": {
+        "cache_write_tokens": 1374,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1374
+        }
+      },
+      "output_tokens": 452,
+      "output_tokens_details": {
+        "reasoning_tokens": 231
+      },
+      "total_tokens": 1829
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"source_support\":{\"score\":1,\"reason\":\"Core product, audience, constraints, and metric categories are source-backed, and KPI values are framed as proposed; however, efficiency/outcome language, case studies/testimonials, and generic filename citations are not clearly tied to supporting evidence.\"},\"constraint_adherence\":{\"score\":0,\"reason\":\"The plan sets a $12,000 budget despite the required spend being strictly below $12,000, omits the two-region scope, and does not require human approval for every customer-facing AI output; paid media timing and PII restrictions are respected.\"},\"actionability\":{\"score\":1,\"reason\":\"It provides three channels, weekly activities, risks, and proposed KPIs, but owner names, dates, regional scope, channel-level responsibilities, and budget allocation remain unspecified.\"},\"uncertainty_handling\":{\"score\":1,\"reason\":\"Placeholders acknowledge missing owners and dates, and no measured results are invented, but the memo does not explicitly request these essential inputs or make dependent launch actions conditional on receiving them.\"}}",
+    "seconds": 6.032086541992612
+  },
+  {
+    "review_id": "candidate-003",
+    "case_id": "missing_operating_inputs",
+    "system": "one_shot",
+    "error": null,
+    "request_sha256": "3df58fd32de706f2145346e6e4e02f1a3fae30a718309e6dcb2f66346208c9d1",
+    "status": "rated",
+    "rating": {
+      "source_support": {
+        "score": 1,
+        "reason": "Audience and KPI claims align with audience.md and metrics.md, but efficacy language such as \u201creduce response times\u201d is not framed as an unvalidated goal, and citations are not tied to specific claims."
+      },
+      "constraint_adherence": {
+        "score": 0,
+        "reason": "The memo omits the PII prohibition and mandatory human approval requirement from constraints.md, while its schedule and paid-ad language imply execution before launch and spend approvals."
+      },
+      "actionability": {
+        "score": 1,
+        "reason": "It provides channels, weekly activities, role owners, and measures, but owners remain unnamed, KPI targets are absent, and the budget and approval gates are not operationalized."
+      },
+      "uncertainty_handling": {
+        "score": 1,
+        "reason": "It identifies budget, region, staffing, and launch approval as undecided and calls the memo conditional, but it does not explicitly request each decision and still states dependent launch and spend actions definitively."
+      }
+    },
+    "usage": {
+      "input_tokens": 1341,
+      "input_tokens_details": {
+        "cache_write_tokens": 1338,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1338
+        }
+      },
+      "output_tokens": 536,
+      "output_tokens_details": {
+        "reasoning_tokens": 336
+      },
+      "total_tokens": 1877
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"source_support\":{\"score\":1,\"reason\":\"Audience and KPI claims align with audience.md and metrics.md, but efficacy language such as \u201creduce response times\u201d is not framed as an unvalidated goal, and citations are not tied to specific claims.\"},\"constraint_adherence\":{\"score\":0,\"reason\":\"The memo omits the PII prohibition and mandatory human approval requirement from constraints.md, while its schedule and paid-ad language imply execution before launch and spend approvals.\"},\"actionability\":{\"score\":1,\"reason\":\"It provides channels, weekly activities, role owners, and measures, but owners remain unnamed, KPI targets are absent, and the budget and approval gates are not operationalized.\"},\"uncertainty_handling\":{\"score\":1,\"reason\":\"It identifies budget, region, staffing, and launch approval as undecided and calls the memo conditional, but it does not explicitly request each decision and still states dependent launch and spend actions definitively.\"}}",
+    "seconds": 8.608882417029236
+  },
+  {
+    "review_id": "candidate-004",
+    "case_id": "standard_launch",
+    "system": "crewai",
+    "error": null,
+    "request_sha256": "8cd4d80f545d9052869bf84ccc9d99b5939149d7bdbcf846a58f6152fe835f6e",
+    "status": "rated",
+    "rating": {
+      "source_support": {
+        "score": 0,
+        "reason": "Several material claims/assets are unsupported, including \u201caccuracy and reliability,\u201d a successful case study, testimonials, and early-adopter results; the memo also omits required source filename citations."
+      },
+      "constraint_adherence": {
+        "score": 0,
+        "reason": "The $12,000 budget is not below the cap, paid-media timing is not restricted to after week 2, and the plan omits the two-region scope, mandatory human approval, PII prohibition, and unsupported-ROI safeguards (constraints.md)."
+      },
+      "actionability": {
+        "score": 1,
+        "reason": "It provides channels, weekly activities, broad owners, a budget, and proposed KPIs, but ownership is not task-specific and several actions depend on unverified case studies, testimonials, trial readiness, and webinar assets."
+      },
+      "uncertainty_handling": {
+        "score": 0,
+        "reason": "It neither requests missing essentials such as the two pilot regions and available proof assets nor makes dependent activities conditional; instead, it assumes successful implementations, results, and early adopters exist."
+      }
+    },
+    "usage": {
+      "input_tokens": 1511,
+      "input_tokens_details": {
+        "cache_write_tokens": 1508,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1508
+        }
+      },
+      "output_tokens": 391,
+      "output_tokens_details": {
+        "reasoning_tokens": 169
+      },
+      "total_tokens": 1902
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"source_support\":{\"score\":0,\"reason\":\"Several material claims/assets are unsupported, including \u201caccuracy and reliability,\u201d a successful case study, testimonials, and early-adopter results; the memo also omits required source filename citations.\"},\"constraint_adherence\":{\"score\":0,\"reason\":\"The $12,000 budget is not below the cap, paid-media timing is not restricted to after week 2, and the plan omits the two-region scope, mandatory human approval, PII prohibition, and unsupported-ROI safeguards (constraints.md).\"},\"actionability\":{\"score\":1,\"reason\":\"It provides channels, weekly activities, broad owners, a budget, and proposed KPIs, but ownership is not task-specific and several actions depend on unverified case studies, testimonials, trial readiness, and webinar assets.\"},\"uncertainty_handling\":{\"score\":0,\"reason\":\"It neither requests missing essentials such as the two pilot regions and available proof assets nor makes dependent activities conditional; instead, it assumes successful implementations, results, and early adopters exist.\"}}",
+    "seconds": 5.400952708965633
+  },
+  {
+    "review_id": "candidate-005",
+    "case_id": "missing_operating_inputs",
+    "system": "crewai",
+    "error": null,
+    "request_sha256": "41e853ea8c7f59f305c2d812f62eb8e9700a42ae0e40c94f98bc1be34b73e31d",
+    "status": "rated",
+    "rating": {
+      "source_support": {
+        "score": 1,
+        "reason": "Core product, audience, constraints, and metric categories cite the supplied files, and numeric targets are labeled proposed; however, efficiency/reduction benefits and testimonials are unsupported by the sources."
+      },
+      "constraint_adherence": {
+        "score": 0,
+        "reason": "The plan schedules campaigns and sponsored posts despite approval, budget, region, and staffing being undecided; privacy and human-approval requirements are only mentioned as a later mitigation rather than enforced as launch gates."
+      },
+      "actionability": {
+        "score": 1,
+        "reason": "It provides three channels and a weekly outline, but owners remain placeholders, tasks lack firm milestones, budget is unresolved, and the operational KPI plan is fragmented into an unfinished audit section."
+      },
+      "uncertainty_handling": {
+        "score": 1,
+        "reason": "It acknowledges missing budget, region, staffing, approval, and measured pilot data, but does not explicitly request each input or make spend and launch activities conditional on receiving them."
+      }
+    },
+    "usage": {
+      "input_tokens": 1503,
+      "input_tokens_details": {
+        "cache_write_tokens": 1500,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1500
+        }
+      },
+      "output_tokens": 445,
+      "output_tokens_details": {
+        "reasoning_tokens": 244
+      },
+      "total_tokens": 1948
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"source_support\":{\"score\":1,\"reason\":\"Core product, audience, constraints, and metric categories cite the supplied files, and numeric targets are labeled proposed; however, efficiency/reduction benefits and testimonials are unsupported by the sources.\"},\"constraint_adherence\":{\"score\":0,\"reason\":\"The plan schedules campaigns and sponsored posts despite approval, budget, region, and staffing being undecided; privacy and human-approval requirements are only mentioned as a later mitigation rather than enforced as launch gates.\"},\"actionability\":{\"score\":1,\"reason\":\"It provides three channels and a weekly outline, but owners remain placeholders, tasks lack firm milestones, budget is unresolved, and the operational KPI plan is fragmented into an unfinished audit section.\"},\"uncertainty_handling\":{\"score\":1,\"reason\":\"It acknowledges missing budget, region, staffing, approval, and measured pilot data, but does not explicitly request each input or make spend and launch activities conditional on receiving them.\"}}",
+    "seconds": 7.388848792004865
+  },
+  {
+    "review_id": "candidate-006",
+    "case_id": "small_team_no_paid_media",
+    "system": "one_shot",
+    "error": null,
+    "request_sha256": "6c3015a5dd696ad35103a05c51cbc3addf441ebce3190d4e2dccc4e170d8fbfc",
+    "status": "rated",
+    "rating": {
+      "source_support": {
+        "score": 1,
+        "reason": "Core product, audience, pain points, channels, and metric categories are source-supported, but early-adopter testimonials are assumed without evidence, CAC of $0 is unsupported, and citations are not tied to specific claims."
+      },
+      "constraint_adherence": {
+        "score": 1,
+        "reason": "The plan stays below the $4,000 cap and avoids paid media, but omits the required two-region scope, PII safeguards, and explicit human approval for every customer-facing AI output; the itemized budget also totals $3,200 rather than $3,500."
+      },
+      "actionability": {
+        "score": 1,
+        "reason": "It provides weekly activities, three channels, proposed metrics, and a budget, but owners remain placeholders, regions are unspecified, several activities lack approval/privacy procedures, and a 30-day trial launched in week 4 extends beyond the stated pilot window."
+      },
+      "uncertainty_handling": {
+        "score": 0,
+        "reason": "It does not explicitly request essential missing inputs such as the two regions, named owners, baselines, or available proof points, and it assumes early-adopter success stories while making dependent actions unconditional."
+      }
+    },
+    "usage": {
+      "input_tokens": 1446,
+      "input_tokens_details": {
+        "cache_write_tokens": 1443,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1443
+        }
+      },
+      "output_tokens": 610,
+      "output_tokens_details": {
+        "reasoning_tokens": 368
+      },
+      "total_tokens": 2056
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"source_support\":{\"score\":1,\"reason\":\"Core product, audience, pain points, channels, and metric categories are source-supported, but early-adopter testimonials are assumed without evidence, CAC of $0 is unsupported, and citations are not tied to specific claims.\"},\"constraint_adherence\":{\"score\":1,\"reason\":\"The plan stays below the $4,000 cap and avoids paid media, but omits the required two-region scope, PII safeguards, and explicit human approval for every customer-facing AI output; the itemized budget also totals $3,200 rather than $3,500.\"},\"actionability\":{\"score\":1,\"reason\":\"It provides weekly activities, three channels, proposed metrics, and a budget, but owners remain placeholders, regions are unspecified, several activities lack approval/privacy procedures, and a 30-day trial launched in week 4 extends beyond the stated pilot window.\"},\"uncertainty_handling\":{\"score\":0,\"reason\":\"It does not explicitly request essential missing inputs such as the two regions, named owners, baselines, or available proof points, and it assumes early-adopter success stories while making dependent actions unconditional.\"}}",
+    "seconds": 7.566331333015114
+  },
+  {
+    "review_id": "candidate-007",
+    "case_id": "small_team_no_paid_media",
+    "system": "crewai",
+    "error": null,
+    "request_sha256": "b80de04ff2f12da36d88e27e1803d1f3784d0d80e49a6106a3ae6c26730db821",
+    "status": "rated",
+    "rating": {
+      "source_support": {
+        "score": 0,
+        "reason": "Material tactics and numeric targets are invented or mis-cited: the sources do not support email/Slack/event plans, 500 contacts, three emails, or KPI target values."
+      },
+      "constraint_adherence": {
+        "score": 0,
+        "reason": "Although spend is below $4,000 and human approval is mentioned, the memo does not operationalize the two-region/two-staff, privacy, paid-media, or opt-in outreach constraints, and the budget lacks a compliant breakdown."
+      },
+      "actionability": {
+        "score": 1,
+        "reason": "It provides channels, weekly sequencing, and proposed measures, but placeholder owners, no regional plan, incomplete risks/mitigations, and no channel-level budget make execution only partially specified."
+      },
+      "uncertainty_handling": {
+        "score": 0,
+        "reason": "Essential missing inputs\u2014named owners, pilot regions, approved opt-in lists, event details, and budget allocations\u2014are neither requested nor made conditional; unsupported KPI targets and tactics are stated as decided."
+      }
+    },
+    "usage": {
+      "input_tokens": 1518,
+      "input_tokens_details": {
+        "cache_write_tokens": 1515,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1515
+        }
+      },
+      "output_tokens": 360,
+      "output_tokens_details": {
+        "reasoning_tokens": 147
+      },
+      "total_tokens": 1878
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"source_support\":{\"score\":0,\"reason\":\"Material tactics and numeric targets are invented or mis-cited: the sources do not support email/Slack/event plans, 500 contacts, three emails, or KPI target values.\"},\"constraint_adherence\":{\"score\":0,\"reason\":\"Although spend is below $4,000 and human approval is mentioned, the memo does not operationalize the two-region/two-staff, privacy, paid-media, or opt-in outreach constraints, and the budget lacks a compliant breakdown.\"},\"actionability\":{\"score\":1,\"reason\":\"It provides channels, weekly sequencing, and proposed measures, but placeholder owners, no regional plan, incomplete risks/mitigations, and no channel-level budget make execution only partially specified.\"},\"uncertainty_handling\":{\"score\":0,\"reason\":\"Essential missing inputs\u2014named owners, pilot regions, approved opt-in lists, event details, and budget allocations\u2014are neither requested nor made conditional; unsupported KPI targets and tactics are stated as decided.\"}}",
+    "seconds": 5.094315459020436
+  },
+  {
+    "review_id": "candidate-008",
+    "case_id": "standard_launch",
+    "system": "self_review",
+    "error": null,
+    "request_sha256": "fb402de0ece15ac135f0eba589e268509f77cf71671555a839cc8fba8c167c91",
+    "status": "rated",
+    "rating": {
+      "source_support": {
+        "score": 0,
+        "reason": "Material unsupported claims include a fabricated XYZ case-study result and a 50% first-response-time reduction, contrary to the prohibition on unsupported ROI/performance claims in constraints.md."
+      },
+      "constraint_adherence": {
+        "score": 0,
+        "reason": "The $12,000 budget violates constraints.md\u2019s requirement to remain below $12,000; the two-region requirement is omitted, and human approval for every customer-facing AI output is not operationalized."
+      },
+      "actionability": {
+        "score": 1,
+        "reason": "It provides channels, weekly activities, and proposed KPIs, but owners and start date are placeholders, the budget lacks allocation, regional execution is absent, and several weekly actions are vague."
+      },
+      "uncertainty_handling": {
+        "score": 0,
+        "reason": "It neither requests missing owner, date, region, baseline, and budget-allocation inputs nor makes dependent plans conditional; it also invents performance results for promotional content."
+      }
+    },
+    "usage": {
+      "input_tokens": 1500,
+      "input_tokens_details": {
+        "cache_write_tokens": 1497,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1497
+        }
+      },
+      "output_tokens": 340,
+      "output_tokens_details": {
+        "reasoning_tokens": 141
+      },
+      "total_tokens": 1840
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"source_support\":{\"score\":0,\"reason\":\"Material unsupported claims include a fabricated XYZ case-study result and a 50% first-response-time reduction, contrary to the prohibition on unsupported ROI/performance claims in constraints.md.\"},\"constraint_adherence\":{\"score\":0,\"reason\":\"The $12,000 budget violates constraints.md\u2019s requirement to remain below $12,000; the two-region requirement is omitted, and human approval for every customer-facing AI output is not operationalized.\"},\"actionability\":{\"score\":1,\"reason\":\"It provides channels, weekly activities, and proposed KPIs, but owners and start date are placeholders, the budget lacks allocation, regional execution is absent, and several weekly actions are vague.\"},\"uncertainty_handling\":{\"score\":0,\"reason\":\"It neither requests missing owner, date, region, baseline, and budget-allocation inputs nor makes dependent plans conditional; it also invents performance results for promotional content.\"}}",
+    "seconds": 4.489803542033769
+  }
+]

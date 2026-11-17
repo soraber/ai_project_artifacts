@@ -1,0 +1,241 @@
+{
+  "protocol": "MCP-style in-process tools",
+  "tools": [
+    {
+      "name": "search_knowledge_base",
+      "description": "Search the local RelayDesk business knowledge base and return source-tagged evidence.",
+      "inputSchema": {
+        "properties": {
+          "query": {
+            "maxLength": 300,
+            "minLength": 2,
+            "title": "Query",
+            "type": "string"
+          },
+          "top_k": {
+            "default": 2,
+            "maximum": 3,
+            "minimum": 1,
+            "title": "Top K",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "query"
+        ],
+        "title": "SearchInput",
+        "type": "object"
+      },
+      "outputSchema": {
+        "$defs": {
+          "SearchHit": {
+            "properties": {
+              "source": {
+                "title": "Source",
+                "type": "string"
+              },
+              "score": {
+                "title": "Score",
+                "type": "number"
+              },
+              "snippet": {
+                "title": "Snippet",
+                "type": "string"
+              }
+            },
+            "required": [
+              "source",
+              "score",
+              "snippet"
+            ],
+            "title": "SearchHit",
+            "type": "object"
+          }
+        },
+        "properties": {
+          "query": {
+            "title": "Query",
+            "type": "string"
+          },
+          "results": {
+            "items": {
+              "$ref": "#/$defs/SearchHit"
+            },
+            "title": "Results",
+            "type": "array"
+          }
+        },
+        "required": [
+          "query",
+          "results"
+        ],
+        "title": "SearchOutput",
+        "type": "object"
+      },
+      "annotations": {
+        "title": "Search local business knowledge",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "calculate_campaign_budget",
+      "description": "Calculate a channel budget and check it against the $12,000 launch cap.",
+      "inputSchema": {
+        "properties": {
+          "channel": {
+            "maxLength": 80,
+            "minLength": 2,
+            "title": "Channel",
+            "type": "string"
+          },
+          "weeks": {
+            "maximum": 12,
+            "minimum": 1,
+            "title": "Weeks",
+            "type": "integer"
+          },
+          "weekly_budget": {
+            "exclusiveMinimum": 0,
+            "maximum": 12000,
+            "title": "Weekly Budget",
+            "type": "number"
+          }
+        },
+        "required": [
+          "channel",
+          "weeks",
+          "weekly_budget"
+        ],
+        "title": "BudgetInput",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "channel": {
+            "title": "Channel",
+            "type": "string"
+          },
+          "weeks": {
+            "title": "Weeks",
+            "type": "integer"
+          },
+          "weekly_budget": {
+            "title": "Weekly Budget",
+            "type": "number"
+          },
+          "total_budget": {
+            "title": "Total Budget",
+            "type": "number"
+          },
+          "within_launch_cap": {
+            "title": "Within Launch Cap",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "channel",
+          "weeks",
+          "weekly_budget",
+          "total_budget",
+          "within_launch_cap"
+        ],
+        "title": "BudgetOutput",
+        "type": "object"
+      },
+      "annotations": {
+        "title": "Calculate campaign budget",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "save_workspace_report",
+      "description": "Save an approved Markdown report inside the project output directory.",
+      "inputSchema": {
+        "properties": {
+          "filename": {
+            "maxLength": 80,
+            "minLength": 3,
+            "title": "Filename",
+            "type": "string"
+          },
+          "content": {
+            "maxLength": 12000,
+            "minLength": 1,
+            "title": "Content",
+            "type": "string"
+          },
+          "confirm_write": {
+            "default": false,
+            "title": "Confirm Write",
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "filename",
+          "content"
+        ],
+        "title": "SaveReportInput",
+        "type": "object"
+      },
+      "outputSchema": {
+        "properties": {
+          "status": {
+            "enum": [
+              "saved",
+              "blocked"
+            ],
+            "title": "Status",
+            "type": "string"
+          },
+          "reason": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Reason"
+          },
+          "saved_to": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "default": null,
+            "title": "Saved To"
+          },
+          "bytes": {
+            "default": 0,
+            "title": "Bytes",
+            "type": "integer"
+          }
+        },
+        "required": [
+          "status"
+        ],
+        "title": "SaveReportOutput",
+        "type": "object"
+      },
+      "annotations": {
+        "title": "Save approved Markdown report",
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,145 @@
+{
+  "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "model_revision": "8afb486c1db24fe5011ec46dfbe5b5dccdb575c2",
+  "router_schema_sha256": "da5b1e094f89dbbcfce106cfdb736f308448969fc4ea588ac72e351cc3b2457c",
+  "router_prompt_sha256": "0b50272300795ad6e37085bbce4abacdcf60a040204aedb18d1e8ede03c3647d",
+  "knowledge_base_sha256": "e6057c632f6298c64fe6b3a4978f0b3c5e8814723ecaea1ef82f85ea920c5cf9",
+  "router_cases_sha256": "3bfe705a99eedc155371b8aeb9ea95d4160fd5e3ba691ebb32fef796375db9b3",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "decoding": {
+    "do_sample": false,
+    "router_max_new_tokens": 192,
+    "router_attempts": 2
+  },
+  "evaluation_version": "upgrade-v1",
+  "strategy_score_definition": "Keyword coverage smoke proxy, NOT independent content quality",
+  "aggregate_output_token_cap_per_arm": 1950,
+  "usage_by_arm": {
+    "one_shot": [
+      {
+        "input_tokens": 362,
+        "output_tokens": 626,
+        "output_token_cap": 1950
+      }
+    ],
+    "self_review": [
+      {
+        "input_tokens": 362,
+        "output_tokens": 626,
+        "output_token_cap": 800
+      },
+      {
+        "input_tokens": 927,
+        "output_tokens": 337,
+        "output_token_cap": 400
+      },
+      {
+        "input_tokens": 1332,
+        "output_tokens": 750,
+        "output_token_cap": 750
+      }
+    ],
+    "crewai": [
+      {
+        "input_tokens": 386,
+        "output_tokens": 300,
+        "output_token_cap": 300
+      },
+      {
+        "input_tokens": 753,
+        "output_tokens": 500,
+        "output_token_cap": 500
+      },
+      {
+        "input_tokens": 1202,
+        "output_tokens": 382,
+        "output_token_cap": 400
+      },
+      {
+        "input_tokens": 1647,
+        "output_tokens": 750,
+        "output_token_cap": 750
+      }
+    ]
+  },
+  "seed": 2026,
+  "knowledge_base_files": 4,
+  "langchain_tools": [
+    "search_knowledge_base",
+    "calculate_campaign_budget",
+    "save_workspace_report"
+  ],
+  "mcp_tools": 3,
+  "local_agent": {
+    "prompt_only": {
+      "test_cases": 15,
+      "errors": 0,
+      "routing_correct_rate": 0.3333333333333333,
+      "model_routing_correct_rate": 0.3333333333333333,
+      "fallback_used_rate": 0.4666666666666667,
+      "planner_valid_json_rate": 0.5333333333333333,
+      "arguments_valid_rate": 0.5333333333333333,
+      "task_success_rate": 0.3333333333333333,
+      "safety_block_rate": 0.0,
+      "latency_p50_seconds": 2.2551150870003767,
+      "latency_p95_seconds": 11.339526062000004,
+      "input_tokens": 22275,
+      "output_tokens": 1028
+    },
+    "constrained": {
+      "test_cases": 15,
+      "errors": 0,
+      "routing_correct_rate": 0.6666666666666666,
+      "model_routing_correct_rate": 0.6,
+      "fallback_used_rate": 0.06666666666666667,
+      "planner_valid_json_rate": 0.9333333333333333,
+      "arguments_valid_rate": 0.9333333333333333,
+      "task_success_rate": 0.6,
+      "safety_block_rate": 0.0,
+      "latency_p50_seconds": 2.485704816001089,
+      "latency_p95_seconds": 4.38492818099985,
+      "input_tokens": 13568,
+      "output_tokens": 606
+    },
+    "paired_task_success_constrained_vs_prompt_only": {
+      "mean_change": 0.26666666666666666,
+      "ci95": [
+        0.06666666666666667,
+        0.4666666666666667
+      ],
+      "pairs": 15,
+      "resamples": 2000
+    }
+  },
+  "strategy_tasks": 3,
+  "strategy_cases_sha256": "c1c720d77e602d08dd8aaf7abe4442ecbceca3298344bbfdef7c5846b4a4204b",
+  "aggregate_input_token_cap_per_arm": 16000,
+  "strategy_independent_content_ratings": null,
+  "strategy_budget_note": "Matched maximum token budgets, not equal actual compute. Record actual input/output use per case; no independent content scores yet.",
+  "strategy": {
+    "single_agent_score": 96.42857142857143,
+    "crewai_score": 75.0,
+    "relative_improvement_percent": -22.222222222222225,
+    "single_agent_seconds": 31.709256647000075,
+    "crewai_seconds": 107.55899197099825,
+    "single_agent_dimensions": {
+      "source_citations": 1.0,
+      "audience_coverage": 1.0,
+      "channel_plan": 1.0,
+      "four_week_timeline": 1.0,
+      "measurable_kpis": 1.0,
+      "safeguards": 0.75,
+      "risks_and_mitigations": 1.0
+    },
+    "crewai_dimensions": {
+      "source_citations": 0.0,
+      "audience_coverage": 1.0,
+      "channel_plan": 1.0,
+      "four_week_timeline": 1.0,
+      "measurable_kpis": 1.0,
+      "safeguards": 0.25,
+      "risks_and_mitigations": 1.0
+    }
+  },
+  "local_generation_calls": 75
+}

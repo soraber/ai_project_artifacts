@@ -1,0 +1,32 @@
+{
+  "self_review": {
+    "attempted": 3,
+    "rated": 3,
+    "dimensions": {
+      "source_support": 0.3333333333333333,
+      "constraint_adherence": 0,
+      "actionability": 0.6666666666666666,
+      "uncertainty_handling": 0.6666666666666666
+    }
+  },
+  "one_shot": {
+    "attempted": 3,
+    "rated": 3,
+    "dimensions": {
+      "source_support": 1,
+      "constraint_adherence": 0.3333333333333333,
+      "actionability": 1,
+      "uncertainty_handling": 0.6666666666666666
+    }
+  },
+  "crewai": {
+    "attempted": 3,
+    "rated": 3,
+    "dimensions": {
+      "source_support": 0.3333333333333333,
+      "constraint_adherence": 0,
+      "actionability": 1,
+      "uncertainty_handling": 0.3333333333333333
+    }
+  }
+}

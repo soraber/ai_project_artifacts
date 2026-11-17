@@ -1,0 +1,47 @@
+{
+  "candidate-000": {
+    "case_id": "missing_operating_inputs",
+    "system": "self_review",
+    "error": null
+  },
+  "candidate-001": {
+    "case_id": "small_team_no_paid_media",
+    "system": "self_review",
+    "error": null
+  },
+  "candidate-002": {
+    "case_id": "standard_launch",
+    "system": "one_shot",
+    "error": null
+  },
+  "candidate-003": {
+    "case_id": "missing_operating_inputs",
+    "system": "one_shot",
+    "error": null
+  },
+  "candidate-004": {
+    "case_id": "standard_launch",
+    "system": "crewai",
+    "error": null
+  },
+  "candidate-005": {
+    "case_id": "missing_operating_inputs",
+    "system": "crewai",
+    "error": null
+  },
+  "candidate-006": {
+    "case_id": "small_team_no_paid_media",
+    "system": "one_shot",
+    "error": null
+  },
+  "candidate-007": {
+    "case_id": "small_team_no_paid_media",
+    "system": "crewai",
+    "error": null
+  },
+  "candidate-008": {
+    "case_id": "standard_launch",
+    "system": "self_review",
+    "error": null
+  }
+}

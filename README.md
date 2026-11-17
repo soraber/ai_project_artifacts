@@ -5,16 +5,47 @@ generation, and tool-using multi-agent systems. The notebooks are designed for a
 Google Colab A100 runtime and emphasize controlled comparisons, measurable results,
 safety boundaries, and documented engineering tradeoffs.
 
-> **Version:** ver 1.3: procedure diagrams and method alternatives<br>
-> **Updated:** 2026-07-31 21:29 EDT
+> **Version:** ver 1.4: controlled upgrades and new evaluation evidence<br>
+> **Updated:** 2026-11-17 EST
 
 ## Portfolio Summary
+
+### Current Upgrade Evidence
+
+The [upgrade checklist](upgrade_plan.md) separates implemented controls, completed
+experiments, and pending comparisons. New results are stored in timestamped
+`output/projectX/runs/upgrade-v1/` directories; the original reports below remain
+historical and are not retroactively validated by the new code.
+
+- **Project 1:** A fresh A100 run evaluated all 500 held-out examples. Perplexity
+  decreased **30.55%** (8.0364 -> 5.5812), but correct tool actions regressed from
+  **5/6 to 0/6** on a separate authored smoke set. Better reference-answer fit is
+  not evidence of agent readiness; do not deploy this adapter for tool use.
+  [Run evidence](output/project1/runs/upgrade-v1/20261117T032756029425Z/).
+- **Project 2:** Four matched retrieval arms finished on 60 natural questions
+  plus three separate absence probes. HyDE increased median latency about 5.2x
+  versus dense retrieval without a clear paired F1 gain. A 15-question blinded
+  automated review is saved separately; it is not human-verified.
+- **Project 3:** Constrained routing passed 9/15 authored task checks versus 5/15
+  for prompt-only routing. On three business briefs, the automated content review
+  did not establish a CrewAI advantage and flagged substantial constraint issues.
+  Both projects' automated reviews cost an estimated **$0.586516 total**.
+- **Safety/reproducibility:** Isolated training/inference environments leave the
+  shared Colab interpreter untouched. Credentials and model weights are not
+  committed; the new [debug log](debug_log/upgrade_debug_log.md) records issues.
+
+### Historical Baseline Results
+
+These July results use the older evaluation procedure. The RAG composite combines
+proxy metrics and does not measure semantic grounding. Project 3's strategy score
+measures keyword coverage, not independently rated quality; its routing score
+includes harness fallbacks. See the upgrade evidence before interpreting them.
 
 | Project | Primary goal | Main comparison | Measured result | Judgment |
 | --- | --- | --- | --- | --- |
 | 1. LLM Fine-Tuning | Adapt Llama 3 8B to software-engineering answers with parameter-efficient training | Base model vs. QLoRA adapter | Held-out answer perplexity decreased **30.42%**, from 7.9560 to 5.5359 | Strong evidence of better fit to the target answer distribution; not yet proof of factual or production quality |
-| 2. RAG Document QA | Improve grounded QA over a real Wikipedia corpus | Dense baseline vs. HyDE + hybrid retrieval + reranking | Composite score increased **17.55%**, from 0.5674 to 0.6669 | Better retrieval, answer overlap, and citation validity, with higher retrieval latency |
-| 3. LLM Agent System | Build auditable local tools and a role-based business workflow | Single agent vs. CrewAI workflow | Agent task success was **100%** on 12 cases; CrewAI strategy score improved **35.71%** | Typed tools and fallbacks were reliable; multi-agent quality improved at a substantial latency cost |
+| 2. RAG Document QA | Improve grounded QA over a real Wikipedia corpus | Dense baseline vs. HyDE + hybrid retrieval + reranking | Composite proxy score increased **17.55%**, from 0.5674 to 0.6669 | Older comparison also changed prompts/context; gains cannot be attributed to retrieval alone |
+| 3. LLM Agent System | Build auditable local tools and a role-based business workflow | Single agent vs. CrewAI workflow | Harness task success was **100%** on 12 cases; strategy keyword coverage increased **35.71%** | Authored smoke/proxy results, not independent model or multi-agent quality evidence |
 
 ### Procedure Diagrams
 
@@ -127,6 +158,12 @@ evaluating the adapter against the unchanged base model.
 
 ### Compute Resources, Time, and Key Settings
 
+The table below describes the historical July run. The November retraining used
+the same one-A100, 701-step training configuration, took **9,756.33 seconds**, and
+evaluated **500 examples / 95,502 answer tokens** in **146.21 seconds**. Its isolated
+environment records Torch 2.15.0, Transformers 5.6.0, PEFT 0.18.1 and
+bitsandbytes 0.50.2; see the saved lock rather than assuming the Colab base versions.
+
 | Item | Configuration |
 | --- | --- |
 | Compute | One Google Colab `NVIDIA A100-SXM4-40GB` GPU |
@@ -138,6 +175,23 @@ evaluating the adapter against the unchanged base model.
 
 ### Results and Judgment
 
+**November upgrade:** NLL decreased from 2.083986 to 1.719413; the paired
+token-weighted NLL reduction has a 95% bootstrap interval of [0.344408, 0.386997].
+No holdout examples were skipped. The separate six-case agent smoke found a
+substantial instruction/tool-format regression, so this adapter is unsuitable
+for the tested tool-use interface. The smoke is diagnostic, not a general
+benchmark. A subsequent frozen-output Docker check passed the base model's one
+authored code task (two assertions); the tuned response failed the JSON contract
+and was not executed. Task-aligned development data and
+instruction-retention checks are appropriate next experiments, not a reason to
+erase the measured failures.
+
+<p align="center">
+  <img src="output/project1/runs/upgrade-v1/20261117T032756029425Z/assets/fit_and_task_tradeoff.png" alt="New training loss and perplexity improvement alongside tool-action regression" width="100%">
+</p>
+
+**Historical July comparison:**
+
 | Metric | Base model | Tuned model | Comparison |
 | --- | ---: | ---: | --- |
 | Answer NLL | 2.0739 | 1.7112 | Lower after tuning |
@@ -148,7 +202,7 @@ evaluating the adapter against the unchanged base model.
 The controlled evaluation supports the conclusion that the adapter learned the
 target answer distribution. However, perplexity measures reference-answer fit,
 not factual correctness, instruction safety, or user preference. The final
-portfolio result uses 100 examples from the fixed 500-example holdout, so the
+July result used 100 examples from the fixed 500-example holdout, so that historical
 claim should always retain its metric and sample-size qualification.
 
 ### Training and Evaluation Figures
@@ -166,13 +220,13 @@ disabled and enabled.
 
 ### Future Optimization
 
-- Run the complete 500-example holdout and repeat training across multiple seeds.
+- Repeat training across multiple seeds; the complete 500-example holdout now runs.
 - Add code-execution tests, factuality checks, human preference ratings, and
   category-level error analysis.
 - Compare LoRA ranks, target modules, learning rates, sequence lengths, and
   full-precision versus 4-bit training under a fixed GPU-hour budget.
-- Export the adapter, tokenizer, model card, dataset card, and immutable training
-  configuration to persistent storage.
+- Keep the persisted adapter/configuration and add a model card and dataset card
+  that explicitly document the observed tool-use regression.
 - Load-test the FastAPI service for throughput, tail latency, batching, memory,
   and adapter hot-swapping.
 
@@ -198,18 +252,56 @@ retrieval baseline.
 - Evaluated both systems on the same deterministic 60-example seed-2026 holdout
   with answer-hit, reciprocal rank, token F1, citation validity, and latency.
 
+The November upgrade separates dense, hybrid, hybrid-plus-reranker and HyDE arms,
+uses the same answer prompt and final top-5 context budget, warms inference paths,
+and records every answer, usage, error and paired interval. Binary questions remain
+in answer evaluation but are excluded from substring retrieval proxies; retrieval
+relevance is still not independently gold-labeled.
+
 ### Compute Resources, Time, and Key Settings
 
 | Item | Configuration |
 | --- | --- |
 | Compute | One Google Colab `NVIDIA A100-SXM4-40GB` GPU; local 4-bit Llama generator, E5 encoder, and cross-encoder reranker |
-| Timed evaluation | Baseline: 0.805 seconds/question, about 48.3 seconds for 60 questions; advanced: 1.749 seconds/question, about 104.9 seconds for 60 questions |
+| Historical timed evaluation | Baseline: 0.805 seconds/question, about 48.3 seconds for 60 questions; advanced: 1.749 seconds/question, about 104.9 seconds for 60 questions |
 | Timing boundary | Evaluation timings exclude one-time dataset download, model loading, chunking, embedding, and index construction |
 | Chunking | 900-character chunks with 120-character overlap, producing 3,492 chunks |
 | Retrieval parameters | Baseline top-3; advanced top-5 after dense/BM25 fusion and cross-encoder reranking; 20 candidates per retriever |
 | Experiment controls | Seed 2026; 60 evaluation questions; identical Llama 3 8B NF4 generator and decoding path for both systems |
 
+The upgraded four-arm run took **652.25 seconds including setup**, with peak
+allocated GPU memory about **6.75 GiB**. Greedy answers use at most 96 new tokens;
+input truncation is capped at 3,072 tokens. Its 252 scored system-question pairs
+include 60 natural questions (32 binary, 28 non-binary) and three authored absence
+probes. GPT-5.6 Sol reviewed 60 outputs from 15 matched questions; 63 API calls
+including three rejected quote-format attempts cost **$0.455684**. The remaining
+ratings used a clarified verbatim-quote instruction, preserving the first 40
+accepted ratings and all prior failures.
+
 ### Results and Judgment
+
+**November controlled comparison (natural QA only):**
+
+| Arm | Token F1, 60 questions | Answer-hit proxy, 28 non-binary | Binary accuracy, 32 questions | p50 / p95 seconds |
+| --- | ---: | ---: | ---: | ---: |
+| Dense | 0.1366 | 0.6786 | 46.9% | 1.19 / 3.03 |
+| Hybrid | 0.1502 | 0.7143 | 40.6% | 1.09 / 2.99 |
+| Hybrid + reranker | 0.1372 | 0.7143 | 46.9% | 1.13 / 4.30 |
+| HyDE + hybrid + reranker | 0.1499 | 0.7143 | 46.9% | 6.12 / 9.25 |
+
+All paired F1 intervals versus dense include zero. All arms abstained correctly
+on the three separately reported authored absence probes. The automated review
+of 12 natural questions per arm judged supported claims as **10/10, 8/8, 16/21,
+and 15/20**, respectively, with **5, 6, 4, and 4 abstentions**. The last two arms
+each had one uncertain claim, included in the denominator. Small claim counts,
+different answer coverage, and an uncalibrated automated reviewer prevent a
+general faithfulness ranking. Unconditional HyDE is not justified by these results.
+
+[Corrected metrics and denominators](output/project2/runs/upgrade-v1/20261117T061830369288Z/metrics_v2/project2_summary.json)
+and [automated review evidence](output/project2/runs/upgrade-v1/20261117T061830369288Z/automated_review_exact_quotes_v2/).
+The metric correction uses frozen outputs; no answer or judge input was changed.
+
+**Historical July comparison, with different prompts/context budgets:**
 
 | Metric | Dense baseline | Advanced RAG | Judgment |
 | --- | ---: | ---: | --- |
@@ -220,8 +312,9 @@ retrieval baseline.
 | Composite score | 0.567 | 0.667 | **17.55% relative improvement** |
 | End-to-end seconds/question | 0.805 | 1.749 | Quality improved at roughly 2.17x latency |
 
-The advanced system produced a defensible quality improvement across retrieval,
-answer overlap, and citation behavior. Its main cost is retrieval latency,
+The older composite increased across retrieval proxies, answer overlap and
+citation formatting, but it did not isolate retrieval changes or establish
+semantic grounding. Its main cost is retrieval latency,
 especially from HyDE and reranking. Because the benchmark lacks gold passage
 IDs, answer-hit is a transparent proxy rather than a complete relevance metric.
 
@@ -264,7 +357,8 @@ workflow that applies multiple roles to a real business-planning task.
 - Implemented three Pydantic-validated tools: local knowledge search,
   deterministic budget calculation, and an approval-gated report writer.
 - Used a local Llama 3 8B planner that emits JSON tool decisions, retries invalid
-  output once, and falls back to conservative deterministic routing.
+  output once, and now requests clarification if validation still fails rather
+  than guessing an action or missing financial input.
 - Added path-confinement, traversal rejection, explicit write approval, source
   citations, and per-tool latency/status traces.
 - Published MCP-style input schemas, output schemas, descriptions, and side-effect
@@ -285,7 +379,48 @@ workflow that applies multiple roles to a real business-planning task.
 | CrewAI parameters | Sequential process; maximum 3 iterations per role; researcher/strategist/critic/editor budgets of 300/500/400/750 tokens |
 | Evaluation scale | 12 agent cases, four local knowledge files, three typed tools, three MCP-style contracts, and 35 local generation calls |
 
+The table is the historical run. The November run took **773.90 seconds** on one
+A100, with about **6.99 GiB** peak allocated memory. It compares 15 router cases
+per arm using a 192-token decision cap and at most two attempts. Each strategy
+has the same maximum aggregate **16,000 input / 1,950 output tokens / 8 calls**,
+but actual compute differs. Across three briefs, mean strategy latency was
+32.17 seconds one-shot, 79.50 seconds self-review, and 101.95 seconds CrewAI.
+Nine blinded GPT-5.6 Sol reviews cost **$0.130832**.
+
 ### Results and Judgment
+
+**November routing comparison:**
+
+| Metric | Prompt-only | Schema-constrained |
+| --- | ---: | ---: |
+| Authored task checks passed | 5/15 | 9/15 |
+| Model-selected correct route, excluding fallback | 5/15 | 9/15 |
+| Valid JSON and arguments | 8/15 | 14/15 |
+| Fallback used | 7/15 | 1/15 |
+| p50 / p95 seconds | 2.26 / 11.34 | 2.49 / 4.38 |
+
+Paired task-check improvement is 26.7 percentage points, with a 95% bootstrap
+interval [6.7, 46.7] on this small authored set. Schema enforcement does not
+guarantee semantic correctness or completion within a token cap.
+
+**Automated workflow review (mean ordinal scores, 0-2; three briefs each):**
+
+| Strategy | Source support | Constraint adherence | Actionability | Uncertainty handling |
+| --- | ---: | ---: | ---: | ---: |
+| One-shot | 1.00 | 0.33 | 1.00 | 0.67 |
+| Self-review | 0.33 | 0.00 | 0.67 | 0.67 |
+| CrewAI | 0.33 | 0.00 | 1.00 | 0.33 |
+
+The automated judge flagged unsupported details and budget/approval constraints.
+These uncalibrated scores are not human judgments. Shared maximum budgets do not
+equalize actual compute; final-memo token limits also affect completion. There is
+no evidence here that adding roles improves final content. Preserve the failed
+constraints and test simpler, validated workflows before expanding orchestration.
+
+[Run evidence](output/project3/runs/upgrade-v1/20261117T064159242835Z/)
+and [blinded automated ratings](output/project3/runs/upgrade-v1/20261117T064159242835Z/automated_review/).
+
+**Historical July harness and keyword-proxy comparison:**
 
 | Agent metric | Result | Judgment |
 | --- | ---: | --- |
@@ -301,11 +436,12 @@ workflow that applies multiple roles to a real business-planning task.
 | Weighted rubric score | 50.0 | 67.86 | **35.71% relative improvement** |
 | Generation time | 29.23 s | 133.88 s | CrewAI was approximately 4.58x slower |
 
-Typed tools and policy gates made the final workflow robust despite imperfect
-planner JSON. CrewAI improved citations, safeguards, and risk treatment, but the
+The older harness recovered some malformed plans through deterministic fallbacks;
+that is not native model routing accuracy. CrewAI improved the older keyword
+coverage proxy, but the
 saved memo still received no measurable-KPI credit under the strict lexical
-rubric. The four-role workflow is therefore more appropriate for high-value,
-asynchronous planning than for low-latency requests. The 12-case agent suite and
+rubric. That lexical result does not establish which architecture is better for
+high-value planning. The 12-case agent suite and
 lexical strategy rubric are portfolio evidence, not production certification.
 
 ### Training and Evaluation Figures
@@ -325,8 +461,8 @@ single-agent and CrewAI paths.
 
 - Replace the in-process MCP-style dispatcher with a real MCP server/client
   transport and test tool discovery, timeouts, cancellation, and versioning.
-- Use constrained decoding or native structured outputs to raise planner
-  valid-JSON performance above 66.7%.
+- Diagnose the remaining constrained-output and semantic routing failures on a
+  separate development set; compare a newer small model with the same controls.
 - Expand adversarial tests for prompt injection, indirect injection, data
   exfiltration, permission escalation, malformed arguments, and tool failure.
 - Add OpenTelemetry-compatible traces, token/cost accounting, replayable runs,
@@ -350,12 +486,14 @@ engineering lessons are summarized below.
 Across the projects, the recurring pattern was to preserve failed-run evidence,
 identify whether the cause belonged to code, dependencies, model access, or the
 remote runtime, apply the smallest targeted fix, and verify it with a controlled
-rerun. Secrets are intentionally excluded from notebooks, logs, and Git history.
+rerun. New credentials are excluded from source, notebooks and logs; this statement
+does not certify that historical Git objects contain no previously revoked keys.
 
 ## Reproducibility Notes
 
-- The notebooks retain executed outputs so the reported metrics can be inspected
-  without rerunning multi-hour GPU workloads.
+- Historical outputs remain in unchanged notebook cells and original reports.
+  New results live in versioned run directories, including executed notebook
+  copies for Projects 2/3. Do not mix those two generations of evidence.
 - Meta Llama 3 8B is gated on Hugging Face; reruns require accepted model terms
   and a read-only token supplied through a hidden prompt or runtime secret.
 - Colab runtimes and their caches are ephemeral. Persist datasets, adapters, and

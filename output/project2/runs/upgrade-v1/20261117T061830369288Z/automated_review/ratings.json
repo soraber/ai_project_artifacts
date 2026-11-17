@@ -1,0 +1,1656 @@
+[
+  {
+    "review_id": "review-0008",
+    "system": "hybrid_rerank",
+    "example_id": 60,
+    "request_sha256": "a7f09e5342f0eee4be7d43b4be0f2adf7e22cb038798f285ca6a31e5d4493ba8",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "no",
+      "relevance": 2,
+      "claims": [],
+      "reason": "The response appropriately abstains because the retrieved evidence contains no information about the user's private passphrase."
+    },
+    "stratum": "authored_absence_probe",
+    "usage": {
+      "input_tokens": 514,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 92,
+      "output_tokens_details": {
+        "reasoning_tokens": 36
+      },
+      "total_tokens": 606
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"no\",\"relevance\":2,\"claims\":[],\"reason\":\"The response appropriately abstains because the retrieved evidence contains no information about the user's private passphrase.\"}",
+    "seconds": 3.094130374956876
+  },
+  {
+    "review_id": "review-0035",
+    "system": "hybrid",
+    "example_id": 60,
+    "request_sha256": "18e7c4ea02eabd0624fbc05d35febe4b6c43a015aec9de4e6368cd1a4673b436",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "no",
+      "relevance": 2,
+      "claims": [],
+      "reason": "The response appropriately abstains. The retrieved evidence contains no information about a private passphrase chosen this morning."
+    },
+    "stratum": "authored_absence_probe",
+    "usage": {
+      "input_tokens": 735,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 106,
+      "output_tokens_details": {
+        "reasoning_tokens": 48
+      },
+      "total_tokens": 841
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"no\",\"relevance\":2,\"claims\":[],\"reason\":\"The response appropriately abstains. The retrieved evidence contains no information about a private passphrase chosen this morning.\"}",
+    "seconds": 2.6610696659772657
+  },
+  {
+    "review_id": "review-0158",
+    "system": "hyde_hybrid_rerank",
+    "example_id": 60,
+    "request_sha256": "a7f09e5342f0eee4be7d43b4be0f2adf7e22cb038798f285ca6a31e5d4493ba8",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "no",
+      "relevance": 2,
+      "claims": [],
+      "reason": "The response appropriately abstains. The retrieved evidence contains no information about the private passphrase chosen this morning."
+    },
+    "stratum": "authored_absence_probe",
+    "usage": {
+      "input_tokens": 514,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 97,
+      "output_tokens_details": {
+        "reasoning_tokens": 39
+      },
+      "total_tokens": 611
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"no\",\"relevance\":2,\"claims\":[],\"reason\":\"The response appropriately abstains. The retrieved evidence contains no information about the private passphrase chosen this morning.\"}",
+    "seconds": 2.620386041002348
+  },
+  {
+    "review_id": "review-0248",
+    "system": "dense",
+    "example_id": 60,
+    "request_sha256": "a7f09e5342f0eee4be7d43b4be0f2adf7e22cb038798f285ca6a31e5d4493ba8",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "no",
+      "relevance": 1,
+      "claims": [],
+      "reason": "The response abstains because the retrieved evidence consists only of unrelated punctuation and does not identify any passphrase."
+    },
+    "stratum": "authored_absence_probe",
+    "usage": {
+      "input_tokens": 514,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 139,
+      "output_tokens_details": {
+        "reasoning_tokens": 81
+      },
+      "total_tokens": 653
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"no\",\"relevance\":1,\"claims\":[],\"reason\":\"The response abstains because the retrieved evidence consists only of unrelated punctuation and does not identify any passphrase.\"}",
+    "seconds": 2.6197826670249924
+  },
+  {
+    "review_id": "review-0201",
+    "system": "hyde_hybrid_rerank",
+    "example_id": 61,
+    "request_sha256": "58c5a2906d66ab6d642f89991eddc759862ba65ecb2bd64ed18655f822659884",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "no",
+      "relevance": 2,
+      "claims": [],
+      "reason": "The answer declines to provide a test result because the supplied evidence contains no information about the user's personal medical test or its unpublished result. The retrieved material is unrelated or refers only to Gerald Ford's undisclosed tests."
+    },
+    "stratum": "authored_absence_probe",
+    "usage": {
+      "input_tokens": 753,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 118,
+      "output_tokens_details": {
+        "reasoning_tokens": 39
+      },
+      "total_tokens": 871
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"no\",\"relevance\":2,\"claims\":[],\"reason\":\"The answer declines to provide a test result because the supplied evidence contains no information about the user's personal medical test or its unpublished result. The retrieved material is unrelated or refers only to Gerald Ford's undisclosed tests.\"}",
+    "seconds": 2.45266641699709
+  },
+  {
+    "review_id": "review-0189",
+    "system": "hybrid_rerank",
+    "example_id": 61,
+    "request_sha256": "58c5a2906d66ab6d642f89991eddc759862ba65ecb2bd64ed18655f822659884",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "no",
+      "relevance": 2,
+      "claims": [],
+      "reason": "The answer appropriately abstains. The retrieved evidence does not identify the user, their personal medical test, or any unpublished test result."
+    },
+    "stratum": "authored_absence_probe",
+    "usage": {
+      "input_tokens": 753,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 111,
+      "output_tokens_details": {
+        "reasoning_tokens": 48
+      },
+      "total_tokens": 864
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"no\",\"relevance\":2,\"claims\":[],\"reason\":\"The answer appropriately abstains. The retrieved evidence does not identify the user, their personal medical test, or any unpublished test result.\"}",
+    "seconds": 1.7940073749632575
+  },
+  {
+    "review_id": "review-0013",
+    "system": "dense",
+    "example_id": 61,
+    "request_sha256": "f06d7e4861eeeeeaeb793edae154444a991f0c3ef56cb037c3736eabbce47e87",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "no",
+      "relevance": 2,
+      "claims": [],
+      "reason": "The response declines to provide a test result because the retrieved evidence contains no substantive information about the user's personal medical test. The evidence cannot answer the question."
+    },
+    "stratum": "authored_absence_probe",
+    "usage": {
+      "input_tokens": 516,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 65,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 581
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"no\",\"relevance\":2,\"claims\":[],\"reason\":\"The response declines to provide a test result because the retrieved evidence contains no substantive information about the user's personal medical test. The evidence cannot answer the question.\"}",
+    "seconds": 1.3535904169548303
+  },
+  {
+    "review_id": "review-0154",
+    "system": "hybrid",
+    "example_id": 61,
+    "request_sha256": "85137e38757d1358a13c74ee773fd7b958b78d04f051b5f888d2a98702cdbee1",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "no",
+      "relevance": 2,
+      "claims": [],
+      "reason": "The response appropriately abstains. The retrieved evidence contains no information about the user's personal medical test or its unpublished result."
+    },
+    "stratum": "authored_absence_probe",
+    "usage": {
+      "input_tokens": 812,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 103,
+      "output_tokens_details": {
+        "reasoning_tokens": 43
+      },
+      "total_tokens": 915
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"no\",\"relevance\":2,\"claims\":[],\"reason\":\"The response appropriately abstains. The retrieved evidence contains no information about the user's personal medical test or its unpublished result.\"}",
+    "seconds": 2.2563658750150353
+  },
+  {
+    "review_id": "review-0139",
+    "system": "dense",
+    "example_id": 62,
+    "request_sha256": "776476d0531be2ec530a73c9e16469383683a9345311b04301c004dbedcbd08e",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "no",
+      "relevance": 1,
+      "claims": [],
+      "reason": "The response abstains because the retrieved evidence contains no bank-account information and cannot establish the current balance."
+    },
+    "stratum": "authored_absence_probe",
+    "usage": {
+      "input_tokens": 517,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 119,
+      "output_tokens_details": {
+        "reasoning_tokens": 62
+      },
+      "total_tokens": 636
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"no\",\"relevance\":1,\"claims\":[],\"reason\":\"The response abstains because the retrieved evidence contains no bank-account information and cannot establish the current balance.\"}",
+    "seconds": 3.133786207996309
+  },
+  {
+    "review_id": "review-0244",
+    "system": "hybrid",
+    "example_id": 62,
+    "request_sha256": "59e1b746c105dea0aefe7b289a344393521d15d6cad70dd3d6ee1df40cefbdff",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "no",
+      "relevance": 2,
+      "claims": [],
+      "reason": "The response appropriately abstains. The retrieved evidence contains no information about the user's private bank account or its current balance."
+    },
+    "stratum": "authored_absence_probe",
+    "usage": {
+      "input_tokens": 696,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 111,
+      "output_tokens_details": {
+        "reasoning_tokens": 51
+      },
+      "total_tokens": 807
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"no\",\"relevance\":2,\"claims\":[],\"reason\":\"The response appropriately abstains. The retrieved evidence contains no information about the user's private bank account or its current balance.\"}",
+    "seconds": 2.424664166988805
+  },
+  {
+    "review_id": "review-0031",
+    "system": "hyde_hybrid_rerank",
+    "example_id": 62,
+    "request_sha256": "da07607aa7690b32a13b321eb4f0da15ad12e866f97bb8ba0394e032d7086552",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "no",
+      "relevance": 2,
+      "claims": [],
+      "reason": "The answer abstains because the retrieved evidence contains no bank account or balance information. The evidence is insufficient to answer the question."
+    },
+    "stratum": "authored_absence_probe",
+    "usage": {
+      "input_tokens": 515,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 60,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 575
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"no\",\"relevance\":2,\"claims\":[],\"reason\":\"The answer abstains because the retrieved evidence contains no bank account or balance information. The evidence is insufficient to answer the question.\"}",
+    "seconds": 1.4017267909948714
+  },
+  {
+    "review_id": "review-0022",
+    "system": "hybrid_rerank",
+    "example_id": 62,
+    "request_sha256": "2bdb466771fc033bb225c0b27ac1fc8b0b8e67b11ed3ec21dd3509a9ad0aa47f",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "no",
+      "relevance": 1,
+      "claims": [],
+      "reason": "The answer abstains because the retrieved evidence contains no bank-account or balance information. The evidence cannot answer the question."
+    },
+    "stratum": "authored_absence_probe",
+    "usage": {
+      "input_tokens": 518,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 58,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 576
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"no\",\"relevance\":1,\"claims\":[],\"reason\":\"The answer abstains because the retrieved evidence contains no bank-account or balance information. The evidence cannot answer the question.\"}",
+    "seconds": 1.8308576249983162
+  },
+  {
+    "review_id": "review-0122",
+    "system": "hybrid_rerank",
+    "example_id": 15,
+    "request_sha256": "287a4db5096cf49ef8aae876cd78ba6bf3f396a1b85e1f21959b5860cffaced8",
+    "status": "rated",
+    "rating": {
+      "is_abstention": false,
+      "evidence_sufficient": "yes",
+      "relevance": 2,
+      "claims": [
+        {
+          "text": "Sea otters insulate themselves by trapping a layer of air in their fur.",
+          "verdict": "supported",
+          "evidence_id": "wiki::1927::0",
+          "supporting_quote": "they rely on a layer of air trapped in their fur",
+          "reason": "The evidence directly states this insulation mechanism."
+        },
+        {
+          "text": "Sea otters maintain the trapped air layer by blowing into their fur from their mouths.",
+          "verdict": "supported",
+          "evidence_id": "wiki::1927::0",
+          "supporting_quote": "which they keep topped up by blowing into the fur from their mouths",
+          "reason": "The evidence directly supports how they maintain the air layer."
+        }
+      ],
+      "reason": "The answer directly addresses the question, and both factual assertions are explicitly supported by the retrieved evidence."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 996,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 183,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1179
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"Sea otters insulate themselves by trapping a layer of air in their fur.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::1927::0\",\"supporting_quote\":\"they rely on a layer of air trapped in their fur\",\"reason\":\"The evidence directly states this insulation mechanism.\"},{\"text\":\"Sea otters maintain the trapped air layer by blowing into their fur from their mouths.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::1927::0\",\"supporting_quote\":\"which they keep topped up by blowing into the fur from their mouths\",\"reason\":\"The evidence directly supports how they maintain the air layer.\"}],\"reason\":\"The answer directly addresses the question, and both factual assertions are explicitly supported by the retrieved evidence.\"}",
+    "seconds": 2.085749791993294
+  },
+  {
+    "review_id": "review-0117",
+    "system": "hyde_hybrid_rerank",
+    "example_id": 15,
+    "request_sha256": "287a4db5096cf49ef8aae876cd78ba6bf3f396a1b85e1f21959b5860cffaced8",
+    "status": "rated",
+    "rating": {
+      "is_abstention": false,
+      "evidence_sufficient": "yes",
+      "relevance": 2,
+      "claims": [
+        {
+          "text": "Sea otters insulate themselves by trapping a layer of air in their fur.",
+          "verdict": "supported",
+          "evidence_id": "wiki::1927::0",
+          "supporting_quote": "they rely on a layer of air trapped in their fur",
+          "reason": "The evidence directly states that sea otters rely on trapped air in their fur for insulation."
+        },
+        {
+          "text": "They maintain this air layer by blowing into their fur from their mouths.",
+          "verdict": "supported",
+          "evidence_id": "wiki::1927::0",
+          "supporting_quote": "which they keep topped up by blowing into the fur from their mouths",
+          "reason": "The evidence directly describes how they maintain the trapped air layer."
+        }
+      ],
+      "reason": "The answer directly addresses the question, and both assertions are explicitly supported by the cited evidence."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 996,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 190,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1186
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"Sea otters insulate themselves by trapping a layer of air in their fur.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::1927::0\",\"supporting_quote\":\"they rely on a layer of air trapped in their fur\",\"reason\":\"The evidence directly states that sea otters rely on trapped air in their fur for insulation.\"},{\"text\":\"They maintain this air layer by blowing into their fur from their mouths.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::1927::0\",\"supporting_quote\":\"which they keep topped up by blowing into the fur from their mouths\",\"reason\":\"The evidence directly describes how they maintain the trapped air layer.\"}],\"reason\":\"The answer directly addresses the question, and both assertions are explicitly supported by the cited evidence.\"}",
+    "seconds": 2.403139874979388
+  },
+  {
+    "review_id": "review-0064",
+    "system": "dense",
+    "example_id": 15,
+    "request_sha256": "92b6db8874be924fad785b7ec6279d5d515fc0b8aa6bfd4b9e5f8864f1d717d8",
+    "status": "rated",
+    "rating": {
+      "is_abstention": false,
+      "evidence_sufficient": "yes",
+      "relevance": 2,
+      "claims": [
+        {
+          "text": "Sea otters insulate themselves by trapping a layer of air in their fur.",
+          "verdict": "supported",
+          "evidence_id": "wiki::1927::0",
+          "supporting_quote": "they rely on a layer of air trapped in their fur",
+          "reason": "The evidence directly states that sea otters rely on trapped air in their fur for insulation."
+        },
+        {
+          "text": "Sea otters maintain the trapped air layer by blowing into their fur from their mouths.",
+          "verdict": "supported",
+          "evidence_id": "wiki::1927::0",
+          "supporting_quote": "which they keep topped up by blowing into the fur from their mouths",
+          "reason": "The evidence directly describes how they replenish the air layer."
+        },
+        {
+          "text": "The trapped air keeps sea otters dry and warm underwater.",
+          "verdict": "supported",
+          "evidence_id": "wiki::1916::0",
+          "supporting_quote": "This traps a layer of air, and keeps them dry and warm under water.",
+          "reason": "The cited evidence directly supports this effect of the trapped air."
+        }
+      ],
+      "reason": "The answer directly addresses the question, and all factual assertions are established by the retrieved evidence."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 817,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 309,
+      "output_tokens_details": {
+        "reasoning_tokens": 50
+      },
+      "total_tokens": 1126
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"Sea otters insulate themselves by trapping a layer of air in their fur.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::1927::0\",\"supporting_quote\":\"they rely on a layer of air trapped in their fur\",\"reason\":\"The evidence directly states that sea otters rely on trapped air in their fur for insulation.\"},{\"text\":\"Sea otters maintain the trapped air layer by blowing into their fur from their mouths.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::1927::0\",\"supporting_quote\":\"which they keep topped up by blowing into the fur from their mouths\",\"reason\":\"The evidence directly describes how they replenish the air layer.\"},{\"text\":\"The trapped air keeps sea otters dry and warm underwater.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::1916::0\",\"supporting_quote\":\"This traps a layer of air, and keeps them dry and warm under water.\",\"reason\":\"The cited evidence directly supports this effect of the trapped air.\"}],\"reason\":\"The answer directly addresses the question, and all factual assertions are established by the retrieved evidence.\"}",
+    "seconds": 3.608718791976571
+  },
+  {
+    "review_id": "review-0223",
+    "system": "hybrid",
+    "example_id": 15,
+    "request_sha256": "2d6cb30024f687ef716f35fb7fab4aa03b2420a5461d8e037a771b792aef95af",
+    "status": "rated",
+    "rating": {
+      "is_abstention": false,
+      "evidence_sufficient": "yes",
+      "relevance": 2,
+      "claims": [
+        {
+          "text": "Sea otters insulate themselves by trapping a layer of air in their fur.",
+          "verdict": "supported",
+          "evidence_id": "wiki::1927::0",
+          "supporting_quote": "they rely on a layer of air trapped in their fur",
+          "reason": "The evidence directly states this insulation mechanism."
+        },
+        {
+          "text": "They maintain the trapped air layer by blowing into their fur from their mouths.",
+          "verdict": "supported",
+          "evidence_id": "wiki::1927::0",
+          "supporting_quote": "which they keep topped up by blowing into the fur from their mouths",
+          "reason": "The evidence directly supports how they replenish the air layer."
+        }
+      ],
+      "reason": "The answer directly addresses the question, and all factual assertions are explicitly supported by the cited evidence."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 937,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 181,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1118
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"Sea otters insulate themselves by trapping a layer of air in their fur.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::1927::0\",\"supporting_quote\":\"they rely on a layer of air trapped in their fur\",\"reason\":\"The evidence directly states this insulation mechanism.\"},{\"text\":\"They maintain the trapped air layer by blowing into their fur from their mouths.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::1927::0\",\"supporting_quote\":\"which they keep topped up by blowing into the fur from their mouths\",\"reason\":\"The evidence directly supports how they replenish the air layer.\"}],\"reason\":\"The answer directly addresses the question, and all factual assertions are explicitly supported by the cited evidence.\"}",
+    "seconds": 2.0713952080113813
+  },
+  {
+    "review_id": "review-0179",
+    "system": "hybrid_rerank",
+    "example_id": 27,
+    "request_sha256": "5170e7bf9aea175663bbbd1d8fc6a750c64891834ffbd292fb79b529482a8b41",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "uncertain",
+      "relevance": 2,
+      "claims": [],
+      "reason": "The response directly abstains from answering. The referent of \u201chis\u201d is not identified in the question; although one chunk says Theodore Roosevelt\u2019s mother died of typhoid fever, the evidence discusses several different men, so it is uncertain which person is intended."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 1045,
+      "input_tokens_details": {
+        "cache_write_tokens": 1042,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1042
+        }
+      },
+      "output_tokens": 183,
+      "output_tokens_details": {
+        "reasoning_tokens": 92
+      },
+      "total_tokens": 1228
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"uncertain\",\"relevance\":2,\"claims\":[],\"reason\":\"The response directly abstains from answering. The referent of \u201chis\u201d is not identified in the question; although one chunk says Theodore Roosevelt\u2019s mother died of typhoid fever, the evidence discusses several different men, so it is uncertain which person is intended.\"}",
+    "seconds": 2.7034117080038413
+  },
+  {
+    "review_id": "review-0136",
+    "system": "hybrid",
+    "example_id": 27,
+    "request_sha256": "7d4ddc0f7b1e662efa2159b5e2a0894af36c2203fbe7db46385a435bb6e32848",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "uncertain",
+      "relevance": 1,
+      "claims": [],
+      "reason": "The answer abstains rather than answering yes or no. The evidence states that Theodore Roosevelt\u2019s mother died of typhoid fever, not pneumonia, but the question does not identify whom \u201chis\u201d refers to, so it is uncertain whether that evidence answers the intended question."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 1102,
+      "input_tokens_details": {
+        "cache_write_tokens": 1099,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1099
+        }
+      },
+      "output_tokens": 192,
+      "output_tokens_details": {
+        "reasoning_tokens": 100
+      },
+      "total_tokens": 1294
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"uncertain\",\"relevance\":1,\"claims\":[],\"reason\":\"The answer abstains rather than answering yes or no. The evidence states that Theodore Roosevelt\u2019s mother died of typhoid fever, not pneumonia, but the question does not identify whom \u201chis\u201d refers to, so it is uncertain whether that evidence answers the intended question.\"}",
+    "seconds": 2.7015763329691254
+  },
+  {
+    "review_id": "review-0089",
+    "system": "hyde_hybrid_rerank",
+    "example_id": 27,
+    "request_sha256": "08f290343377aa09d3bb966e7227d7ac7413be6171d3d4af408fc8946a3825e6",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "no",
+      "relevance": 2,
+      "claims": [],
+      "reason": "The response directly abstains without making factual claims. The evidence discusses multiple possible male referents, and the question does not identify whom \u201chis\u201d refers to, so it cannot be answered confidently from the supplied material."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 956,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 214,
+      "output_tokens_details": {
+        "reasoning_tokens": 134
+      },
+      "total_tokens": 1170
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"no\",\"relevance\":2,\"claims\":[],\"reason\":\"The response directly abstains without making factual claims. The evidence discusses multiple possible male referents, and the question does not identify whom \u201chis\u201d refers to, so it cannot be answered confidently from the supplied material.\"}",
+    "seconds": 2.893954249972012
+  },
+  {
+    "review_id": "review-0153",
+    "system": "dense",
+    "example_id": 27,
+    "request_sha256": "5a49c1f159c78945889c3c168e157edd6343f51cb4cf23810bebe9da0020a993",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "no",
+      "relevance": 2,
+      "claims": [],
+      "reason": "The answer appropriately abstains. The evidence mentions several mothers' deaths but does not identify pneumonia as the cause for the likely referenced mother; therefore it cannot answer the question definitively."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 865,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 71,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 936
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"no\",\"relevance\":2,\"claims\":[],\"reason\":\"The answer appropriately abstains. The evidence mentions several mothers' deaths but does not identify pneumonia as the cause for the likely referenced mother; therefore it cannot answer the question definitively.\"}",
+    "seconds": 2.0470349169918336
+  },
+  {
+    "review_id": "review-0006",
+    "system": "dense",
+    "example_id": 38,
+    "request_sha256": "a5c80f3c3e4ec91e0066fefa65ed2828e45d1b903d3055c1d9fccca217077da1",
+    "status": "rated",
+    "rating": {
+      "is_abstention": false,
+      "evidence_sufficient": "yes",
+      "relevance": 2,
+      "claims": [
+        {
+          "text": "Oil and gas will probably remain the backbone of Qatar's economy for some time to come.",
+          "verdict": "supported",
+          "evidence_id": "wiki::2566::0",
+          "supporting_quote": "While oil and gas will probably remain the backbone of Qatar's economy for some time to come",
+          "reason": "The evidence directly states the claim."
+        }
+      ],
+      "reason": "The answer directly addresses the question, and the cited evidence explicitly supports its prediction."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 1091,
+      "input_tokens_details": {
+        "cache_write_tokens": 1088,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1088
+        }
+      },
+      "output_tokens": 121,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1212
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"Oil and gas will probably remain the backbone of Qatar's economy for some time to come.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::2566::0\",\"supporting_quote\":\"While oil and gas will probably remain the backbone of Qatar's economy for some time to come\",\"reason\":\"The evidence directly states the claim.\"}],\"reason\":\"The answer directly addresses the question, and the cited evidence explicitly supports its prediction.\"}",
+    "seconds": 1.5694330830010585
+  },
+  {
+    "review_id": "review-0239",
+    "system": "hybrid",
+    "example_id": 38,
+    "request_sha256": "3b36c558318a12f8c8a4194469f8b64c29d74e69bd66bdf539c53f605767e3fe",
+    "status": "rated",
+    "rating": {
+      "is_abstention": false,
+      "evidence_sufficient": "yes",
+      "relevance": 2,
+      "claims": [
+        {
+          "text": "Oil and gas will probably remain the backbone of Qatar's economy for some time to come.",
+          "verdict": "supported",
+          "evidence_id": "wiki::2566::0",
+          "supporting_quote": "oil and gas will probably remain the backbone of Qatar's economy for some time to come",
+          "reason": "The evidence states the claim verbatim."
+        }
+      ],
+      "reason": "The answer directly addresses the question, and the retrieved evidence explicitly supports its conclusion, although the answer cites a different chunk that only establishes Qatar's current reliance on oil and gas exports."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 1099,
+      "input_tokens_details": {
+        "cache_write_tokens": 1096,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1096
+        }
+      },
+      "output_tokens": 141,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1240
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"Oil and gas will probably remain the backbone of Qatar's economy for some time to come.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::2566::0\",\"supporting_quote\":\"oil and gas will probably remain the backbone of Qatar's economy for some time to come\",\"reason\":\"The evidence states the claim verbatim.\"}],\"reason\":\"The answer directly addresses the question, and the retrieved evidence explicitly supports its conclusion, although the answer cites a different chunk that only establishes Qatar's current reliance on oil and gas exports.\"}",
+    "seconds": 3.7336318329907954
+  },
+  {
+    "review_id": "review-0055",
+    "system": "hyde_hybrid_rerank",
+    "example_id": 38,
+    "request_sha256": "7335d334f286d91dc1f60209612a24a71e16f3f3803a1b6f2f5fa6aab9ee5e74",
+    "status": "rated",
+    "rating": {
+      "is_abstention": false,
+      "evidence_sufficient": "yes",
+      "relevance": 2,
+      "claims": [
+        {
+          "text": "Oil and gas will probably remain the backbone of Qatar's economy for some time to come.",
+          "verdict": "supported",
+          "evidence_id": "wiki::2566::0",
+          "supporting_quote": "oil and gas will probably remain the backbone of Qatar's economy for some time to come",
+          "reason": "The evidence directly states the claim."
+        }
+      ],
+      "reason": "The answer directly addresses the question, and the cited evidence explicitly supports it."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 1149,
+      "input_tokens_details": {
+        "cache_write_tokens": 1146,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1146
+        }
+      },
+      "output_tokens": 119,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1268
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"Oil and gas will probably remain the backbone of Qatar's economy for some time to come.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::2566::0\",\"supporting_quote\":\"oil and gas will probably remain the backbone of Qatar's economy for some time to come\",\"reason\":\"The evidence directly states the claim.\"}],\"reason\":\"The answer directly addresses the question, and the cited evidence explicitly supports it.\"}",
+    "seconds": 1.6835636250325479
+  },
+  {
+    "review_id": "review-0146",
+    "system": "hybrid_rerank",
+    "example_id": 38,
+    "request_sha256": "7335d334f286d91dc1f60209612a24a71e16f3f3803a1b6f2f5fa6aab9ee5e74",
+    "status": "rated",
+    "rating": {
+      "is_abstention": false,
+      "evidence_sufficient": "yes",
+      "relevance": 2,
+      "claims": [
+        {
+          "text": "Oil and gas will probably remain the backbone of Qatar's economy for some time to come.",
+          "verdict": "supported",
+          "evidence_id": "wiki::2566::0",
+          "supporting_quote": "While oil and gas will probably remain the backbone of Qatar's economy for some time to come",
+          "reason": "The evidence states the claim verbatim."
+        }
+      ],
+      "reason": "The answer directly addresses the question, and the cited evidence explicitly supports it."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 1149,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 1146,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 121,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1270
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"Oil and gas will probably remain the backbone of Qatar's economy for some time to come.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::2566::0\",\"supporting_quote\":\"While oil and gas will probably remain the backbone of Qatar's economy for some time to come\",\"reason\":\"The evidence states the claim verbatim.\"}],\"reason\":\"The answer directly addresses the question, and the cited evidence explicitly supports it.\"}",
+    "seconds": 1.9050536249997094
+  },
+  {
+    "review_id": "review-0173",
+    "system": "hyde_hybrid_rerank",
+    "example_id": 7,
+    "request_sha256": "1b33e45421878421d485c43fcca8d72d71ef90e9f9f9bcb2ddb6dc12590bd122",
+    "status": "rated",
+    "rating": {
+      "is_abstention": false,
+      "evidence_sufficient": "yes",
+      "relevance": 2,
+      "claims": [
+        {
+          "text": "Wilson did not support the committee system.",
+          "verdict": "supported",
+          "evidence_id": "wiki::2142::0",
+          "supporting_quote": "Wilson pours out scorn for the committee system.",
+          "reason": "Wilson's scorn and explicit criticism of the system support the negative answer."
+        },
+        {
+          "text": "Wilson believed the committee system was undemocratic.",
+          "verdict": "supported",
+          "evidence_id": "wiki::2142::0",
+          "supporting_quote": "Wilson said that the committee system was fundamentally undemocratic",
+          "reason": "The evidence states this directly."
+        },
+        {
+          "text": "Wilson criticized the committee system in his work \"Congressional Government\".",
+          "verdict": "supported",
+          "evidence_id": "wiki::2142::0",
+          "supporting_quote": "The longest section of Congressional Government is on the United States House of Representatives, where Wilson pours out scorn for the committee system.",
+          "reason": "The evidence directly identifies the work and describes Wilson's criticism in it."
+        }
+      ],
+      "reason": "The answer directly addresses the question, and the retrieved evidence clearly establishes Wilson's opposition to and criticism of the committee system."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 941,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 250,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1191
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"Wilson did not support the committee system.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::2142::0\",\"supporting_quote\":\"Wilson pours out scorn for the committee system.\",\"reason\":\"Wilson's scorn and explicit criticism of the system support the negative answer.\"},{\"text\":\"Wilson believed the committee system was undemocratic.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::2142::0\",\"supporting_quote\":\"Wilson said that the committee system was fundamentally undemocratic\",\"reason\":\"The evidence states this directly.\"},{\"text\":\"Wilson criticized the committee system in his work \\\"Congressional Government\\\".\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::2142::0\",\"supporting_quote\":\"The longest section of Congressional Government is on the United States House of Representatives, where Wilson pours out scorn for the committee system.\",\"reason\":\"The evidence directly identifies the work and describes Wilson's criticism in it.\"}],\"reason\":\"The answer directly addresses the question, and the retrieved evidence clearly establishes Wilson's opposition to and criticism of the committee system.\"}",
+    "seconds": 2.8199409170192666
+  },
+  {
+    "review_id": "review-0148",
+    "system": "hybrid_rerank",
+    "example_id": 7,
+    "request_sha256": "1b33e45421878421d485c43fcca8d72d71ef90e9f9f9bcb2ddb6dc12590bd122",
+    "status": "rated",
+    "rating": {
+      "is_abstention": false,
+      "evidence_sufficient": "yes",
+      "relevance": 2,
+      "claims": [
+        {
+          "text": "Wilson did not support the committee system.",
+          "verdict": "supported",
+          "evidence_id": "wiki::2142::0",
+          "supporting_quote": "Wilson pours out scorn for the committee system.",
+          "reason": "Wilson's expressed scorn and characterization of the system as fundamentally undemocratic entail opposition to it."
+        },
+        {
+          "text": "Wilson believed the committee system was undemocratic.",
+          "verdict": "supported",
+          "evidence_id": "wiki::2142::0",
+          "supporting_quote": "Wilson said that the committee system was fundamentally undemocratic",
+          "reason": "The evidence directly states this belief."
+        },
+        {
+          "text": "Wilson criticized the committee system in his work \"Congressional Government.\"",
+          "verdict": "supported",
+          "evidence_id": "wiki::2142::0",
+          "supporting_quote": "The longest section of Congressional Government is on the United States House of Representatives, where Wilson pours out scorn for the committee system.",
+          "reason": "The evidence directly describes his criticism of the committee system in that work."
+        }
+      ],
+      "reason": "The answer directly addresses the question, and the retrieved evidence clearly establishes Wilson's opposition to and criticism of the committee system."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 941,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 318,
+      "output_tokens_details": {
+        "reasoning_tokens": 60
+      },
+      "total_tokens": 1259
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"Wilson did not support the committee system.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::2142::0\",\"supporting_quote\":\"Wilson pours out scorn for the committee system.\",\"reason\":\"Wilson's expressed scorn and characterization of the system as fundamentally undemocratic entail opposition to it.\"},{\"text\":\"Wilson believed the committee system was undemocratic.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::2142::0\",\"supporting_quote\":\"Wilson said that the committee system was fundamentally undemocratic\",\"reason\":\"The evidence directly states this belief.\"},{\"text\":\"Wilson criticized the committee system in his work \\\"Congressional Government.\\\"\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::2142::0\",\"supporting_quote\":\"The longest section of Congressional Government is on the United States House of Representatives, where Wilson pours out scorn for the committee system.\",\"reason\":\"The evidence directly describes his criticism of the committee system in that work.\"}],\"reason\":\"The answer directly addresses the question, and the retrieved evidence clearly establishes Wilson's opposition to and criticism of the committee system.\"}",
+    "seconds": 3.0212477919994853
+  },
+  {
+    "review_id": "review-0219",
+    "system": "dense",
+    "example_id": 7,
+    "request_sha256": "58bbeb2499176b0e03ac24db241f4655f987354683af364d91000de91064ba56",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "yes",
+      "relevance": 1,
+      "claims": [],
+      "reason": "The response abstains by stating that evidence is insufficient. However, the retrieved evidence directly answers the question: Wilson expressed scorn for the committee system, called it fundamentally undemocratic, and believed it facilitated corruption, establishing that he did not support it."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 1148,
+      "input_tokens_details": {
+        "cache_write_tokens": 1145,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1145
+        }
+      },
+      "output_tokens": 172,
+      "output_tokens_details": {
+        "reasoning_tokens": 84
+      },
+      "total_tokens": 1320
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"yes\",\"relevance\":1,\"claims\":[],\"reason\":\"The response abstains by stating that evidence is insufficient. However, the retrieved evidence directly answers the question: Wilson expressed scorn for the committee system, called it fundamentally undemocratic, and believed it facilitated corruption, establishing that he did not support it.\"}",
+    "seconds": 2.538239082961809
+  },
+  {
+    "review_id": "review-0251",
+    "system": "hybrid",
+    "example_id": 7,
+    "request_sha256": "58bbeb2499176b0e03ac24db241f4655f987354683af364d91000de91064ba56",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "yes",
+      "relevance": 1,
+      "claims": [],
+      "reason": "The answer abstains, but the retrieved evidence clearly answers the question: Wilson did not support the committee system. Evidence wiki::2142::0 says he \u201cpours out scorn for the committee system\u201d and called it \u201cfundamentally undemocratic\u201d; wiki::2143::0 adds that he believed it \u201cfacilitated corruption.\u201d"
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 1149,
+      "input_tokens_details": {
+        "cache_write_tokens": 1146,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1146
+        }
+      },
+      "output_tokens": 201,
+      "output_tokens_details": {
+        "reasoning_tokens": 94
+      },
+      "total_tokens": 1350
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"yes\",\"relevance\":1,\"claims\":[],\"reason\":\"The answer abstains, but the retrieved evidence clearly answers the question: Wilson did not support the committee system. Evidence wiki::2142::0 says he \u201cpours out scorn for the committee system\u201d and called it \u201cfundamentally undemocratic\u201d; wiki::2143::0 adds that he believed it \u201cfacilitated corruption.\u201d\"}",
+    "seconds": 2.630184207984712
+  },
+  {
+    "review_id": "review-0231",
+    "system": "hybrid",
+    "example_id": 46,
+    "request_sha256": "917d37146f12e9798b05b4f856e252aaf2269ab3e1a819570a2354f78ad88554",
+    "status": "rated",
+    "rating": {
+      "is_abstention": false,
+      "evidence_sufficient": "yes",
+      "relevance": 2,
+      "claims": [
+        {
+          "text": "This has inspired genetic researchers to begin examining the turtle genome for longevity genes.",
+          "verdict": "supported",
+          "evidence_id": "wiki::2690::0",
+          "supporting_quote": "This has inspired genetic researchers to begin examining the turtle genome for longevity genes.",
+          "reason": "The evidence directly confirms the answer's affirmative assertion."
+        }
+      ],
+      "reason": "The response directly answers the yes/no question, and the cited evidence explicitly supports it."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 905,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 118,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1023
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"This has inspired genetic researchers to begin examining the turtle genome for longevity genes.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::2690::0\",\"supporting_quote\":\"This has inspired genetic researchers to begin examining the turtle genome for longevity genes.\",\"reason\":\"The evidence directly confirms the answer's affirmative assertion.\"}],\"reason\":\"The response directly answers the yes/no question, and the cited evidence explicitly supports it.\"}",
+    "seconds": 2.564263749984093
+  },
+  {
+    "review_id": "review-0160",
+    "system": "hybrid_rerank",
+    "example_id": 46,
+    "request_sha256": "a2f38f9aa5f47e93996f9e6eb5da34e139e07fd262914b49e441eea2f0d210d9",
+    "status": "rated",
+    "rating": {
+      "is_abstention": false,
+      "evidence_sufficient": "yes",
+      "relevance": 2,
+      "claims": [
+        {
+          "text": "The discovery inspired genetic researchers to begin examining the turtle genome for longevity genes.",
+          "verdict": "supported",
+          "evidence_id": "wiki::2690::0",
+          "supporting_quote": "This has inspired genetic researchers to begin examining the turtle genome for longevity genes.",
+          "reason": "The evidence directly states the claim."
+        }
+      ],
+      "reason": "The answer directly addresses the yes/no question, and the cited evidence explicitly supports it."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 655,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 115,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 770
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"The discovery inspired genetic researchers to begin examining the turtle genome for longevity genes.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::2690::0\",\"supporting_quote\":\"This has inspired genetic researchers to begin examining the turtle genome for longevity genes.\",\"reason\":\"The evidence directly states the claim.\"}],\"reason\":\"The answer directly addresses the yes/no question, and the cited evidence explicitly supports it.\"}",
+    "seconds": 1.6723329579690471
+  },
+  {
+    "review_id": "review-0159",
+    "system": "dense",
+    "example_id": 46,
+    "request_sha256": "96cc982d9c456920f2821ff74f00aba449d25aa59e41ebec2acd419c7729560a",
+    "status": "rated",
+    "rating": {
+      "is_abstention": false,
+      "evidence_sufficient": "yes",
+      "relevance": 2,
+      "claims": [
+        {
+          "text": "This has inspired genetic researchers to begin examining the turtle genome for longevity genes.",
+          "verdict": "supported",
+          "evidence_id": "wiki::2690::0",
+          "supporting_quote": "This has inspired genetic researchers to begin examining the turtle genome for longevity genes.",
+          "reason": "The evidence directly states the claim."
+        }
+      ],
+      "reason": "The answer directly answers the yes/no question, and the cited evidence explicitly supports it."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 776,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 115,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 891
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"This has inspired genetic researchers to begin examining the turtle genome for longevity genes.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::2690::0\",\"supporting_quote\":\"This has inspired genetic researchers to begin examining the turtle genome for longevity genes.\",\"reason\":\"The evidence directly states the claim.\"}],\"reason\":\"The answer directly answers the yes/no question, and the cited evidence explicitly supports it.\"}",
+    "seconds": 1.9877534999977797
+  },
+  {
+    "review_id": "review-0198",
+    "system": "hyde_hybrid_rerank",
+    "example_id": 46,
+    "request_sha256": "86e58543876efda7c2ddf018c395c42f1787e9ccad4a2f476d5be580846f0c0a",
+    "status": "rated",
+    "rating": {
+      "is_abstention": false,
+      "evidence_sufficient": "yes",
+      "relevance": 2,
+      "claims": [
+        {
+          "text": "The discovery has inspired genetic researchers to begin examining the turtle genome for longevity genes.",
+          "verdict": "supported",
+          "evidence_id": "wiki::2690::0",
+          "supporting_quote": "This has inspired genetic researchers to begin examining the turtle genome for longevity genes.",
+          "reason": "The evidence directly states the claim."
+        }
+      ],
+      "reason": "The answer directly addresses the yes/no question, and the cited evidence explicitly supports it."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 636,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 116,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 752
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"The discovery has inspired genetic researchers to begin examining the turtle genome for longevity genes.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::2690::0\",\"supporting_quote\":\"This has inspired genetic researchers to begin examining the turtle genome for longevity genes.\",\"reason\":\"The evidence directly states the claim.\"}],\"reason\":\"The answer directly addresses the yes/no question, and the cited evidence explicitly supports it.\"}",
+    "seconds": 1.753259084012825
+  },
+  {
+    "review_id": "review-0241",
+    "system": "hybrid_rerank",
+    "example_id": 14,
+    "request_sha256": "1778171e940bd0e77a1bf80190353add7187b1e0bf7b16368b7f80393b304e7f",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "no",
+      "relevance": 2,
+      "claims": [],
+      "reason": "The response explicitly abstains due to insufficient evidence. The retrieved passages describe turtles and their taxonomy but contain no information about the Flying Spaghetti Monster or any relationship between it and turtles."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 865,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 137,
+      "output_tokens_details": {
+        "reasoning_tokens": 64
+      },
+      "total_tokens": 1002
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"no\",\"relevance\":2,\"claims\":[],\"reason\":\"The response explicitly abstains due to insufficient evidence. The retrieved passages describe turtles and their taxonomy but contain no information about the Flying Spaghetti Monster or any relationship between it and turtles.\"}",
+    "seconds": 1.939966791018378
+  },
+  {
+    "review_id": "review-0105",
+    "system": "hyde_hybrid_rerank",
+    "example_id": 14,
+    "request_sha256": "efc13da16177642fb32e29712160a38761b6f211ec1541f7399d7b70f17f5945",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "no",
+      "relevance": 2,
+      "claims": [],
+      "reason": "The response directly abstains due to insufficient evidence. The retrieved chunks describe turtle biology and classification but provide no information about the Flying Spaghetti Monster or any relationship between it and turtles."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 805,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 123,
+      "output_tokens_details": {
+        "reasoning_tokens": 50
+      },
+      "total_tokens": 928
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"no\",\"relevance\":2,\"claims\":[],\"reason\":\"The response directly abstains due to insufficient evidence. The retrieved chunks describe turtle biology and classification but provide no information about the Flying Spaghetti Monster or any relationship between it and turtles.\"}",
+    "seconds": 1.9209990829695016
+  },
+  {
+    "review_id": "review-0121",
+    "system": "dense",
+    "example_id": 14,
+    "request_sha256": "c7b90325a6da249b20f71c3928aa3995933cc6141dbc457cf9f1fce62e75e2ee",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "no",
+      "relevance": 2,
+      "claims": [],
+      "reason": "The answer appropriately abstains because the retrieved evidence describes turtle taxonomy but provides no information about the Flying Spaghetti Monster or whether turtles are part of it."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 786,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 65,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 851
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"no\",\"relevance\":2,\"claims\":[],\"reason\":\"The answer appropriately abstains because the retrieved evidence describes turtle taxonomy but provides no information about the Flying Spaghetti Monster or whether turtles are part of it.\"}",
+    "seconds": 2.392712417000439
+  },
+  {
+    "review_id": "review-0149",
+    "system": "hybrid",
+    "example_id": 14,
+    "request_sha256": "4c18f88290ff2ef979590fdf8358a43a52ddaadea5c28adb01b93119000cb271",
+    "status": "rated",
+    "rating": {
+      "is_abstention": true,
+      "evidence_sufficient": "no",
+      "relevance": 1,
+      "claims": [],
+      "reason": "The answer abstains due to insufficient evidence. The retrieved chunks describe turtle biology and classification but provide no information about the Flying Spaghetti Monster or any relationship between it and turtles."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 1050,
+      "input_tokens_details": {
+        "cache_write_tokens": 1047,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1047
+        }
+      },
+      "output_tokens": 70,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1120
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":true,\"evidence_sufficient\":\"no\",\"relevance\":1,\"claims\":[],\"reason\":\"The answer abstains due to insufficient evidence. The retrieved chunks describe turtle biology and classification but provide no information about the Flying Spaghetti Monster or any relationship between it and turtles.\"}",
+    "seconds": 1.421474875009153
+  },
+  {
+    "review_id": "review-0197",
+    "system": "hyde_hybrid_rerank",
+    "example_id": 21,
+    "request_sha256": "fd870ca4873a6bf4ce4d1f19e01732ec09b6e4f9e51515d39a1dd69fb537872a",
+    "status": "rated",
+    "rating": {
+      "is_abstention": false,
+      "evidence_sufficient": "yes",
+      "relevance": 2,
+      "claims": [
+        {
+          "text": "Leopards are solitary cats.",
+          "verdict": "supported",
+          "evidence_id": "wiki::2458::0",
+          "supporting_quote": "These cats are solitary, avoiding one another.",
+          "reason": "The cited passage directly describes leopards as solitary cats."
+        }
+      ],
+      "reason": "The answer directly identifies leopards, and the retrieved evidence explicitly supports that they are solitary."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 1214,
+      "input_tokens_details": {
+        "cache_write_tokens": 1211,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1211
+        }
+      },
+      "output_tokens": 108,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1322
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"Leopards are solitary cats.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::2458::0\",\"supporting_quote\":\"These cats are solitary, avoiding one another.\",\"reason\":\"The cited passage directly describes leopards as solitary cats.\"}],\"reason\":\"The answer directly identifies leopards, and the retrieved evidence explicitly supports that they are solitary.\"}",
+    "seconds": 1.854862458014395
+  },
+  {
+    "review_id": "review-0081",
+    "system": "hybrid",
+    "example_id": 21,
+    "request_sha256": "c6fd56ee77b53fa5d1e56697b3113d7b39ab37244717c0059e3e0ec4afd0810d",
+    "status": "rated",
+    "rating": {
+      "is_abstention": false,
+      "evidence_sufficient": "yes",
+      "relevance": 2,
+      "claims": [
+        {
+          "text": "Leopards are solitary.",
+          "verdict": "supported",
+          "evidence_id": "wiki::2458::0",
+          "supporting_quote": "These cats are solitary, avoiding one another.",
+          "reason": "The evidence directly states that leopards are solitary."
+        }
+      ],
+      "reason": "The answer directly identifies leopards as solitary cats, and the cited evidence explicitly supports this."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 1080,
+      "input_tokens_details": {
+        "cache_write_tokens": 1077,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 1077
+        }
+      },
+      "output_tokens": 106,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1186
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"Leopards are solitary.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::2458::0\",\"supporting_quote\":\"These cats are solitary, avoiding one another.\",\"reason\":\"The evidence directly states that leopards are solitary.\"}],\"reason\":\"The answer directly identifies leopards as solitary cats, and the cited evidence explicitly supports this.\"}",
+    "seconds": 1.6686580840032548
+  },
+  {
+    "review_id": "review-0057",
+    "system": "hybrid_rerank",
+    "example_id": 21,
+    "request_sha256": "fd870ca4873a6bf4ce4d1f19e01732ec09b6e4f9e51515d39a1dd69fb537872a",
+    "status": "rated",
+    "rating": {
+      "is_abstention": false,
+      "evidence_sufficient": "yes",
+      "relevance": 2,
+      "claims": [
+        {
+          "text": "Leopards are solitary cats.",
+          "verdict": "supported",
+          "evidence_id": "wiki::2458::0",
+          "supporting_quote": "These cats are solitary, avoiding one another.",
+          "reason": "The evidence directly identifies leopards as cats that are solitary."
+        }
+      ],
+      "reason": "The answer directly responds to the question, and the cited evidence supports that leopards are solitary."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 1214,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 1211,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 110,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1324
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"Leopards are solitary cats.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::2458::0\",\"supporting_quote\":\"These cats are solitary, avoiding one another.\",\"reason\":\"The evidence directly identifies leopards as cats that are solitary.\"}],\"reason\":\"The answer directly responds to the question, and the cited evidence supports that leopards are solitary.\"}",
+    "seconds": 1.5776984170079231
+  },
+  {
+    "review_id": "review-0113",
+    "system": "dense",
+    "example_id": 21,
+    "request_sha256": "490b3ccbe5a802b7fba22408b3a6a3ea706775b95a38c5b070fd3fc3c1ac6ad9",
+    "status": "rated",
+    "rating": {
+      "is_abstention": false,
+      "evidence_sufficient": "yes",
+      "relevance": 2,
+      "claims": [
+        {
+          "text": "Leopards are solitary cats.",
+          "verdict": "supported",
+          "evidence_id": "wiki::2466::0",
+          "supporting_quote": "The leopard is solitary",
+          "reason": "The evidence directly states that the leopard is solitary."
+        }
+      ],
+      "reason": "The answer directly addresses the question, and the cited evidence supports its factual assertion."
+    },
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 852,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 99,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 951
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"Leopards are solitary cats.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::2466::0\",\"supporting_quote\":\"The leopard is solitary\",\"reason\":\"The evidence directly states that the leopard is solitary.\"}],\"reason\":\"The answer directly addresses the question, and the cited evidence supports its factual assertion.\"}",
+    "seconds": 1.3346262919949368
+  },
+  {
+    "review_id": "review-0047",
+    "system": "hybrid",
+    "example_id": 43,
+    "request_sha256": "f474562d6b0b8e52f9c2565a8baba8c76d927e027d816202db6a6c1aa5a3af45",
+    "status": "failed",
+    "rating": null,
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 845,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 120,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 965
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"Gerald Ford was the 38th President of the United States.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::1992::0\",\"supporting_quote\":\"Gerald Rudolph Ford, Jr. ... was the thirty-eighth President of the United States\",\"reason\":\"The evidence directly confirms the claim.\"}],\"reason\":\"The answer directly and correctly responds to the question, and its cited evidence explicitly supports the assertion.\"}",
+    "error_type": "ValueError",
+    "seconds": 2.280741541995667
+  },
+  {
+    "review_id": "review-0212",
+    "system": "hyde_hybrid_rerank",
+    "example_id": 43,
+    "request_sha256": "14a7a4dfa182761d7697703123ee2f4899d6a0c2b46c3396ccac81307cc13dc1",
+    "status": "failed",
+    "rating": null,
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 1016,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 121,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1137
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"Gerald Ford was the 38th President of the United States.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::1992::0\",\"supporting_quote\":\"Gerald Rudolph Ford, Jr. ... was the thirty-eighth President of the United States\",\"reason\":\"The evidence directly confirms the answer.\"}],\"reason\":\"The response directly answers the question, and its sole factual assertion is explicitly supported by the cited evidence.\"}",
+    "error_type": "ValueError",
+    "seconds": 1.7264324160059914
+  },
+  {
+    "review_id": "review-0072",
+    "system": "hybrid_rerank",
+    "example_id": 43,
+    "request_sha256": "14a7a4dfa182761d7697703123ee2f4899d6a0c2b46c3396ccac81307cc13dc1",
+    "status": "failed",
+    "rating": null,
+    "stratum": "natural_qa",
+    "usage": {
+      "input_tokens": 1016,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cached_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        }
+      },
+      "output_tokens": 116,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1132
+    },
+    "response_model": "gpt-5.6-sol",
+    "raw_output": "{\"is_abstention\":false,\"evidence_sufficient\":\"yes\",\"relevance\":2,\"claims\":[{\"text\":\"Gerald Ford was the 38th President of the United States.\",\"verdict\":\"supported\",\"evidence_id\":\"wiki::1992::0\",\"supporting_quote\":\"Gerald Rudolph Ford, Jr. ... was the thirty-eighth President of the United States\",\"reason\":\"The evidence directly confirms the claim.\"}],\"reason\":\"The answer directly addresses the question, and the cited evidence explicitly supports it.\"}",
+    "error_type": "ValueError",
+    "seconds": 1.7332476670271717
+  }
+]

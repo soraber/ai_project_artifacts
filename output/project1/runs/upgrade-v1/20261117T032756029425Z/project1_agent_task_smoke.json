@@ -1,0 +1,206 @@
+{
+  "evaluation_version": "authored-task-smoke-v1",
+  "records": [
+    {
+      "task_id": "add",
+      "system": "base",
+      "schema_valid": true,
+      "tool_correct": true,
+      "arguments_correct": true,
+      "abstention_correct": null,
+      "code_tests_passed": null,
+      "error": null,
+      "response": "{\"tool\": \"calculator\", \"arguments\": {\"operation\": \"add\", \"a\": 17, \"b\": 29}}",
+      "latency_seconds": 3.6157936199997494
+    },
+    {
+      "task_id": "add",
+      "system": "tuned",
+      "schema_valid": false,
+      "tool_correct": false,
+      "arguments_correct": false,
+      "abstention_correct": null,
+      "code_tests_passed": null,
+      "error": "JSONDecodeError",
+      "response": "You can use\nfilter\nto filter out the\nnull\nvalues and\nmap\nto convert the\nnull\nvalues to\n0\n.\nconst arr = [null, 1, null, 2, null, 3, null, 4, null, 5, null, 6, null, 7, null, 8, null, 9, null, 10, null, 11, null, 12, null, 13, null, 14, null, 15, null, 16, null, 17, null, 18, null, 19, null, 20, null, 21, null, 22, null, 23, null, 24, null, 25, null, 26, null, 27, null, 28, null, 29, null, 30, null, 31, null, 32, null, 33, null, 34, null, 35, null, 36, null, 37, null, 38, null, 39, null, 40, null, 41, null, 42, null, 43, null, 44, null,",
+      "latency_seconds": 28.101818854000157
+    },
+    {
+      "task_id": "multiply",
+      "system": "base",
+      "schema_valid": true,
+      "tool_correct": true,
+      "arguments_correct": true,
+      "abstention_correct": null,
+      "code_tests_passed": null,
+      "error": null,
+      "response": "{\n  \"tool\": \"calculator\",\n  \"arguments\": {\n    \"operation\": \"multiply\",\n    \"a\": 12,\n    \"b\": 8\n  }\n}",
+      "latency_seconds": 2.099458954999136
+    },
+    {
+      "task_id": "multiply",
+      "system": "tuned",
+      "schema_valid": false,
+      "tool_correct": false,
+      "arguments_correct": false,
+      "abstention_correct": null,
+      "code_tests_passed": null,
+      "error": "JSONDecodeError",
+      "response": "You can use\nfilter\nto filter out the\nnull\nvalues and\nmap\nto convert the\nnull\nvalues to\n0\n.\nconst arr = [1, null, 2, null, 3, null, 4, null, 5, null, 6, null, 7, null, 8, null, 9, null, 10, null, 11, null, 12, null, 13, null, 14, null, 15, null, 16, null, 17, null, 18, null, 19, null, 20, null, 21, null, 22, null, 23, null, 24, null, 25, null, 26, null, 27, null, 28, null, 29, null, 30, null, 31, null, 32, null, 33, null, 34, null, 35, null, 36, null, 37, null, 38, null, 39, null, 40, null, 41, null, 42, null, 43, null, 44, null, 45,",
+      "latency_seconds": 27.867266255998402
+    },
+    {
+      "task_id": "lookup",
+      "system": "base",
+      "schema_valid": true,
+      "tool_correct": true,
+      "arguments_correct": true,
+      "abstention_correct": null,
+      "code_tests_passed": null,
+      "error": null,
+      "response": "{\n  \"tool\": \"lookup\",\n  \"arguments\": {\n    \"query\": \"return policy\"\n  }\n}",
+      "latency_seconds": 1.464616389999719
+    },
+    {
+      "task_id": "lookup",
+      "system": "tuned",
+      "schema_valid": false,
+      "tool_correct": false,
+      "arguments_correct": false,
+      "abstention_correct": null,
+      "code_tests_passed": null,
+      "error": "JSONDecodeError",
+      "response": "You can use\nfilter\nand\nmap\nto get the desired result:\nconst data = [{\r\n  \"id\": 1,\r\n  \"name\": \"John\",\r\n  \"age\": 30\r\n}, {\r\n  \"id\": 2,\r\n  \"name\": \"Paul\",\r\n  \"age\": 25\r\n}, {\r\n  \"id\": 3,\r\n  \"name\": \"John\",\r\n  \"age\": 30\r\n}, {\r\n  \"id\": 4,\r\n  \"name\": \"John\",\r\n  \"age\": 30\r\n}, {\r\n  \"id\": 5,\r\n  \"name\": \"John\",\r\n  \"age\": 30\r\n}, {\r\n  \"id\": 6,\r\n  \"name\": \"John\",\r\n  \"age\": 30\r\n}, {\r\n  \"id\": 7,\r\n  \"name\": \"John\",\r\n  \"age\": 30\r\n}, {\r\n  \"id\": 8,\r\n  \"name\": \"John\",\r\n  \"age\": 30\r\n}, {\r\n  \"id\": 9,\r\n  \"name\": \"John\",\r\n  \"age\": 30\r\n}, {\r\n  \"id\": 10,\r\n  \"name\": \"John\",\r\n  \"age\": 30\r\n}, {\r\n  \"id\":",
+      "latency_seconds": 27.926636312999108
+    },
+    {
+      "task_id": "missing_fact",
+      "system": "base",
+      "schema_valid": true,
+      "tool_correct": true,
+      "arguments_correct": true,
+      "abstention_correct": true,
+      "code_tests_passed": null,
+      "error": null,
+      "response": "{\n  \"tool\": \"abstain\",\n  \"arguments\": {}\n}",
+      "latency_seconds": 0.9739455230010208
+    },
+    {
+      "task_id": "missing_fact",
+      "system": "tuned",
+      "schema_valid": false,
+      "tool_correct": false,
+      "arguments_correct": false,
+      "abstention_correct": false,
+      "code_tests_passed": null,
+      "error": "JSONDecodeError",
+      "response": "You can use\njson\nto convert the object to a string and\njson.loads\nto convert it back to a dictionary.\nimport json\n\ndef json_to_dict(obj):\n    return json.loads(json.dumps(obj))\n\ndef dict_to_json(obj):\n    return json.dumps(obj)\n\ndef json_to_dict(obj):\n    return json.loads(json.dumps(obj))\n\ndef dict_to_json(obj):\n    return json.dumps(obj)\n\ndef json_to_dict(obj):\n    return json.loads(json.dumps(obj))\n\ndef dict_to_json(obj):\n    return json.dumps(obj)\n\ndef json_to_dict(obj):\n    return json.loads(json.dumps(obj))\n\ndef dict_to_json(obj):\n    return json.dumps(obj)\n\ndef json_to_dict(obj):\n    return json.loads(json.dumps(obj))\n\ndef dict_to_json(obj):\n    return json.dumps(obj)\n\ndef json_to_dict(obj):\n    return json.loads(json.dumps(obj))\n\ndef dict_to_json(obj):\n    return json.dumps(obj)\n\ndef json_to_dict(obj):\n    return json.loads(json.dumps(obj))\n\ndef dict_to_json(obj):\n    return json.dumps(obj)\n\ndef json_to_dict(obj):\n    return json.loads(json.dumps(obj))\n\ndef dict_to_json(obj):\n    return json.dumps(obj)\n\ndef json_to_dict(obj):\n    return json.loads(json.dumps(obj))\n\ndef dict_to_json(obj",
+      "latency_seconds": 27.792135506000704
+    },
+    {
+      "task_id": "missing_amount",
+      "system": "base",
+      "schema_valid": false,
+      "tool_correct": false,
+      "arguments_correct": false,
+      "abstention_correct": false,
+      "code_tests_passed": null,
+      "error": "ValueError",
+      "response": "{\n  \"tool\": \"calculator\",\n  \"arguments\": {\n    \"operation\": \"add\"\n  }\n}",
+      "latency_seconds": 1.3462964310001553
+    },
+    {
+      "task_id": "missing_amount",
+      "system": "tuned",
+      "schema_valid": false,
+      "tool_correct": false,
+      "arguments_correct": false,
+      "abstention_correct": false,
+      "code_tests_passed": null,
+      "error": "JSONDecodeError",
+      "response": "You can use\ngroupby\nand\nsum\n:\ndf.groupby('date').sum()\nOutput:\ndate\namount\n2020-01-01    100\n2020-01-02    200\n2020-01-03    300\n2020-01-04    400\n2020-01-05    500\n2020-01-06    600\n2020-01-07    700\n2020-01-08    800\n2020-01-09    900\n2020-01-10   1000\n2020-01-11   1100\n2020-01-12   1200\n2020-01-13   1300\n2020-01-14   1400\n2020-01-15   1500\n2020-01-16   1600\n2020-01-17   1700\n2020-01-18   1800\n2020-01-19   1900\n2020-01-20   2000\n2020-01-21   2100\n2020-01-22   220",
+      "latency_seconds": 27.773542031000034
+    },
+    {
+      "task_id": "code",
+      "system": "base",
+      "schema_valid": true,
+      "tool_correct": true,
+      "arguments_correct": null,
+      "abstention_correct": null,
+      "code_tests_passed": null,
+      "error": null,
+      "response": "{\n  \"tool\": \"python\",\n  \"arguments\": {\n    \"code\": \"def add(a, b):\\n    return a + b\"\n  }\n}",
+      "latency_seconds": 1.9619633050006087
+    },
+    {
+      "task_id": "code",
+      "system": "tuned",
+      "schema_valid": false,
+      "tool_correct": false,
+      "arguments_correct": null,
+      "abstention_correct": null,
+      "code_tests_passed": null,
+      "error": "JSONDecodeError",
+      "response": "You can use\njson\nto convert the object to a string and\njson.loads\nto convert it back to a dictionary.\nimport json\n\ndef calculator(**kwargs):\n    if kwargs['operation'] == 'add':\n        return json.loads('{\"tool\": \"add\", \"arguments\": {\"a\": 1, \"b\": 2}}')\n    elif kwargs['operation'] =='multiply':\n        return json.loads('{\"tool\": \"multiply\", \"arguments\": {\"a\": 1, \"b\": 2}}')\n    else:\n        return json.loads('{\"tool\": \"error\", \"arguments\": {\"error\": \"unknown operation\"}}')\n\ndef lookup(**kwargs):\n    return json.loads('{\"tool\": \"lookup\", \"arguments\": {\"query\": \"foo\"}}')\n\ndef abstain(**kwargs):\n    return json.loads('{\"tool\": \"abstain\", \"arguments\": {}}')\n\ndef python(**kwargs):\n    return json.loads('{\"tool\": \"python\", \"arguments\": {\"code\": \"print(1 + 2)\"}}')\nThe output of the above code is:\n{\"tool\": \"add\", \"arguments\": {\"a\": 1, \"b\": 2}}\n{\"tool\": \"multiply\", \"arguments\": {\"a",
+      "latency_seconds": 27.841845844999625
+    }
+  ],
+  "metrics": {
+    "base": {
+      "schema_valid": {
+        "mean": 0.8333333333333334,
+        "count": 6
+      },
+      "tool_correct": {
+        "mean": 0.8333333333333334,
+        "count": 6
+      },
+      "arguments_correct": {
+        "mean": 0.8,
+        "count": 5
+      },
+      "abstention_correct": {
+        "mean": 0.5,
+        "count": 2
+      },
+      "code_tests_passed": {
+        "mean": null,
+        "count": 0
+      }
+    },
+    "tuned": {
+      "schema_valid": {
+        "mean": 0.0,
+        "count": 6
+      },
+      "tool_correct": {
+        "mean": 0.0,
+        "count": 6
+      },
+      "arguments_correct": {
+        "mean": 0.0,
+        "count": 5
+      },
+      "abstention_correct": {
+        "mean": 0.0,
+        "count": 2
+      },
+      "code_tests_passed": {
+        "mean": null,
+        "count": 0
+      }
+    }
+  },
+  "limitations": "Six authored smoke tasks, not an independent agent benchmark. Code scoring requires an isolated executor; never execute generated code in Colab.",
+  "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "model_revision": "8afb486c1db24fe5011ec46dfbe5b5dccdb575c2",
+  "seconds": 187.5478884660006,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "decoding": {
+    "do_sample": false,
+    "max_new_tokens": 256,
+    "input_max_tokens": 2048
+  },
+  "adapter_weights_sha256": "914bbdbf42bf35d91f186661362b8b7839affd0e8a9ef8fd79cf587459a60e70"
+}

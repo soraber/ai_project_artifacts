@@ -10,3 +10,8 @@ tmp/
 .env
 .env.*
 colab_tool.py
+temp_info.txt
+llm-api.txt
+*.pem
+*.key
+*.code-workspace

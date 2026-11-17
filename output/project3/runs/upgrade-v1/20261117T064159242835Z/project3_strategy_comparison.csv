@@ -1,0 +1,4 @@
+system,score,source_citations,audience_coverage,channel_plan,four_week_timeline,measurable_kpis,safeguards,risks_and_mitigations
+single_agent,96.42857142857143,1.0,1.0,1.0,1.0,1.0,0.75,1.0
+crewai,75.0,0.0,1.0,1.0,1.0,1.0,0.25,1.0
+single_agent_self_review,96.42857142857143,1.0,1.0,1.0,1.0,1.0,0.75,1.0

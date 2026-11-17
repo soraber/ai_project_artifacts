@@ -1,0 +1,14 @@
+{
+  "stage": "project3",
+  "started_utc": "20261117T063509808173Z",
+  "status": "failed",
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "python": "3.11.17",
+  "seed_note": "Notebook seeds retained; authored checks and model scores are distinct.",
+  "notebook_sha256": "afc9605fa9ef5741385520e9ef238154fe9433e312c370c3561894ec59e767cc",
+  "error_type": "PydanticUserError",
+  "error": "`AgentDecision` is not fully defined; you should define `Literal`, then call `AgentDecision.model_rebuild()`.\n\nFor further information visit https://errors.pydantic.dev/2.12/u/class-not-fully-defined",
+  "seconds": 40.888306202999956,
+  "peak_gpu_allocated_bytes": 7503876096,
+  "finished_utc": "20261117T063550696730Z"
+}

@@ -1,0 +1,329 @@
+{
+  "evaluation_version": "upgrade-v1",
+  "dataset": "rag-datasets/rag-mini-wikipedia",
+  "dataset_revision": "ec8e240df1b1eb7171cb3e5dcf9462f6569f4544",
+  "examples": 63,
+  "evaluation_seed": 2026,
+  "generator_model": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "generator_revision": "8afb486c1db24fe5011ec46dfbe5b5dccdb575c2",
+  "embedding_fingerprint": "f203a4b23a2ed94dbcd387229fc2bcfe1eb1e2856d2501821e8d41f1b681f316",
+  "reranker_revision": "233902d25c440f23af6f7d6e94d2946bac0bee0a",
+  "answer_prompt_sha256": "1019b1d4686e1ebd308052e161e5cb446218f0e16821629da2b8e278ae04794a",
+  "evaluation_sha256": "21ef6cbf50124cbbd951b4cf181e9a371cc6227512f7a44ee54058b814936074",
+  "decoding": {
+    "do_sample": false,
+    "max_new_tokens": 96,
+    "input_max_tokens": 3072
+  },
+  "context_chunks": 5,
+  "gpu": "NVIDIA A100-SXM4-40GB",
+  "metrics": {
+    "dense": {
+      "answer_hit_proxy": 0.3968253968253968,
+      "reciprocal_rank_proxy": 0.317989417989418,
+      "token_f1": 0.17775562491726984,
+      "binary_answer_correct": 0.46875,
+      "citation_id_validity": 0.5238095238095238,
+      "relevance_recall": null,
+      "abstention_correct": 1.0,
+      "examples": 63,
+      "generation_calls": 63,
+      "input_tokens": 35471,
+      "output_tokens": 1368,
+      "errors": 0,
+      "latency_p50_seconds": 1.1332757020009012,
+      "latency_p95_seconds": 2.838715386000331,
+      "paired_f1_vs_dense": {
+        "mean_change": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "pairs": 63,
+        "resamples": 2000
+      }
+    },
+    "hybrid": {
+      "answer_hit_proxy": 0.42857142857142855,
+      "reciprocal_rank_proxy": 0.37222222222222223,
+      "token_f1": 0.19068446782870782,
+      "binary_answer_correct": 0.40625,
+      "citation_id_validity": 0.5396825396825397,
+      "relevance_recall": null,
+      "abstention_correct": 1.0,
+      "examples": 63,
+      "generation_calls": 63,
+      "input_tokens": 37845,
+      "output_tokens": 1291,
+      "errors": 0,
+      "latency_p50_seconds": 1.02433624600053,
+      "latency_p95_seconds": 2.910675672999787,
+      "paired_f1_vs_dense": {
+        "mean_change": 0.012928842911437958,
+        "ci95": [
+          -0.023422476124694135,
+          0.0590792107976373
+        ],
+        "pairs": 63,
+        "resamples": 2000
+      }
+    },
+    "hybrid_rerank": {
+      "answer_hit_proxy": 0.42857142857142855,
+      "reciprocal_rank_proxy": 0.40476190476190477,
+      "token_f1": 0.1782409142633708,
+      "binary_answer_correct": 0.46875,
+      "citation_id_validity": 0.5555555555555556,
+      "relevance_recall": null,
+      "abstention_correct": 1.0,
+      "examples": 63,
+      "generation_calls": 63,
+      "input_tokens": 37977,
+      "output_tokens": 1406,
+      "errors": 0,
+      "latency_p50_seconds": 1.090099551000094,
+      "latency_p95_seconds": 2.9846600300006685,
+      "paired_f1_vs_dense": {
+        "mean_change": 0.0004852893461009249,
+        "ci95": [
+          -0.016698206034357455,
+          0.01660462089023116
+        ],
+        "pairs": 63,
+        "resamples": 2000
+      }
+    },
+    "hyde_hybrid_rerank": {
+      "answer_hit_proxy": 0.42857142857142855,
+      "reciprocal_rank_proxy": 0.40476190476190477,
+      "token_f1": 0.1903442153945597,
+      "binary_answer_correct": 0.46875,
+      "citation_id_validity": 0.5396825396825397,
+      "relevance_recall": null,
+      "abstention_correct": 1.0,
+      "examples": 63,
+      "generation_calls": 126,
+      "input_tokens": 42025,
+      "output_tokens": 7179,
+      "errors": 0,
+      "latency_p50_seconds": 6.082817408001574,
+      "latency_p95_seconds": 8.22564826300004,
+      "paired_f1_vs_dense": {
+        "mean_change": 0.012588590477289835,
+        "ci95": [
+          -0.014897599018552534,
+          0.050354698539243715
+        ],
+        "pairs": 63,
+        "resamples": 2000
+      }
+    }
+  },
+  "metrics_by_stratum": {
+    "authored_absence_probe": {
+      "dense": {
+        "answer_hit_proxy": 0.0,
+        "reciprocal_rank_proxy": 0.0,
+        "token_f1": 1.0,
+        "binary_answer_correct": null,
+        "citation_id_validity": 0.0,
+        "relevance_recall": null,
+        "abstention_correct": 1.0,
+        "examples": 3,
+        "generation_calls": 3,
+        "input_tokens": 354,
+        "output_tokens": 15,
+        "errors": 0,
+        "latency_p50_seconds": 0.2936417379987688,
+        "latency_p95_seconds": 0.2973368240000127,
+        "paired_f1_vs_dense": {
+          "mean_change": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "pairs": 3,
+          "resamples": 2000
+        }
+      },
+      "hybrid": {
+        "answer_hit_proxy": 0.0,
+        "reciprocal_rank_proxy": 0.0,
+        "token_f1": 1.0,
+        "binary_answer_correct": null,
+        "citation_id_validity": 0.0,
+        "relevance_recall": null,
+        "abstention_correct": 1.0,
+        "examples": 3,
+        "generation_calls": 3,
+        "input_tokens": 1014,
+        "output_tokens": 15,
+        "errors": 0,
+        "latency_p50_seconds": 0.30721882800025924,
+        "latency_p95_seconds": 0.3090235589988879,
+        "paired_f1_vs_dense": {
+          "mean_change": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "pairs": 3,
+          "resamples": 2000
+        }
+      },
+      "hybrid_rerank": {
+        "answer_hit_proxy": 0.0,
+        "reciprocal_rank_proxy": 0.0,
+        "token_f1": 1.0,
+        "binary_answer_correct": null,
+        "citation_id_validity": 0.0,
+        "relevance_recall": null,
+        "abstention_correct": 1.0,
+        "examples": 3,
+        "generation_calls": 3,
+        "input_tokens": 592,
+        "output_tokens": 15,
+        "errors": 0,
+        "latency_p50_seconds": 0.32077123199997004,
+        "latency_p95_seconds": 0.3268503809995309,
+        "paired_f1_vs_dense": {
+          "mean_change": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "pairs": 3,
+          "resamples": 2000
+        }
+      },
+      "hyde_hybrid_rerank": {
+        "answer_hit_proxy": 0.0,
+        "reciprocal_rank_proxy": 0.0,
+        "token_f1": 1.0,
+        "binary_answer_correct": null,
+        "citation_id_validity": 0.0,
+        "relevance_recall": null,
+        "abstention_correct": 1.0,
+        "examples": 3,
+        "generation_calls": 6,
+        "input_tokens": 782,
+        "output_tokens": 143,
+        "errors": 0,
+        "latency_p50_seconds": 1.2865276349984924,
+        "latency_p95_seconds": 5.313089621999097,
+        "paired_f1_vs_dense": {
+          "mean_change": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "pairs": 3,
+          "resamples": 2000
+        }
+      }
+    },
+    "natural_qa": {
+      "dense": {
+        "answer_hit_proxy": 0.4166666666666667,
+        "reciprocal_rank_proxy": 0.3338888888888889,
+        "token_f1": 0.13664340616313334,
+        "binary_answer_correct": 0.46875,
+        "citation_id_validity": 0.55,
+        "relevance_recall": null,
+        "abstention_correct": null,
+        "examples": 60,
+        "generation_calls": 60,
+        "input_tokens": 35117,
+        "output_tokens": 1353,
+        "errors": 0,
+        "latency_p50_seconds": 1.1874209349998637,
+        "latency_p95_seconds": 3.0255210300001636,
+        "paired_f1_vs_dense": {
+          "mean_change": 0.0,
+          "ci95": [
+            0.0,
+            0.0
+          ],
+          "pairs": 60,
+          "resamples": 2000
+        }
+      },
+      "hybrid": {
+        "answer_hit_proxy": 0.45,
+        "reciprocal_rank_proxy": 0.3908333333333333,
+        "token_f1": 0.1502186912201432,
+        "binary_answer_correct": 0.40625,
+        "citation_id_validity": 0.5666666666666667,
+        "relevance_recall": null,
+        "abstention_correct": null,
+        "examples": 60,
+        "generation_calls": 60,
+        "input_tokens": 36831,
+        "output_tokens": 1276,
+        "errors": 0,
+        "latency_p50_seconds": 1.0856175999997504,
+        "latency_p95_seconds": 2.9898771839998517,
+        "paired_f1_vs_dense": {
+          "mean_change": 0.013575285057009856,
+          "ci95": [
+            -0.026023958383131807,
+            0.060892109348417954
+          ],
+          "pairs": 60,
+          "resamples": 2000
+        }
+      },
+      "hybrid_rerank": {
+        "answer_hit_proxy": 0.45,
+        "reciprocal_rank_proxy": 0.425,
+        "token_f1": 0.13715295997653934,
+        "binary_answer_correct": 0.46875,
+        "citation_id_validity": 0.5833333333333334,
+        "relevance_recall": null,
+        "abstention_correct": null,
+        "examples": 60,
+        "generation_calls": 60,
+        "input_tokens": 37385,
+        "output_tokens": 1391,
+        "errors": 0,
+        "latency_p50_seconds": 1.1328967784993438,
+        "latency_p95_seconds": 4.29688050599907,
+        "paired_f1_vs_dense": {
+          "mean_change": 0.0005095538134059711,
+          "ci95": [
+            -0.016284310331851362,
+            0.01776151536024896
+          ],
+          "pairs": 60,
+          "resamples": 2000
+        }
+      },
+      "hyde_hybrid_rerank": {
+        "answer_hit_proxy": 0.45,
+        "reciprocal_rank_proxy": 0.425,
+        "token_f1": 0.1498614261642877,
+        "binary_answer_correct": 0.46875,
+        "citation_id_validity": 0.5666666666666667,
+        "relevance_recall": null,
+        "abstention_correct": null,
+        "examples": 60,
+        "generation_calls": 120,
+        "input_tokens": 41243,
+        "output_tokens": 7036,
+        "errors": 0,
+        "latency_p50_seconds": 6.123722227500366,
+        "latency_p95_seconds": 9.247045774000071,
+        "paired_f1_vs_dense": {
+          "mean_change": 0.013218020001154325,
+          "ci95": [
+            -0.014537680058953697,
+            0.05191429126072327
+          ],
+          "pairs": 60,
+          "resamples": 2000
+        }
+      }
+    }
+  },
+  "limitations": "Substring hit/MRR and token F1 are proxies. Citation ID validity is not claim support. Human claim-support labels remain pending."
+}
