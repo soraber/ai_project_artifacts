@@ -12,6 +12,8 @@ from pathlib import Path
 
 
 def run(notebook_path, persistent_root):
+    from security_preflight import require_gpu_clearance
+    require_gpu_clearance()
     from huggingface_hub import HfApi, get_token
     import datasets
     import torch

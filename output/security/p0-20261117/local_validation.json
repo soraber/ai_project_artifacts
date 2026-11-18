@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-17",
+  "scope": "Local regression results observed by the execution tools; not model-performance measurements",
+  "macos_arm64_cpu": {"passed": 57, "skipped": 1},
+  "offline_linux_arm64_cpu": {"passed": 57, "skipped": 1},
+  "skip_reason": "Optional real-Torch trainer test is run separately",
+  "separate_cpu_trainer": {"passed": 3, "real_adapter_update_test": true, "cuda_tested": false},
+  "linux_test_image_id": "sha256:0ea819ed39d406757b99232ce13914022d09a22f19a00e88c75f7ae5680e5696",
+  "project1_dataset_cell_id": "253ca33c",
+  "project1_dataset_cell_sha256": "e0eb053df6f13160eafc7e1ee91d3bb5864482eda2bdfbd69faae06c88d29231",
+  "paid_api_calls": 0,
+  "gpu_validation": "deferred_by_user",
+  "github_ci_executed": false
+}

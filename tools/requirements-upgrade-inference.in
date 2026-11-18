@@ -7,7 +7,7 @@ duckdb==1.5.6
 sqlglot==29.0.1
 openai==2.54.0
 rank-bm25==0.2.2
-pytest==8.4.2
+pytest==9.0.3
 torch==2.14.1
 accelerate>=1.2,<2
 bitsandbytes>=0.45

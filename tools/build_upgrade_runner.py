@@ -2,6 +2,9 @@
 import base64
 import json
 from pathlib import Path
+from security_preflight import require_gpu_clearance
+
+require_gpu_clearance()
 
 ROOT = Path(__file__).resolve().parents[1]
 notebook = json.loads((ROOT / "01_llm_fine_tuning_pipeline.ipynb").read_text())

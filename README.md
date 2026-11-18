@@ -5,17 +5,44 @@ generation, and tool-using multi-agent systems. The notebooks are designed for a
 Google Colab A100 runtime and emphasize controlled comparisons, measurable results,
 safety boundaries, and documented engineering tradeoffs.
 
-> **Version:** ver 1.4: controlled upgrades and new evaluation evidence<br>
-> **Updated:** 2026-11-17 EST
+> **Version:** ver 1.7: verified v2 training and inference benchmarks<br>
+> **Updated:** 2026-11-18 05:27 EST
 
 ## Portfolio Summary
 
 ### Current Upgrade Evidence
 
+**Security follow-up:** CPU dependencies are hash-locked and audited. The historical
+GPU dependency stacks have new advisory findings; their legacy launchers are
+blocked. The approved Transformers/PEFT replacement passes CPU LoRA tests and
+A100 NF4 validation. Project 2 adds conditional HyDE;
+Project 3's new workflow uses LangGraph and a tested real MCP stdio boundary.
+The CPU suite passes 57 tests on macOS and offline Linux ARM64. See
+[security and setup status](SECURITY_UPGRADE.md).
+No historical model score below is attributed to this new environment.
+
 The [upgrade checklist](upgrade_plan.md) separates implemented controls, completed
-experiments, and pending comparisons. New results are stored in timestamped
+experiments, and pending comparisons. Historical upgrade results are stored in timestamped
 `output/projectX/runs/upgrade-v1/` directories; the original reports below remain
 historical and are not retroactively validated by the new code.
+
+- **v2 fine-tuning:** One A100 completed 3,106 steps with the patched
+  Transformers/PEFT recipe. On 500 holdout examples, answer NLL fell from
+  2.0840 to 1.6655 (34.20% lower perplexity).
+- **v2 retrieval:** All five arms scored 63 held-out examples on the A100 without
+  execution errors. Conditional HyDE reduced generation calls from 126 to 107
+  and median latency from 5.83 s to 5.12 s versus always-on HyDE, with token F1
+  near 0.190 in both arms. Plain hybrid had the highest observed token F1
+  (0.1907) at 0.99 s median. These results measure a lexical answer proxy.
+  [Metrics snapshot](output/project2/runs/upgrade-v2/20261118T092816338337Z/metrics_snapshot.json).
+  A retrieval-only follow-up found no hit-rate gain from Qwen3 embeddings or BGE
+  reranking on 28 eligible questions.
+  [Retriever refresh](output/project2/runs/upgrade-v2/20261118T102500977498Z/retriever_refresh_metrics.json).
+- **v2 agent workflow:** Constrained routing passed 9/15 cases versus 5/15
+  for prompt-only routing. The LangGraph and single-agent strategies tied at
+  96.43% on the keyword-coverage proxy. LangGraph used more time, and the
+  real MCP stdio checks passed.
+  [Metrics snapshot](output/project3/runs/upgrade-v2/20261118T094818859687Z/metrics_snapshot.json).
 
 - **Project 1:** A fresh A100 run evaluated all 500 held-out examples. Perplexity
   decreased **30.55%** (8.0364 -> 5.5812), but correct tool actions regressed from

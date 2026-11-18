@@ -218,6 +218,8 @@ def queue(workspace, inference_python, resume_stages=None):
 
 
 if __name__ == '__main__':
+    from security_preflight import require_gpu_clearance
+    require_gpu_clearance()
     parser = argparse.ArgumentParser()
     parser.add_argument('--workspace', type=Path, required=True)
     parser.add_argument('--stage', choices=['queue', 'project2', 'project3', 'project5', 'project8'], default='queue')

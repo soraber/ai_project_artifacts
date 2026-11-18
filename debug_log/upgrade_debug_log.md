@@ -2,6 +2,31 @@
 
 Updated: 2026-11-17 EST. Local code changes and authorized remote execution; no push.
 
+## Local Follow-Up: 2026-11-17 12:40 EST
+
+- User deferred training/GPU work and approved LangGraph migration. Replaced only
+  the new role workflow; historical CrewAI results and prior GPU artifacts remain.
+  The graph propagates prior outputs, accounts for measured tokens, and stops on
+  errors/missing usage. Eight local strategy tests pass without API calls.
+- Added conditional HyDE as a fifth arm. Inspection found that invalid retrieval
+  IDs after the top three could evade validation; validate the whole rank list
+  and reject unknown/duplicate reranker outputs. Four control tests pass.
+- Added real MCP 2.3 stdio discovery/search/calculation tests; write tools are not
+  exposed. Two tests pass, including symlink escape rejection. This is a local
+  protocol boundary, not remote OAuth or model-task accuracy.
+- Final CPU/inference locks were regenerated after adding MCP and audited again:
+  zero reported advisories. Final CPU suite: 57 passed, one real-torch test skipped
+  in both macOS and network-disabled Linux ARM64. Three separate trainer tests
+  pass, including a real tiny CPU LoRA update. A Transformers deprecation warning
+  is retained; it does not indicate a failed test or a verified CUDA environment.
+- Changed notebook cells: P1 3-5 and 15-20; P2 3/4/13/16/17;
+  P3 2-4 and 11-14, with new 15-16. Full IDs are in SECURITY_UPGRADE.md.
+  P1 dataset cell 8 source SHA256 is unchanged. No historical PDF was regenerated.
+- No unresolved issue reached three failed attempts. No paid API evaluation,
+  full training, GPU model run, commit, or push occurred in this follow-up.
+
+## Earlier Execution Log
+
 | Issue | Attempts / Evidence | Resolution / Status |
 | --- | --- | --- |
 | New Colab runtime had no Project 1 adapter or holdout | One scoped artifact probe | User authorized fresh training and persistence in MyDrive/projects/MyProject1/. Historical scores remain unchanged. |
@@ -95,6 +120,32 @@ agent-task smoke, Projects 2/3, and Projects 5/8. Completion is not yet verified
   controller cells 8/9 only inventory/export small evidence within the approved
   Drive subtree and block credential-like strings before transfer.
 
+## P0 Dependency And Trainer Follow-Up: 2026-11-17
+
+- The advisory scan reopened environment hardening: pytest 8.4.2 and both historical
+  GPU dependency closures had findings. CPU locks now use pytest 9.0.3 and
+  distribution hashes. Legacy GPU launchers stop before constructing a new run.
+- LLaMA-Factory 0.9.5 constrains Transformers to at most 5.6.0. A solver attempt
+  with the patched floor failed; the user approved direct Transformers/PEFT training.
+  The new lock audits clean. SoupSieve's patched release requires Python >=3.11.5;
+  resolving against 3.11.0 failed once, then succeeded with an explicit microversion.
+- The new Trainer API removed `overwrite_output_dir`. Signature inspection caught
+  it before any GPU launch; directory creation now enforces non-overwrite. A real
+  two-step CPU test verifies adapter-only updates and safetensors output. A test
+  checks production TrainingArguments keywords against the installed API.
+- The notebook migration initially encountered a legacy cell without an ID; changed
+  the structured traversal to preserve such cells. Updated cells 3-5 and 15-20 only.
+  Cell 8 source/hash and unrelated cell outputs remain intact. Evaluation refuses
+  smoke adapters and requires the training model revision.
+- The new CPU suite passes 45 tests, with optional CrewAI/tiny-torch integration
+  tests skipped there; all three trainer tests pass in their separate CPU venv.
+- VS Code currently reports zero active Colab sessions. Requested A100 reconnection;
+  generated a separate credential-free NF4 tiny-model controller. Its GPU result
+  is pending, not inferred from CPU tests. No full retraining was launched.
+- Inspection confirmed `crewai-core` contains shared utilities, not Agent/Crew/Task.
+  Chroma advisories in the old closure lack fixed-version entries; no blanket
+  suppression was added. Requested approval before changing the role framework.
+
 ## First GPU Suite: Runner Integration Failures
 
 The first suite `20261117T061830369288Z` completed Project 2 in 652.25 seconds,
@@ -121,3 +172,34 @@ not failed model answers or evidence for model quality:
   are not rerun. No project source notebook cell changed for these runner fixes.
 - Blinded Project 2 automated review started against the completed evidence;
   its first calls returned valid ratings within the approved budget.
+
+## Project 1 MyPro Training: 2026-11-17 To 2026-11-18
+
+- The notebook's original dataset preparation stayed in cell 8. Cells 25-27
+  verified the mounted Drive split and A100 smoke result, checked gated model
+  access, and launched the full run as a separate process on MyPro.
+- The notebook initially showed a stale status after a VS Code window switch.
+  A status refresh also selected the existing evaluation cell by mistake. That
+  cell stopped at its missing-run guard. The background worker continued.
+- Reloaded the VS Code window and selected the existing Project 01 Jupyter
+  session on MyPro. Cell 28 now reads the run log and refreshes every 30 seconds.
+  Its step counter advanced across the reload. Drive's separate file listing
+  lagged the mounted folder during training and later showed the final files.
+- Run `20261118T033050536430Z` completed 3,106 steps and scored all 500 holdout
+  rows. Verified the 80.1 MiB adapter and paired evaluation JSON under
+  `MyDrive/projects/MyProject1/runs/upgrade-v2/20261118T033050536430Z/`.
+
+## MyPro Inference Follow-Up: 2026-11-18
+
+- The Project 2 notebook launcher installed the separate, hash-locked
+  Python 3.11.17 inference environment. Run `20261118T092816338337Z`
+  completed 63 cases across five retrieval arms with zero errors.
+- Project 3's first attempt `20261118T094559405926Z` stopped at cell 8.
+  LM Format Enforcer 0.11.3 imported `PreTrainedTokenizerBase` from the
+  Transformers 4 path. Cell 4 temporarily exposes the moved class during the
+  integration import and restores the module afterward. The refreshed launcher
+  in cell 17 ran `20261118T094818859687Z` through routing, LangGraph and MCP
+  stdio. The worker exited successfully in 708.80 seconds.
+- The notebooks save each run under the corresponding MyProject2 or MyProject3
+  Drive folder. The repo keeps compact metrics snapshots and the original
+  notebook outputs for review.

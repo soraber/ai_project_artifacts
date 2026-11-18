@@ -17,12 +17,14 @@ AGENTIC = JOBS / 'ai_agentic_attemptings'
 
 
 def build(reviewed_existing_sha256=None):
+    from security_preflight import require_gpu_clearance
+    require_gpu_clearance()
     files = {}
     for name in ['02_rag_document_qa_system.ipynb', '03_llm_agent_system.ipynb']:
         files['artifacts/' + name] = ROOT / name
     for name in ['gpu_upgrade_runtime.py', 'project1_task_evaluation.py',
                  'agent_task_evaluation.py', 'requirements-upgrade-inference.in',
-                 'requirements-upgrade-inference.lock.txt']:
+                 'requirements-upgrade-inference.lock.txt', 'security_preflight.py']:
         files['artifacts/tools/' + name] = ROOT / 'tools' / name
     for number in [5, 8]:
         project = AGENTIC / f'project{number}'

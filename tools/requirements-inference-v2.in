@@ -1,0 +1,25 @@
+# Projects 2/3/5/8. Project 3 v2 uses explicit LangGraph roles, not CrewAI/Chroma.
+torch==2.15.0
+transformers==5.23.0
+accelerate==1.16.0
+bitsandbytes==0.50.2
+datasets==5.2.0
+fsspec==2026.9.0
+peft==0.21.3
+sentence-transformers>=5,<6
+faiss-cpu>=1.9,<2
+langchain-core>=1,<2
+langchain-text-splitters>=1,<2
+duckdb==1.5.6
+sqlglot==29.0.1
+openai==2.54.0
+rank-bm25==0.2.2
+pytest==9.0.3
+pandas>=2,<3
+matplotlib==3.10.8
+reportlab>=4.4,<5
+pillow>=13,<14
+ipykernel>=7,<8
+langgraph==1.2.22
+lm-format-enforcer==0.11.3
+mcp==2.3.0

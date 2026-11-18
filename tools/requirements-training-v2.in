@@ -1,0 +1,15 @@
+# CLI-only QLoRA stack; no LLaMA-Factory web UI dependency.
+torch==2.15.0
+transformers>=5.10,<6
+peft>=0.18,<1
+accelerate>=1.15,<2
+datasets>=5.0.1,<6
+fsspec>=2026.6.0
+bitsandbytes>=0.50,<1
+beautifulsoup4>=4.13,<5
+soupsieve>=4.0.0,<5
+safetensors>=0.6,<1
+pillow>=13,<14
+pyyaml==6.0.3
+pytest==9.0.3
+ipykernel>=7,<8
